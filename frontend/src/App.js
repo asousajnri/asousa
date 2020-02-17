@@ -14,7 +14,9 @@ function App() {
   return (
     <ThemeProvider theme={pinkAndGreen}>
       <GlobalStyle />
-      <MainContainer></MainContainer>
+      <MainContainer>
+        <h1>Antônio Sousa</h1>
+      </MainContainer>
     </ThemeProvider>
   );
 }

@@ -1,6 +1,10 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
+
+import teste from "./fonts/circularStd";
 
 export default createGlobalStyle`
+    ${teste}
+
     *,
     *::before,
     *::after {
@@ -21,10 +25,15 @@ export default createGlobalStyle`
     }
 
     body {
+        font-family: Circular Std;
         background: #e9ebee;
     }
 
     ul {
         list-style: none;
+    }
+
+    h1, h2, h3, h4 {
+        font-family: inherit;
     }
 `;

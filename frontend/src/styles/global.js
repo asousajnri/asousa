@@ -1,9 +1,10 @@
-import { createGlobalStyle, css } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
-import teste from "./fonts/circularStd";
+import CIRCULAR_STD from "./fonts/circularStd";
 
 export default createGlobalStyle`
-    ${teste}
+    /* Font Family */
+    ${CIRCULAR_STD}
 
     *,
     *::before,

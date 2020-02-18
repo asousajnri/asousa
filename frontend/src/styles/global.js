@@ -14,6 +14,7 @@ export default createGlobalStyle`
         box-sizing: border-box;
         box-shadow: none;
         outline: none;
+        line-height: 1;
     }
 
     html,
@@ -28,6 +29,9 @@ export default createGlobalStyle`
     body {
         font-family: Circular Std;
         background: #e9ebee;
+        font-size: 1.6rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
     }
 
     ul {
@@ -36,5 +40,11 @@ export default createGlobalStyle`
 
     h1, h2, h3, h4 {
         font-family: inherit;
+        font-size: 2rem;
+    }
+
+    img {
+        max-width: 100%;
+        display: block;
     }
 `;

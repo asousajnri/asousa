@@ -6,7 +6,7 @@ export const sizes = {
   desktopBig: "1400px"
 };
 
-module.exports = {
+export default {
   mobile: `(min-width: ${sizes.mobile})`,
   tabletPortrait: `(min-width: ${sizes.tabletPortrait})`,
   tabletLandscape: `(min-width: ${sizes.tabletLandscape})`,

@@ -16,11 +16,11 @@ export const SlideContainer = styled.div`
 
     @media ${devices.tabletLandscape} {
       padding-top: unset;
-      padding-left: 10rem;
+      padding-right: 10rem;
     }
 
     @media ${devices.desktop} {
-      padding-left: 14.7rem;
+      padding-right: 14.7rem;
     }
   }
 
@@ -47,7 +47,8 @@ export const SlideContainer = styled.div`
     background: #1aa316;
 
     @media ${devices.tabletLandscape} {
-      left: -1px;
+      left: unset;
+      right: -1px;
     }
   }
 
@@ -56,8 +57,8 @@ export const SlideContainer = styled.div`
     background: #3da93a;
 
     @media ${devices.tabletLandscape} {
-      right: unset;
-      left: -1px;
+      right: -1px;
+      left: unset;
       top: unset;
       bottom: 0;
     }

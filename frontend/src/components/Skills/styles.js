@@ -7,6 +7,6 @@ export const SkillContainer = styled.article`
   flex-direction: column;
 
   @media ${devices.tabletLandscape} {
-    flex-direction: row;
+    flex-direction: row-reverse;
   }
 `;

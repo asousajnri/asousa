@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
+import devices from "../../styles/devices";
+
 export const WorksContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  @media ${devices.tabletLandscape} {
+    column-gap: 0;
+    columns: 2;
+  }
 `;

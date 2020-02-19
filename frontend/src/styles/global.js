@@ -46,5 +46,6 @@ export default createGlobalStyle`
     img {
         max-width: 100%;
         display: block;
+        backface-visibility: hidden;
     }
 `;

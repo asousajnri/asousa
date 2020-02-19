@@ -11,9 +11,9 @@ import SlideItem from "./SlideItem";
 const Slide = () => {
   const params = {
     slidesPerView: 1,
-    speed: 1500,
+    speed: 1200,
     autoplay: {
-      delay: 2000,
+      delay: 1200,
       waitForTransition: true,
       disableOnInteraction: false
     },

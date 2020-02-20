@@ -15,13 +15,6 @@ export const BlockContainer = styled.div`
     height: 100%;
     object-fit: cover;
   }
-
-  &:hover {
-    > div {
-      /* transform: scale(1.5); */
-      opacity: 1;
-    }
-  }
 `;
 
 export const OverlayHover = styled.div`
@@ -41,6 +34,10 @@ export const OverlayHover = styled.div`
   width: 100%;
   height: 100%;
   bottom: 0;
+
+  &.hovered-true {
+    opacity: 1;
+  }
 
   h3,
   span {

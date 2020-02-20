@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { BlockContainer, OverlayHover } from "./styles";
 
 const Block = ({ name, enterprise, pathImg }) => {
+  const [hoverOverlay, setHoverOverlay] = useState(false);
+
   return (
-    <BlockContainer>
+    <BlockContainer
+      onClick={() => setHoverOverlay(!hoverOverlay)}
+      onMouseEnter={() => setHoverOverlay(!hoverOverlay)}
+      onMouseLeave={() => setHoverOverlay(!hoverOverlay)}
+    >
       <img src={pathImg} alt="Image Placeholder" />
-      <OverlayHover>
+      <OverlayHover className={`hovered-${hoverOverlay}`}>
         <h3>{name}</h3>
         <span>{enterprise}</span>
       </OverlayHover>

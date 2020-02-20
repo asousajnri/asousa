@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import devices from "../../styles/devices";
+import { sizes } from "../../styles/devices";
 
 export const Container = styled.main`
-  max-width: ${devices.desktop};
+  max-width: ${sizes.desktop};
   margin: 0 auto;
   width: 100%;
   height: 100%;

@@ -2,13 +2,13 @@ import React from "react";
 
 import { BlockContainer, OverlayHover } from "./styles";
 
-const Block = ({ pathImg }) => {
+const Block = ({ name, enterprise, pathImg }) => {
   return (
     <BlockContainer>
       <img src={pathImg} alt="Image Placeholder" />
       <OverlayHover>
-        <h3>Name Projeto</h3>
-        <span>Enterprise</span>
+        <h3>{name}</h3>
+        <span>{enterprise}</span>
       </OverlayHover>
     </BlockContainer>
   );

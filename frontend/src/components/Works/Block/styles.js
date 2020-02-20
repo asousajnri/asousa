@@ -18,6 +18,7 @@ export const BlockContainer = styled.div`
 
   &:hover {
     > div {
+      /* transform: scale(1.5); */
       opacity: 1;
     }
   }
@@ -30,6 +31,7 @@ export const OverlayHover = styled.div`
 
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  /* transition: transform .3s linear; */
 
   padding: 3rem;
   display: flex;
@@ -43,6 +45,7 @@ export const OverlayHover = styled.div`
   h3,
   span {
     color: #fff;
+    text-align: center;
   }
 
   h3 {
@@ -55,6 +58,6 @@ export const OverlayHover = styled.div`
   }
 
   span {
-    font-size: 3rem;
+    font-size: 2.3rem;
   }
 `;

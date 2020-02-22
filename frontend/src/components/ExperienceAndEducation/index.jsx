@@ -15,7 +15,7 @@ const ExperienceAndEducation = () => {
     },
     {
       title: "Front End Developer",
-      subtitle: "Bleez Agência Digital - 2019/Atualmente"
+      subtitle: "Bleez Agência Digital - 2016/2017"
     },
     {
       title: "Web Designer",
@@ -25,11 +25,11 @@ const ExperienceAndEducation = () => {
 
   const dataEducation = [
     {
-      title: "Front End Developer",
+      title: "Análise de Sistemas",
       subtitle: "FATENE - 2013/2017"
     },
     {
-      title: "Front End Developer",
+      title: "Ensino Integral (Curso de Informática)",
       subtitle: "EEEP Prof. César Campelo - 2010/2013"
     }
   ];
@@ -42,6 +42,13 @@ const ExperienceAndEducation = () => {
           blockColor="secundary"
         />
         <BlockInfo data={dataExperience} />
+      </Side>
+      <Side>
+        <BlockTitleSections
+          titleText="Education"
+          blockColor="secundary"
+          bgGradiente={true}
+        />
         <BlockInfo data={dataEducation} />
       </Side>
     </Container>

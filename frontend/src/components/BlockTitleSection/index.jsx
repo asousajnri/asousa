@@ -2,9 +2,9 @@ import React from "react";
 
 import { Container } from "./styles";
 
-const BlockTitleSection = ({ titleText, blockColor }) => {
+const BlockTitleSection = ({ titleText, blockColor, bgGradiente }) => {
   return (
-    <Container blockColor={blockColor}>
+    <Container blockColor={blockColor} bgGradiente={bgGradiente}>
       <h2>{titleText}</h2>
     </Container>
   );

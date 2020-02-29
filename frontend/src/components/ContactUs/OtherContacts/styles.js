@@ -1,10 +1,16 @@
 import styled from 'styled-components';
 
+import devices from "../../../styles/devices";
+
 export const Container = styled.ul`
   background: #cd127a;
   display: flex;
   flex-direction: column;
   padding: 8rem 2rem;
+
+  @media ${devices.tabletPortrait} {
+    padding: 8rem 4rem;
+  }
 `;
 
 export const Item = styled.li`

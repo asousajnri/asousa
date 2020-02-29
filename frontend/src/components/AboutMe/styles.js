@@ -15,11 +15,16 @@ export const AboutMeContainer = styled.article`
 export const Side = styled.section`
   width: 100%;
   position: relative;
+  height: 34rem;
 
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+
+  @media ${devices.tabletPortrait} {
+    height: 64rem;
+  }
 
   @media ${devices.tabletLandscape} {
     width: 50%;
@@ -29,6 +34,7 @@ export const Side = styled.section`
 export const SideBio = styled(Side)`
   padding: 5rem 2rem;
   background: #fff;
+  height: auto;
 
   @media ${devices.tabletPortrait} {
     padding: 6rem;
@@ -76,6 +82,7 @@ export const Photo = styled.img`
   height: 100%;
   width: 100%;
   object-fit: cover;
+  filter: grayscale(1);
 `;
 
 export const LayerOverlay = styled.div`

@@ -1,22 +1,21 @@
 import styled from 'styled-components';
 
+import devices from "../../../styles/devices";
+
 export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
-    background: #c62b81;
-    padding: 8rem 2rem;
+    align-items: center;
+    justify-content: center;
 `;
 
 export const Input = styled.input`
-    border: 2px solid #fff;
-    border-radius: 5px;
+    border: none;
     background: transparent;
-    height: 7rem;
-    padding: 1rem 3rem;
-    margin-bottom: 3rem;
     width: 100%;
     font-size: 2rem;
     color: #fff;
+    text-transform: uppercase;
 
     &::placeholder {
         color: #fff;
@@ -30,7 +29,6 @@ export const Textarea = styled(Input)`
 `;
 
 export const Button = styled(Input)`
-	font-weight: 700;
 	font-size: 3rem;
-    margin-bottom: 0;
+    cursor: pointer;
 `;

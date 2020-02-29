@@ -13,14 +13,14 @@ export const ContactUsContainer = styled.div`
 
 export const ColumnOtherContacts = styled(ContactUsContainer)`
   @media ${devices.tabletLandscape} {
-    width: 40%;
+    width: 50%;
     flex-direction: column;
   }
 `;
 
 export const ColumnForm = styled(ContactUsContainer)`
   @media ${devices.tabletLandscape} {
-    width: 60%;
+    width: 50%;
     flex-direction: column;
   }
 `;

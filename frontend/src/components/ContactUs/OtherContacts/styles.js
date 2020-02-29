@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 
+import { shade } from "polished";
+
 import devices from "../../../styles/devices";
 
 export const Container = styled.ul`
-  background: #cd127a;
+  background: ${props => shade(0.15, props.theme.colors.primary)};
   display: flex;
   flex-direction: column;
   padding: 8rem 2rem;
 
   @media ${devices.tabletPortrait} {
-    padding: 8rem 4rem;
+    padding: 8rem 6rem;
+    height: 50%;
   }
 `;
 

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from "polished";
 
 import devices from "../../../styles/devices";
 
@@ -7,15 +8,23 @@ export const FormContainer = styled.form`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background: ${props => shade(0.10, props.theme.colors.primary)};
+    padding: 6rem 2rem 8rem;
+
+    @media ${devices.tabletPortrait} {
+        padding: 6rem 6rem 8rem;
+    }
 `;
 
 export const Input = styled.input`
     border: none;
     background: transparent;
     width: 100%;
-    font-size: 2rem;
+    height: 8rem;
+    font-size: 2.5rem;
     color: #fff;
-    text-transform: uppercase;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 2rem;
 
     &::placeholder {
         color: #fff;
@@ -23,12 +32,30 @@ export const Input = styled.input`
 `;
 
 export const Textarea = styled(Input)`
-	padding: 3rem;
+    font-family: inherit;
 	resize: none;
 	height: 18rem;
+    padding-top: 3rem;
+    margin-bottom: 6rem;
+
+    @media ${devices.tabletLandscape} {
+        height: 25rem;
+    }
 `;
 
-export const Button = styled(Input)`
-	font-size: 3rem;
+export const Button = styled.button`
+    color: #fff;
+    border: none;
+    width: 100%;
+    height: 8rem;
+    background: ${props => shade(0.18, props.theme.colors.primary)};
+	font-size: 2.5rem;
+    text-transform: uppercase;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background: #fff;
+        color: ${props => shade(0.18, props.theme.colors.primary)};
+    }
 `;

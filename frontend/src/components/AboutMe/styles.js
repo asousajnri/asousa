@@ -38,6 +38,7 @@ export const SideBio = styled(Side)`
 
   @media ${devices.tabletPortrait} {
     padding: 6rem;
+    height: auto;
   }
 
   @media ${devices.desktop} {

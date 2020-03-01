@@ -8,8 +8,6 @@ const Block = ({ name, enterprise, pathImg }) => {
   return (
     <BlockContainer
       onClick={() => setHoverOverlay(!hoverOverlay)}
-      onMouseEnter={() => setHoverOverlay(!hoverOverlay)}
-      onMouseLeave={() => setHoverOverlay(!hoverOverlay)}
     >
       <img src={pathImg} alt="Image Placeholder" />
       <OverlayHover className={`hovered-${hoverOverlay}`}>

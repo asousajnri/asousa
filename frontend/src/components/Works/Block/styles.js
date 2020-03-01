@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { shade } from "polished";
+
 import devices from "../../../styles/devices";
 
 export const BlockContainer = styled.div`
@@ -20,7 +22,7 @@ export const BlockContainer = styled.div`
 export const OverlayHover = styled.div`
   position: absolute;
   z-index: 2;
-  background: ${props => props.theme.colors.primary};
+  background: ${props => shade(0.10, props.theme.colors.primary)};
 
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
@@ -35,7 +37,7 @@ export const OverlayHover = styled.div`
   height: 100%;
   bottom: 0;
 
-  &.hovered-true {
+  &:hover {
     opacity: 1;
   }
 
@@ -46,15 +48,21 @@ export const OverlayHover = styled.div`
   }
 
   h3 {
-    @media ${devices.tabletLandscape} {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: -0.05px;
+    margin-bottom: 1rem;
+
+    @media ${devices.tabletPortrait} {
       font-size: 6rem;
-      font-weight: 900;
-      letter-spacing: -0.05px;
-      margin-bottom: 1rem;
     }
   }
 
   span {
-    font-size: 2.3rem;
+    font-size: 1.8rem;
+
+    @media ${devices.tabletPortrait} {
+      font-size: 2.5rem;
+    }
   }
 `;

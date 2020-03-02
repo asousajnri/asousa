@@ -1,11 +1,9 @@
 import React from "react";
 
-import { Container } from "./styles";
-
-import BlockTitleSections from "../../components/BlockTitleSection";
-
-import Side from "./Side";
+import BlockTitleSections from "../BlockTitleSection";
 import BlockInfo from "./BlockInfo";
+import Side from "./Side";
+import { Container } from "./styles";
 
 const ExperienceAndEducation = () => {
   const dataExperience = [
@@ -47,7 +45,7 @@ const ExperienceAndEducation = () => {
         <BlockTitleSections
           titleText="Education"
           blockColor="secundary"
-          bgGradiente={true}
+          bgGradiente
         />
         <BlockInfo data={dataEducation} />
       </Side>

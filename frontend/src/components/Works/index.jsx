@@ -45,7 +45,12 @@ const Works = () => {
       <BlockTitleSection titleText="Works" blockColor="primary" />
 
       {worksLis.map((work, index) => (
-        <Block key={index} name={work.name} enterprise={work.enterprise} pathImg={work.pathImg} />
+        <Block
+          key={index}
+          name={work.name}
+          enterprise={work.enterprise}
+          pathImg={work.pathImg}
+        />
       ))}
     </WorksContainer>
   );

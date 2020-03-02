@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { sizes } from "../../styles/devices";
+import { sizes } from '../../styles/devices';
 
 export const Container = styled.main`
   max-width: ${sizes.desktop};

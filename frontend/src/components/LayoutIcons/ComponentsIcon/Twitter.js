@@ -1,6 +1,6 @@
 import React from "react";
 
-const Twitter = ({ width = 32, height = 32, fill = "#000" }) => {
+const Twitter = ({ width = "3rem", height = "3rem", fill = "#000" }) => {
   return (
     <svg 
       xmlns="http://www.w3.org/2000/svg"

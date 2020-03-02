@@ -1,21 +1,23 @@
 import React from 'react';
 
+import * as LayoutIcons from "../../LayoutIcons";
+
 import { SocialContainer, SocialItem } from './styles';
 
 const Social = () => {
   return (
     <SocialContainer>
       <SocialItem changeBg>
-        <i></i>
+        <LayoutIcons.Facebook fill="#fff" width="5rem" height="5rem" />
       </SocialItem>
       <SocialItem>
-        <i></i>
+      <LayoutIcons.Twitter fill="#fff" width="5rem" height="5rem" />
       </SocialItem>
       <SocialItem>
-        <i></i>
+        <LayoutIcons.Instagram fill="#fff" width="5rem" height="5rem" />
       </SocialItem>
       <SocialItem changeBg>
-        <i></i>
+        <LayoutIcons.Linkedin fill="#fff" width="5rem" height="5rem" />
       </SocialItem>
     </SocialContainer>
   );

@@ -37,6 +37,6 @@ export const SocialItem = styled.a`
 
 export const IconWrapper = styled.i`
   display: block;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
 `;

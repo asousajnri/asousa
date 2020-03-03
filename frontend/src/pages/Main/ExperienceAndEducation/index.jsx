@@ -27,7 +27,7 @@ const ExperienceAndEducation = () => {
       subtitle: 'FATENE - 2013/2017',
     },
     {
-      title: 'Ensino Integral (Curso de Informática)',
+      title: 'Curso de Informática',
       subtitle: 'EEEP Prof. César Campelo - 2010/2013',
     },
   ];

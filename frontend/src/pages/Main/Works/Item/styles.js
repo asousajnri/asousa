@@ -10,12 +10,12 @@ export const ItemContainer = styled.div`
   width: 100%;
   cursor: pointer;
   overflow: hidden;
+`;
 
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+export const Image = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
 
 export const OverlayHover = styled.div`

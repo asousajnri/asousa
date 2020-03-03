@@ -33,7 +33,7 @@ export const SlideContainer = styled.div`
     color: #fff !important;
 
     @media ${devices.tabletLandscape} {
-      width: 11rem;
+      width: 11.1rem;
       height: 50%;
     }
 

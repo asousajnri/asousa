@@ -16,7 +16,7 @@ export const Container = styled.div`
     height: 32rem;
   }
 
-  @media ${devices.tabletLandscape} {
+  @media ${devices.desktop} {
     padding: 3rem 6rem;
   }
 
@@ -94,6 +94,16 @@ export const IconWrapper = styled.i`
       @media ${devices.tabletPortrait} {
         right: 25%;
       }
+
+      @media ${devices.tabletLandscape} {
+        right: 15%;
+        top: 25%;
+      }
+
+      @media ${devices.desktop} {
+        right: 25%;
+        top: 26%;
+      }
     `}
 
   ${props =>
@@ -104,6 +114,16 @@ export const IconWrapper = styled.i`
 
       @media ${devices.tabletPortrait} {
         right: 25%;
+      }
+
+      @media ${devices.tabletLandscape} {
+        right: 19%;
+        top: 26%;
+      }
+
+      @media ${devices.desktop} {
+        right: 28%;
+        top: 26%;
       }
     `}
 
@@ -116,6 +136,16 @@ export const IconWrapper = styled.i`
       @media ${devices.tabletPortrait} {
         right: 20%;
       }
+
+      @media ${devices.tabletLandscape} {
+        right: 12%;
+        top: 30%;
+      }
+
+      @media ${devices.desktop} {
+        right: 20%;
+        top: 26%;
+      }
     `}
 
   ${props =>
@@ -127,6 +157,16 @@ export const IconWrapper = styled.i`
       @media ${devices.tabletPortrait} {
         right: 15%;
       }
+
+      @media ${devices.tabletLandscape} {
+        right: 8%;
+        top: 27%;
+      }
+
+      @media ${devices.desktop} {
+        right: 20%;
+        top: 26%;
+      }
     `}
 
   ${props =>
@@ -135,9 +175,10 @@ export const IconWrapper = styled.i`
       top: 20%;
       right: 10%;
 
-      /* @media ${devices.tabletPortrait} {
-        right: 25%;
-      } */
+      @media ${devices.desktop} {
+        top: 20%;
+        right: 15%;
+      }
     `}
 
   @media ${devices.tabletPortrait} {

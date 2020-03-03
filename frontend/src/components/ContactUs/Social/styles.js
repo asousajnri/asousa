@@ -1,8 +1,7 @@
+import { shade } from 'polished';
 import styled, { css } from 'styled-components';
 
-import { shade } from "polished";
-
-import devices from "../../../styles/devices";
+import devices from '../../../styles/devices';
 
 export const SocialContainer = styled.ul`
   display: flex;
@@ -18,7 +17,7 @@ export const SocialItem = styled.li`
   align-items: center;
   justify-content: center;
   width: 50%;
-  background: ${props => shade(0.10, props.theme.colors.primary)};
+  background: ${props => shade(0.1, props.theme.colors.primary)};
   height: 18rem;
 
   @media ${devices.tabletPortrait} {
@@ -29,7 +28,15 @@ export const SocialItem = styled.li`
     height: 50%;
   }
 
-  ${props => props.changeBg && css`
-    background: #c11374;  
-  `}
+  ${props =>
+    props.changeBg &&
+    css`
+      background: #c11374;
+    `}
+`;
+
+export const IconWrapper = styled.i`
+  display: block;
+  width: 5rem;
+  height: 5rem;
 `;

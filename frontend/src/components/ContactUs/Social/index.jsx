@@ -1,26 +1,31 @@
 import React from 'react';
 
-import * as LayoutIcons from "../../LayoutIcons";
+import * as LayoutIcons from '../../LayoutIcons';
+import { SocialContainer, SocialItem, IconWrapper } from './styles';
 
-import { SocialContainer, SocialItem } from './styles';
-
-const Social = () => {
-  return (
-    <SocialContainer>
-      <SocialItem changeBg>
+const Social = () => (
+  <SocialContainer>
+    <SocialItem changeBg>
+      <IconWrapper>
         <LayoutIcons.Facebook fill="#fff" width="5rem" height="5rem" />
-      </SocialItem>
-      <SocialItem>
-      <LayoutIcons.Twitter fill="#fff" width="5rem" height="5rem" />
-      </SocialItem>
-      <SocialItem>
+      </IconWrapper>
+    </SocialItem>
+    <SocialItem>
+      <IconWrapper>
+        <LayoutIcons.Twitter fill="#fff" width="5rem" height="5rem" />
+      </IconWrapper>
+    </SocialItem>
+    <SocialItem>
+      <IconWrapper>
         <LayoutIcons.Instagram fill="#fff" width="5rem" height="5rem" />
-      </SocialItem>
-      <SocialItem changeBg>
+      </IconWrapper>
+    </SocialItem>
+    <SocialItem changeBg>
+      <IconWrapper>
         <LayoutIcons.Linkedin fill="#fff" width="5rem" height="5rem" />
-      </SocialItem>
-    </SocialContainer>
-  );
-};
+      </IconWrapper>
+    </SocialItem>
+  </SocialContainer>
+);
 
 export default Social;

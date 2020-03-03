@@ -6,6 +6,7 @@ module.exports = {
     secundary: '#1cb517',
 
     text: '#000000',
+    textInverter: '#ffffff',
     textBlockTitleIcon: '#FFFFFF',
   },
 };

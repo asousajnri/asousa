@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 
 import devices from '../../styles/devices';
-import { colors } from '../../styles/Theme/pinkAndGreen';
 
 export const Container = styled.div`
   display: flex;
@@ -10,7 +9,7 @@ export const Container = styled.div`
   padding: 3rem 2rem;
   height: 20rem;
   width: 100%;
-  color: ${colors.textBlockTitleIcon};
+  color: ${props => props.theme.colors.textBlockTitleIcon};
   position: relative;
 
   @media ${devices.tabletLandscape} {

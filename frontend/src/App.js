@@ -1,20 +1,27 @@
-import React from "react";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
-// STYLED
-import { ThemeProvider } from "styled-components";
+import { ThemeProvider } from 'styled-components';
 
-//
-import GlobalStyle from "./styles/global";
-import pinkAndGreen from "./styles/Theme/pinkAndGreen";
-
-// PAGES
-import Main from "./pages/Main";
+import Login from './pages/Login';
+import Main from './pages/Main';
+import GlobalStyle from './styles/global';
+import pinkAndGreen from './styles/Theme/pinkAndGreen';
 
 function App() {
   return (
     <ThemeProvider theme={pinkAndGreen}>
       <GlobalStyle />
-      <Main />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Main />
+          </Route>
+          <Route exact path="/admin">
+            <Login />
+          </Route>
+        </Switch>
+      </Router>
     </ThemeProvider>
   );
 }

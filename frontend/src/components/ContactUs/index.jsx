@@ -1,27 +1,24 @@
 import React from 'react';
 
-import BlockTitleSection from "../BlockTitleSection";
-
+import BlockTitle from '../BlockTitle';
+import { ContactUs as IconContactUs } from '../LayoutIcons';
+import Form from './Form';
+import OtherContacts from './OtherContacts';
+import Social from './Social';
 import { ContactUsContainer, ColumnOtherContacts, ColumnForm } from './styles';
 
-import Form from "./Form";
-import OtherContacts from "./OtherContacts";
-import Social from "./Social";
+const ContactUs = () => (
+  <ContactUsContainer>
+    <ColumnForm>
+      <BlockTitle titleText="Contact US" IconTitle={IconContactUs} />
+      <Form />
+    </ColumnForm>
 
-const ContactUs = () => {
-  return (
-    <ContactUsContainer>
-        <ColumnForm>
-          <BlockTitleSection titleText="Contact US" blockColor=""/>
-          <Form />
-        </ColumnForm>
-
-        <ColumnOtherContacts>
-          <OtherContacts />
-          <Social />
-        </ColumnOtherContacts>
-    </ContactUsContainer>
-  );
-};
+    <ColumnOtherContacts>
+      <OtherContacts />
+      <Social />
+    </ColumnOtherContacts>
+  </ContactUsContainer>
+);
 
 export default ContactUs;

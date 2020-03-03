@@ -1,24 +1,20 @@
-import React from "react";
+import React from 'react';
 
-// COMPONENTS
-import MainContainer from "../../components/MainContainer";
+import AboutMe from '../../components/AboutMe';
+import ContactUs from '../../components/ContactUs';
+import ExperienceAndEducation from '../../components/ExperienceAndEducation';
+import MainContainer from '../../components/MainContainer';
+import Skills from '../../components/Skills';
+import Works from '../../components/Works';
 
-import AboutMe from "../../components/AboutMe";
-import Skills from "../../components/Skills";
-import Works from "../../components/Works";
-import ExperienceAndEducation from "../../components/ExperienceAndEducation";
-import ContactUs from "../../components/ContactUs";
-
-const Main = () => {
-  return (
-    <MainContainer>
-      <AboutMe />
-      <Skills />
-      <Works />
-      <ExperienceAndEducation />
-      <ContactUs />
-    </MainContainer>
-  );
-};
+const Main = () => (
+  <MainContainer>
+    <AboutMe />
+    <Skills />
+    <Works />
+    <ExperienceAndEducation />
+    <ContactUs />
+  </MainContainer>
+);
 
 export default Main;

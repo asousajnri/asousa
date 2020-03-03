@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import BlockTitleSection from '../BlockTitleSection';
+import BlockTitle from '../BlockTitle';
+import { Project } from '../LayoutIcons';
 import Block from './Block';
 import { WorksContainer } from './styles';
 
@@ -40,7 +41,7 @@ const Works = () => {
 
   return (
     <WorksContainer>
-      <BlockTitleSection titleText="Works" blockColor="primary" />
+      <BlockTitle titleText="Works" blockColor="primary" IconTitle={Project} />
 
       {worksLis.map((work, index) => (
         <Block

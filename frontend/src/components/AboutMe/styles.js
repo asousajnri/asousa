@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import devices from "../../styles/devices";
+import devices from '../../styles/devices';
 
 export const AboutMeContainer = styled.article`
   width: 100%;
@@ -68,8 +68,11 @@ export const BlockTitle = styled.div`
     margin-bottom: 1rem;
     font-weight: 900;
 
+    @media ${devices.tabletLandscape} {
+      font-size: 5rem;
+    }
+
     @media ${devices.desktop} {
-      font-size: 6rem;
       margin-bottom: 1.5rem;
     }
   }
@@ -89,7 +92,7 @@ export const Photo = styled.img`
 export const LayerOverlay = styled.div`
   background: ${props => props.theme.colors.primary};
   opacity: 0.5;
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   left: 0;

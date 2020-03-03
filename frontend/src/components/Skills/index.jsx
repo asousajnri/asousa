@@ -1,20 +1,19 @@
-import React from "react";
+import React from 'react';
 
-import { SkillContainer } from "./styles";
+import BlockTitle from '../BlockTitle';
+import { Skills as SkillIcon } from '../LayoutIcons';
+import Slide from './Slide';
+import { SkillContainer } from './styles';
 
-// COMPONENTS
-import BlockTitleSection from "../BlockTitleSection";
-
-// COMPONENTS THIS
-import Slide from "./Slide";
-
-const Skills = () => {
-  return (
-    <SkillContainer>
-      <BlockTitleSection titleText="Skills" blockColor="secundary" />
-      <Slide />
-    </SkillContainer>
-  );
-};
+const Skills = () => (
+  <SkillContainer>
+    <BlockTitle
+      titleText="Skills"
+      blockColor="secundary"
+      IconTitle={SkillIcon}
+    />
+    <Slide />
+  </SkillContainer>
+);
 
 export default Skills;

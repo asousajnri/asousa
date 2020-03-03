@@ -1,23 +1,21 @@
-import Facebook from "./ComponentsIcon/Facebook";
-import Twitter from "./ComponentsIcon/Twitter";
-import Instagram from "./ComponentsIcon/Instagram";
-import Linkedin from "./ComponentsIcon/Linkedin";
+import ContactUs from './Icons/ContactUs';
+import Facebook from './Icons/Facebook';
+import Instagram from './Icons/Instagram';
+import Linkedin from './Icons/Linkedin';
+import Mortarboard from './Icons/Mortarboard';
+import Project from './Icons/Project';
+import Skills from './Icons/Skills';
+import Twitter from './Icons/Twitter';
+import Work from './Icons/Work';
 
-import Mortarboard from "./ComponentsIcon/Mortarboard";
-import Skills from "./ComponentsIcon/Skills";
-import Project from "./ComponentsIcon/Project";
-import ContactUs from "./ComponentsIcon/ContactUs";
-import Work from "./ComponentsIcon/Work";
-
-export { 
-  Facebook, 
-  Twitter, 
-  Instagram, 
+export {
+  Facebook,
+  Twitter,
+  Instagram,
   Linkedin,
-
   Mortarboard,
   Skills,
   Work,
   Project,
-  ContactUs
+  ContactUs,
 };

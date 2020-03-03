@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, IconWrapper } from './styles';
 
-const BlockTitle = ({
+const BlockTitleIcon = ({
   targetSection,
   titleText,
   blockColor,
@@ -20,4 +20,4 @@ const BlockTitle = ({
   </Container>
 );
 
-export default BlockTitle;
+export default BlockTitleIcon;

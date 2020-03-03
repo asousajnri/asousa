@@ -1,10 +1,11 @@
 module.exports = {
-  name: "pinkAndGreen",
+  name: 'pinkAndGreen',
 
   colors: {
-    primary: "#ea178c",
-    secundary: "#1cb517",
+    primary: '#ea178c',
+    secundary: '#1cb517',
 
-    text: "#000000"
-  }
+    text: '#000000',
+    textBlockTitleIcon: '#FFFFFF',
+  },
 };

@@ -5,7 +5,7 @@ import {
   AboutMeContainer,
   Side,
   SideBio,
-  BlockTitle,
+  BlockTitleIcon,
   Photo,
   LayerOverlay,
 } from './styles';
@@ -17,10 +17,10 @@ const AboutMe = () => (
       <LayerOverlay />
     </Side>
     <SideBio>
-      <BlockTitle>
+      <BlockTitleIcon>
         <h1>Antônio Sousa</h1>
         <span>Front End Developer</span>
-      </BlockTitle>
+      </BlockTitleIcon>
 
       <p>
         It is a long established fact that a reader will be distracted by the

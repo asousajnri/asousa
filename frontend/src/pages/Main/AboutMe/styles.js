@@ -55,7 +55,7 @@ export const SideBio = styled(Side)`
   }
 `;
 
-export const BlockTitle = styled.div`
+export const BlockTitleIcon = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

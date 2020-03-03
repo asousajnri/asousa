@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import BlockTitle from '../../../components/BlockTitle';
+import BlockTitleIcon from '../../../components/BlockTitleIcon';
 import { Project } from '../../../components/LayoutIcons';
 import Block from './Item';
 import { WorksContainer } from './styles';
@@ -41,7 +41,7 @@ const Works = () => {
 
   return (
     <WorksContainer>
-      <BlockTitle
+      <BlockTitleIcon
         targetSection="works"
         titleText="Works"
         blockColor="primary"

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BlockTitle from '../BlockTitle';
+import BlockTitleIcon from '../BlockTitleIcon';
 import { ContactUs as IconContactUs } from '../LayoutIcons';
 import Form from './Form';
 import OtherContacts from './OtherContacts';
@@ -10,7 +10,7 @@ import { ContactUsContainer, ColumnOtherContacts, ColumnForm } from './styles';
 const ContactUs = () => (
   <ContactUsContainer>
     <ColumnForm>
-      <BlockTitle
+      <BlockTitleIcon
         targetSection="contact-us"
         titleText="Contact US"
         IconTitle={IconContactUs}

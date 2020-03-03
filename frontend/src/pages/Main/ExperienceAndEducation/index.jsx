@@ -1,6 +1,6 @@
 import React from 'react';
 
-import BlockTitle from '../../../components/BlockTitle';
+import BlockTitleIcon from '../../../components/BlockTitleIcon';
 import * as LayoutIcons from '../../../components/LayoutIcons';
 import Items from './Items';
 import { Container, Side } from './styles';
@@ -35,7 +35,7 @@ const ExperienceAndEducation = () => {
   return (
     <Container>
       <Side>
-        <BlockTitle
+        <BlockTitleIcon
           targetSection="work-experience"
           titleText="Work Experience"
           blockColor="secundary"
@@ -44,7 +44,7 @@ const ExperienceAndEducation = () => {
         <Items data={dataExperience} />
       </Side>
       <Side>
-        <BlockTitle
+        <BlockTitleIcon
           targetSection="education"
           titleText="Education"
           blockColor="secundary"

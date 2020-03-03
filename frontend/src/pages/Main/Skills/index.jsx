@@ -1,13 +1,13 @@
 import React from 'react';
 
-import BlockTitle from '../../../components/BlockTitle';
+import BlockTitleIcon from '../../../components/BlockTitleIcon';
 import { Skills as SkillIcon } from '../../../components/LayoutIcons';
 import Slide from './Slide';
 import { SkillContainer } from './styles';
 
 const Skills = () => (
   <SkillContainer>
-    <BlockTitle
+    <BlockTitleIcon
       targetSection="skills"
       titleText="Skills"
       blockColor="secundary"

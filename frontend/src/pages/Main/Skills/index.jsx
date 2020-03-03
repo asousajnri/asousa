@@ -1,7 +1,7 @@
 import React from 'react';
 
-import BlockTitle from '../BlockTitle';
-import { Skills as SkillIcon } from '../LayoutIcons';
+import BlockTitle from '../../../components/BlockTitle';
+import { Skills as SkillIcon } from '../../../components/LayoutIcons';
 import Slide from './Slide';
 import { SkillContainer } from './styles';
 

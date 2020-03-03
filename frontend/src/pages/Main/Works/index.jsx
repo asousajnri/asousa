@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import BlockTitle from '../BlockTitle';
-import { Project } from '../LayoutIcons';
-import Block from './Block';
+import BlockTitle from '../../../components/BlockTitle';
+import { Project } from '../../../components/LayoutIcons';
+import Block from './Item';
 import { WorksContainer } from './styles';
 
 const Works = () => {

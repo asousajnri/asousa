@@ -1,10 +1,9 @@
 import React from 'react';
 
-import BlockTitle from '../BlockTitle';
-import * as LayoutIcons from '../LayoutIcons';
+import BlockTitle from '../../../components/BlockTitle';
+import * as LayoutIcons from '../../../components/LayoutIcons';
 import BlockInfo from './BlockInfo';
-import Side from './Side';
-import { Container } from './styles';
+import { Container, Side } from './styles';
 
 const ExperienceAndEducation = () => {
   const dataExperience = [

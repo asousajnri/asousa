@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import devices from "../../../styles/devices";
+import devices from '../../../../styles/devices';
 
 export const SlideContainer = styled.div`
   display: flex;

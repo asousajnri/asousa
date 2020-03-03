@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import { BlockContainer, OverlayHover } from "./styles";
+import { ItemContainer, OverlayHover } from './styles';
 
-const Block = ({ name, enterprise, pathImg }) => {
+const Item = ({ name, enterprise, pathImg }) => {
   const [hoverOverlay, setHoverOverlay] = useState(false);
 
   return (
-    <BlockContainer
-      onClick={() => setHoverOverlay(!hoverOverlay)}
-    >
+    <ItemContainer onClick={() => setHoverOverlay(!hoverOverlay)}>
       <img src={pathImg} alt="Image Placeholder" />
       <OverlayHover className={`hovered-${hoverOverlay}`}>
         <h3>{name}</h3>
         <span>{enterprise}</span>
       </OverlayHover>
-    </BlockContainer>
+    </ItemContainer>
   );
 };
 
-export default Block;
+export default Item;

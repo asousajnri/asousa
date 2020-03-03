@@ -1,10 +1,9 @@
-import styled from "styled-components";
+import { shade } from 'polished';
+import styled from 'styled-components';
 
-import { shade } from "polished";
+import devices from '../../../../styles/devices';
 
-import devices from "../../../styles/devices";
-
-export const BlockContainer = styled.div`
+export const ItemContainer = styled.div`
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -22,7 +21,7 @@ export const BlockContainer = styled.div`
 export const OverlayHover = styled.div`
   position: absolute;
   z-index: 2;
-  background: ${props => shade(0.10, props.theme.colors.primary)};
+  background: ${props => shade(0.1, props.theme.colors.primary)};
 
   opacity: 0;
   transition: opacity 0.4s ease-in-out;

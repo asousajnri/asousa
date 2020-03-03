@@ -1,11 +1,10 @@
 import React from 'react';
 
-import AboutMe from '../../components/AboutMe';
-import ContactUs from '../../components/ContactUs';
-import ExperienceAndEducation from '../../components/ExperienceAndEducation';
+import AboutMe from '../../components/ContactUs';
 import MainContainer from '../../components/MainContainer';
-import Skills from '../../components/Skills';
-import Works from '../../components/Works';
+import ExperienceAndEducation from './ExperienceAndEducation';
+import Works from './Works';
+import Skills from './Skills';
 
 const Main = () => (
   <MainContainer>

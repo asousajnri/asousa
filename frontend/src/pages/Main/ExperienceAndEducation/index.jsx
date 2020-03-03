@@ -2,7 +2,7 @@ import React from 'react';
 
 import BlockTitle from '../../../components/BlockTitle';
 import * as LayoutIcons from '../../../components/LayoutIcons';
-import BlockInfo from './BlockInfo';
+import Items from './Items';
 import { Container, Side } from './styles';
 
 const ExperienceAndEducation = () => {
@@ -41,7 +41,7 @@ const ExperienceAndEducation = () => {
           blockColor="secundary"
           IconTitle={LayoutIcons.Work}
         />
-        <BlockInfo data={dataExperience} />
+        <Items data={dataExperience} />
       </Side>
       <Side>
         <BlockTitle
@@ -51,7 +51,7 @@ const ExperienceAndEducation = () => {
           bgGradiente
           IconTitle={LayoutIcons.Mortarboard}
         />
-        <BlockInfo data={dataEducation} />
+        <Items data={dataEducation} />
       </Side>
     </Container>
   );

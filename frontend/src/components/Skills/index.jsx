@@ -8,6 +8,7 @@ import { SkillContainer } from './styles';
 const Skills = () => (
   <SkillContainer>
     <BlockTitle
+      targetSection="skills"
       titleText="Skills"
       blockColor="secundary"
       IconTitle={SkillIcon}

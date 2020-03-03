@@ -37,6 +37,7 @@ const ExperienceAndEducation = () => {
     <Container>
       <Side>
         <BlockTitle
+          targetSection="work-experience"
           titleText="Work Experience"
           blockColor="secundary"
           IconTitle={LayoutIcons.Work}
@@ -45,6 +46,7 @@ const ExperienceAndEducation = () => {
       </Side>
       <Side>
         <BlockTitle
+          targetSection="education"
           titleText="Education"
           blockColor="secundary"
           bgGradiente

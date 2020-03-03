@@ -10,7 +10,11 @@ import { ContactUsContainer, ColumnOtherContacts, ColumnForm } from './styles';
 const ContactUs = () => (
   <ContactUsContainer>
     <ColumnForm>
-      <BlockTitle titleText="Contact US" IconTitle={IconContactUs} />
+      <BlockTitle
+        targetSection="contact-us"
+        titleText="Contact US"
+        IconTitle={IconContactUs}
+      />
       <Form />
     </ColumnForm>
 

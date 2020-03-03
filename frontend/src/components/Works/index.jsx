@@ -41,7 +41,12 @@ const Works = () => {
 
   return (
     <WorksContainer>
-      <BlockTitle titleText="Works" blockColor="primary" IconTitle={Project} />
+      <BlockTitle
+        targetSection="works"
+        titleText="Works"
+        blockColor="primary"
+        IconTitle={Project}
+      />
 
       {worksLis.map((work, index) => (
         <Block

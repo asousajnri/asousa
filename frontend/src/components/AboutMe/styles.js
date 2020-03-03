@@ -68,7 +68,7 @@ export const BlockTitle = styled.div`
     margin-bottom: 1rem;
     font-weight: 900;
 
-    @media ${devices.tabletLandscape} {
+    @media ${devices.tabletPortrait} {
       font-size: 5rem;
     }
 

@@ -16,6 +16,10 @@ export const Container = styled.div`
     height: 32rem;
   }
 
+  @media ${devices.tabletLandscape} {
+    padding: 3rem 6rem;
+  }
+
   background: ${props =>
     props.blockColor === 'secundary'
       ? props.theme.colors.secundary
@@ -71,27 +75,49 @@ export const Container = styled.div`
 
 export const IconWrapper = styled.i`
   display: block;
-  width: 6rem;
-  height: 6rem;
+  width: 5rem;
+  height: 5rem;
   position: absolute;
-  right: 10%;
-  top: 30%;
-  margin-top: -3rem;
   z-index: 1;
 
+  ${props =>
+    props.targetSection === 'skills' &&
+    css`
+      top: 20%;
+      right: 20%;
+    `}
+
+  ${props =>
+    props.targetSection === 'works' &&
+    css`
+      top: 20%;
+      right: 15%;
+    `}
+
+  ${props =>
+    props.targetSection === 'work-experience' &&
+    css`
+      top: 20%;
+      right: 10%;
+    `}
+
+  ${props =>
+    props.targetSection === 'education' &&
+    css`
+      top: 20%;
+      right: 10%;
+    `}
+
+  ${props =>
+    props.targetSection === 'contact-us' &&
+    css`
+      top: 20%;
+      right: 10%;
+    `}
+
   @media ${devices.tabletPortrait} {
-    top: 35%;
-    right: 15%;
-    width: 8rem;
-    height: 8rem;
-    margin-top: -4rem;
   }
 
   @media ${devices.tabletLandscape} {
-    top: 40%;
-    right: 10%;
-    width: 6rem;
-    height: 6rem;
-    margin-top: -4rem;
   }
 `;

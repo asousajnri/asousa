@@ -67,7 +67,7 @@ export const Container = styled.div`
     margin-right: 1rem;
     z-index: 2;
 
-    @media ${devices.tabletLandscape} {
+    @media ${devices.tabletPortrait} {
       font-size: 7rem;
     }
   }
@@ -80,11 +80,20 @@ export const IconWrapper = styled.i`
   position: absolute;
   z-index: 1;
 
+  @media ${devices.tabletPortrait} {
+    width: 6rem;
+    height: 6rem;
+  }
+
   ${props =>
     props.targetSection === 'skills' &&
     css`
       top: 20%;
       right: 20%;
+
+      @media ${devices.tabletPortrait} {
+        right: 25%;
+      }
     `}
 
   ${props =>
@@ -92,6 +101,10 @@ export const IconWrapper = styled.i`
     css`
       top: 20%;
       right: 15%;
+
+      @media ${devices.tabletPortrait} {
+        right: 25%;
+      }
     `}
 
   ${props =>
@@ -99,6 +112,10 @@ export const IconWrapper = styled.i`
     css`
       top: 20%;
       right: 10%;
+
+      @media ${devices.tabletPortrait} {
+        right: 20%;
+      }
     `}
 
   ${props =>
@@ -106,6 +123,10 @@ export const IconWrapper = styled.i`
     css`
       top: 20%;
       right: 10%;
+
+      @media ${devices.tabletPortrait} {
+        right: 15%;
+      }
     `}
 
   ${props =>
@@ -113,6 +134,10 @@ export const IconWrapper = styled.i`
     css`
       top: 20%;
       right: 10%;
+
+      /* @media ${devices.tabletPortrait} {
+        right: 25%;
+      } */
     `}
 
   @media ${devices.tabletPortrait} {

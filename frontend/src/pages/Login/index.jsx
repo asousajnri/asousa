@@ -1,9 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-import photo from '../../assets/images/photo.jpg';
+// import photo from '../../assets/images/photo.jpg';
 import Button from '../../components/Button';
 import Form from '../../components/Form';
-import { LoginContainer } from './styles';
+import Main from '../Main';
+import { LoginContainer, GoBack } from './styles';
 
 const Login = () => (
   <LoginContainer>
@@ -12,6 +14,10 @@ const Login = () => (
       <Form.Input placeholder="Password" />
       <Button type="submit">Acessar</Button>
     </Form.Wrapper>
+
+    <GoBack>
+      <Link to="/">Home</Link>
+    </GoBack>
   </LoginContainer>
 );
 

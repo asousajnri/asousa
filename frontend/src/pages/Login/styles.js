@@ -31,3 +31,7 @@ export const Title = styled.h1`
   font-size: 3rem;
   margin-bottom: 5rem;
 `;
+
+export const GoBack = styled.span`
+  margin-top: 2rem;
+`;

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components';
 
 import devices from '../../../styles/devices';
 
-export const SocialContainer = styled.ul`
+export const SocialContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
 
@@ -12,7 +12,7 @@ export const SocialContainer = styled.ul`
   }
 `;
 
-export const SocialItem = styled.li`
+export const SocialItem = styled.a`
   display: flex;
   align-items: center;
   justify-content: center;

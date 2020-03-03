@@ -1,6 +1,6 @@
 import React from 'react';
 
-import pathPhoto from '../../assets/images/photo.jpg';
+import pathPhoto from '../../../assets/images/photo.jpg';
 import {
   AboutMeContainer,
   Side,

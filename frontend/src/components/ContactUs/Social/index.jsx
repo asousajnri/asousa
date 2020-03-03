@@ -5,24 +5,24 @@ import { SocialContainer, SocialItem, IconWrapper } from './styles';
 
 const Social = () => (
   <SocialContainer>
-    <SocialItem changeBg>
+    <SocialItem href="#" changeBg>
       <IconWrapper>
-        <LayoutIcons.Facebook fill="#fff" width="5rem" height="5rem" />
+        <LayoutIcons.Facebook fill="#fff" />
       </IconWrapper>
     </SocialItem>
-    <SocialItem>
+    <SocialItem href="#">
       <IconWrapper>
-        <LayoutIcons.Twitter fill="#fff" width="5rem" height="5rem" />
+        <LayoutIcons.Twitter fill="#fff" />
       </IconWrapper>
     </SocialItem>
-    <SocialItem>
+    <SocialItem href="#">
       <IconWrapper>
-        <LayoutIcons.Instagram fill="#fff" width="5rem" height="5rem" />
+        <LayoutIcons.Instagram fill="#fff" />
       </IconWrapper>
     </SocialItem>
-    <SocialItem changeBg>
+    <SocialItem href="#" changeBg>
       <IconWrapper>
-        <LayoutIcons.Linkedin fill="#fff" width="5rem" height="5rem" />
+        <LayoutIcons.Linkedin fill="#fff" />
       </IconWrapper>
     </SocialItem>
   </SocialContainer>

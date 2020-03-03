@@ -10,32 +10,32 @@ const Works = () => {
     {
       name: 'Printerama',
       enterprise: 'Bleez Agência Digital',
-      pathImg: require('../../assets/images/works/printerama.jpg'),
+      pathImg: require('../../../assets/images/works/printerama.jpg'),
     },
     {
       name: 'Bransk',
       enterprise: 'Index Digital',
-      pathImg: require('../../assets/images/works/bransk.jpg'),
+      pathImg: require('../../../assets/images/works/bransk.jpg'),
     },
     {
       name: 'Mesa Brasil',
       enterprise: 'Index Digital',
-      pathImg: require('../../assets/images/works/mesa.jpg'),
+      pathImg: require('../../../assets/images/works/mesa.jpg'),
     },
     {
       name: 'Colégio Nova Dimensão',
       enterprise: 'Freelancer',
-      pathImg: require('../../assets/images/works/colegioNd.jpg'),
+      pathImg: require('../../../assets/images/works/colegioNd.jpg'),
     },
     {
       name: 'Roteiros Incríveis',
       enterprise: 'Index Digital',
-      pathImg: require('../../assets/images/works/roteiros.jpg'),
+      pathImg: require('../../../assets/images/works/roteiros.jpg'),
     },
     {
       name: 'Gaspar Viana',
       enterprise: 'Index Digital',
-      pathImg: require('../../assets/images/works/clinica.jpg'),
+      pathImg: require('../../../assets/images/works/clinica.jpg'),
     },
   ]);
 

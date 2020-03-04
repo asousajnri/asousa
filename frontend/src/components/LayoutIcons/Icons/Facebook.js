@@ -4,7 +4,7 @@ const Facebook = ({ fill = '#000' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    className="facebook"
+    className="Facebook"
     viewBox="-110 1 511 511.99996"
     aria-labelledby="title"
     fill={fill}

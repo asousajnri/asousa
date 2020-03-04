@@ -4,12 +4,12 @@ const ContactUs = ({ fill = '#000' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    className="ContactUs"
+    className="Dashboard"
     viewBox="0 0 469.333 469.333"
     aria-labelledby="title"
     fill={fill}
   >
-    <title id="title">ContactUs Icon</title>
+    <title id="title">Dashboard Icon</title>
     <g>
       <path
         d="M426.667,0h-384C19.135,0,0,19.135,0,42.667v384c0,23.531,19.135,42.667,42.667,42.667h384

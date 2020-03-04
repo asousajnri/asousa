@@ -3,7 +3,9 @@ import Dashboard from './Icons/Dashboard';
 import Facebook from './Icons/Facebook';
 import Instagram from './Icons/Instagram';
 import Linkedin from './Icons/Linkedin';
+import Menu from './Icons/Menu';
 import Mortarboard from './Icons/Mortarboard';
+import Pages from './Icons/Pages';
 import Project from './Icons/Project';
 import Skills from './Icons/Skills';
 import Twitter from './Icons/Twitter';
@@ -24,4 +26,6 @@ export {
   Dashboard,
   User,
   UserStrong,
+  Menu,
+  Pages,
 };

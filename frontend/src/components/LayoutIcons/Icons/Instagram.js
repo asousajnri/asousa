@@ -4,7 +4,7 @@ const Instagram = ({ fill = '#000' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    className="instagram"
+    className="Instagram"
     viewBox="0 0 512.00096 512.00096"
     aria-labelledby="title"
     fill={fill}

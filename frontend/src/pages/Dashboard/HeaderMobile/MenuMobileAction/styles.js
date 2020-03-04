@@ -9,16 +9,11 @@ export const Container = styled.div`
   justify-content: center;
   width: 3.2rem;
   height: 2.5rem;
-  /* box-shadow: 0 0 0 4px transparent; */
   cursor: pointer;
   position: relative;
   transition: all 0.5s ease-in-out;
 
   &.is-clicked {
-    /* width: 5rem; */
-    /* background: ${props => shade(0.1, props.theme.colors.primary)}; */
-    /* box-shadow: 0 0 0 4px ${props =>
-      shade(0.1, props.theme.colors.primary)}; */
     justify-content: center;
   }
 `;
@@ -29,7 +24,7 @@ export const Line = styled.span`
   height: 0.4rem;
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
   max-width: 3.2rem;
   border-radius: 0.1rem;
   position: absolute;

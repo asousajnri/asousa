@@ -16,7 +16,7 @@ const Login = () => (
     </Form.Wrapper>
 
     <GoBack>
-      <Link to="/">Home</Link>
+      <Link to="/">Voltar</Link>
     </GoBack>
   </LoginContainer>
 );

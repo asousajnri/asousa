@@ -18,7 +18,7 @@ const Social = () => (
     </SocialItem>
     <SocialItem href="#">
       <IconWrapper>
-        <LayoutIcons.Instagram fill="#fff" />
+        <LayoutIcons.Dashboard fill="#fff" />
       </IconWrapper>
     </SocialItem>
     <SocialItem href="#" changeBg>

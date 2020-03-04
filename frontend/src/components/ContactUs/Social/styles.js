@@ -17,13 +17,14 @@ export const SocialItem = styled.a`
   align-items: center;
   justify-content: center;
   width: 50%;
-  background: ${(props) => shade(0.1, props.theme.colors.primary)};
+  background: ${props => shade(0.1, props.theme.colors.primary)};
   height: 18rem;
+  border: 0.3rem solid transparent;
 
-  transition: background 0.5s ease-in-out;
+  transition: border 0.5s ease-in-out;
 
   &:hover {
-    background: #fff;
+    border-color: #fff;
   }
 
   @media ${devices.tabletPortrait} {
@@ -34,8 +35,9 @@ export const SocialItem = styled.a`
     height: 50%;
   }
 
-  ${(props) => props.changeBg
-    && css`
+  ${props =>
+    props.changeBg &&
+    css`
       background: #c11374;
     `}
 `;

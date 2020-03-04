@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import BlockTitleIcon from '../../../components/BlockTitleIcon';
 import { Project } from '../../../components/LayoutIcons';
-import Block from './Item';
+import Item from './Item';
 import { WorksContainer } from './styles';
 
 const Works = () => {
@@ -49,7 +49,7 @@ const Works = () => {
       />
 
       {worksLis.map((work, index) => (
-        <Block
+        <Item
           key={index}
           name={work.name}
           enterprise={work.enterprise}

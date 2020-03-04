@@ -33,12 +33,12 @@ export const SlideContainer = styled.div`
     color: #fff !important;
 
     @media ${devices.tabletLandscape} {
-      width: 11.1rem;
+      width: 11.2rem;
       height: 50%;
     }
 
     @media ${devices.desktop} {
-      width: 15.7rem;
+      width: 15.4rem;
     }
   }
 
@@ -48,7 +48,7 @@ export const SlideContainer = styled.div`
 
     @media ${devices.tabletLandscape} {
       left: unset;
-      right: -1px;
+      right: 0px;
     }
   }
 
@@ -57,7 +57,7 @@ export const SlideContainer = styled.div`
     background: #3da93a;
 
     @media ${devices.tabletLandscape} {
-      right: -1px;
+      right: 0px;
       left: unset;
       top: unset;
       bottom: 0;

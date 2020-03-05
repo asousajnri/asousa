@@ -5,7 +5,7 @@ const useIsMobile = () => {
 
   useLayoutEffect(() => {
     function checkScreenSize() {
-      if (window.innerWidth < 1265) {
+      if (window.innerWidth < 900) {
         setIsMobile(true);
       } else {
         setIsMobile(false);

@@ -31,6 +31,7 @@ export const Container = styled.li`
     padding: 3rem 2rem;
     display: flex;
     align-items: center;
+    width: 100%;
   }
 `;
 

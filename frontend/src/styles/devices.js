@@ -3,7 +3,7 @@ export const sizes = {
   tabletPortrait: '600px',
   tabletLandscape: '900px',
   tabletLandscape1024: '900px',
-  desktop: '1280px',
+  desktop: '1265px',
   desktopBig: '1400px',
 };
 

@@ -12,6 +12,7 @@ import Twitter from './Icons/Twitter';
 import User from './Icons/User';
 import UserStrong from './Icons/UserStrong';
 import Work from './Icons/Work';
+import Posts from './Icons/Posts';
 
 export {
   Facebook,
@@ -28,4 +29,5 @@ export {
   UserStrong,
   Menu,
   Pages,
+  Posts,
 };

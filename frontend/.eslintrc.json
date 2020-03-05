@@ -35,6 +35,7 @@
       }
     ],
     "import/prefer-default-export": "off",
-    "eslint no-confusing-arrow": ["error", { "allowParens": true }]
+    "eslint no-confusing-arrow": ["error", { "allowParens": true }],
+    "allowKeywords": false
   }
 }

@@ -1,17 +1,20 @@
 import React from 'react';
 
-import * as LayoutIcons from '../../../../../../components/LayoutIcons';
 import { Container, WrapperIcon } from './styles';
 
-const Item = ({ nameLink, pathLink }) => (
-  <Container>
-    <a href="/">
-      <WrapperIcon>
-        <LayoutIcons.Pages fill="#000" />
-      </WrapperIcon>
-      {nameLink}
-    </a>
-  </Container>
-);
+import { Link } from 'react-router-dom';
+
+const Item = ({ name, layoutIcon: LayoutIcons }) => {
+  return (
+    <Container>
+      <Link to="/">
+        <WrapperIcon>
+          <LayoutIcons fill="#000" />
+        </WrapperIcon>
+        {name}
+      </Link>
+    </Container>
+  );
+};
 
 export default Item;

@@ -4,11 +4,21 @@ import HeaderMobile from './Mobile/HeaderMobile';
 import MenuMobile from './Mobile/MenuMobile';
 import { DashBoardContainer } from './styles';
 
-const Dashboard = () => (
-  <DashBoardContainer>
-    <HeaderMobile />
-    <MenuMobile />
-  </DashBoardContainer>
-);
+import useIsMobile from '../../Hooks/useIsMobile';
+
+const Dashboard = () => {
+  const isMobile = useIsMobile();
+
+  return (
+    <DashBoardContainer>
+      {isMobile && (
+        <>
+          <HeaderMobile />
+          <MenuMobile />
+        </>
+      )}
+    </DashBoardContainer>
+  );
+};
 
 export default Dashboard;

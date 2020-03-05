@@ -6,15 +6,13 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
   background: #fff;
-`;
+  position: fixed;
+  top: 100vh;
+  transition: all 0.5s ease-in-out;
 
-export const Title = styled.h2`
-  display: flex;
-  align-items: center;
-  font-size: 3.5rem;
-  padding: 3rem 2rem 1rem;
-  font-weight: 900;
-  color: ${props => props.theme.colors.text};
+  &.is-active {
+    top: 80px;
+  }
 `;
 
 export const WrapperIcons = styled.i`
@@ -22,4 +20,17 @@ export const WrapperIcons = styled.i`
   height: 3rem;
   display: block;
   margin-right: 1rem;
+
+  &.MenuClose {
+    width: 2rem;
+    height: 2rem;
+  }
+`;
+
+export const MenuCloseAction = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+  background: #f5f5f5;
 `;

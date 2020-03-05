@@ -13,6 +13,9 @@ import User from './Icons/User';
 import UserStrong from './Icons/UserStrong';
 import Work from './Icons/Work';
 import Posts from './Icons/Posts';
+import DoubleChevronDown from './Icons/DoubleChevronDown';
+import DoubleChevronLeft from './Icons/DoubleChevronLeft';
+import DoubleChevronRight from './Icons/DoubleChevronRight';
 
 export {
   Facebook,
@@ -30,4 +33,7 @@ export {
   Menu,
   Pages,
   Posts,
+  DoubleChevronDown,
+  DoubleChevronLeft,
+  DoubleChevronRight,
 };

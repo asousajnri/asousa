@@ -2,16 +2,15 @@ import React from 'react';
 
 import * as LayoutIcons from '../../../../components/LayoutIcons';
 import LinkItems from './LinkItems';
-import { Container, Title, WrapperIcons } from './styles';
+import { Container, WrapperIcons, MenuCloseAction } from './styles';
 
 const MenuMobile = () => (
   <Container>
-    <Title>
-      <WrapperIcons>
-        <LayoutIcons.Menu fill="#000" />
+    <MenuCloseAction>
+      <WrapperIcons className="MenuClose">
+        <LayoutIcons.DoubleChevronDown fill="#000" />
       </WrapperIcons>
-      Menu
-    </Title>
+    </MenuCloseAction>
     <LinkItems />
   </Container>
 );

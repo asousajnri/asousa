@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { colors } from '../../../styles/Theme/pinkAndGreen';
 import * as LayoutIcons from '../../LayoutIcons';
 import { SocialContainer, SocialItem, IconWrapper } from './styles';
 

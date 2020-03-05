@@ -1,4 +1,3 @@
-import { shade } from 'polished';
 import styled from 'styled-components';
 
 export const Container = styled.li`
@@ -40,4 +39,10 @@ export const WrapperIcon = styled.i`
   height: 3rem;
   display: block;
   margin-right: 1rem;
+
+  &.align-to-right {
+    margin-left: auto;
+    width: 2rem;
+    height: 2rem;
+  }
 `;

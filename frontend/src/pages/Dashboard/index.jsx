@@ -5,6 +5,7 @@ import MenuMobile from './Mobile/MenuMobile';
 import { DashBoardContainer } from './styles';
 
 import useIsMobile from '../../Hooks/useIsMobile';
+import UserProfileAndSettings from './Mobile/UserProfileAndSettings';
 
 const Dashboard = () => {
   const isMobile = useIsMobile();
@@ -15,6 +16,7 @@ const Dashboard = () => {
         <>
           <HeaderMobile />
           <MenuMobile />
+          <UserProfileAndSettings />
         </>
       )}
     </DashBoardContainer>

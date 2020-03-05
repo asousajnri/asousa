@@ -2,20 +2,15 @@ import React from 'react';
 
 import { uniqueId } from 'lodash';
 
-import * as LayoutIcons from '../../../../../components/LayoutIcons';
+import * as LayoutIcons from '../../../../components/LayoutIcons';
 
 import LinkItem from './Item';
 import { Container } from './styles';
 
-const LinkItems = () => {
-  const linksData = [
-    { name: 'Páginas', icon: 'Pages' },
-    { name: 'Posts', icon: 'Posts' },
-  ];
-
+const MenuItems = ({ data }) => {
   return (
     <Container>
-      {linksData.map(link => (
+      {data.map(link => (
         <LinkItem
           key={uniqueId()}
           name={link.name}
@@ -26,4 +21,4 @@ const LinkItems = () => {
   );
 };
 
-export default LinkItems;
+export default MenuItems;

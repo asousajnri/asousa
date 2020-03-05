@@ -1,18 +1,23 @@
 import React from 'react';
 
-import * as LayoutIcons from '../../../../components/LayoutIcons';
-import LinkItems from './LinkItems';
-import { Container, WrapperIcons, MenuCloseAction } from './styles';
+import MenuItems from '../MenuItems';
+import CloseMenuAction from '../CloseMenuAction';
+// import { Container } from './styles';
 
-const MenuMobile = () => (
-  <Container>
-    <MenuCloseAction>
-      <WrapperIcons className="MenuClose">
-        <LayoutIcons.DoubleChevronDown fill="#000" />
-      </WrapperIcons>
-    </MenuCloseAction>
-    <LinkItems />
-  </Container>
-);
+import WrapperMenus from '../WrapperMenus';
+
+const MenuMobile = () => {
+  const linksData = [
+    { name: 'Páginas', icon: 'Pages' },
+    { name: 'Posts', icon: 'Posts' },
+  ];
+
+  return (
+    <WrapperMenus>
+      <CloseMenuAction />
+      <MenuItems data={linksData} />
+    </WrapperMenus>
+  );
+};
 
 export default MenuMobile;

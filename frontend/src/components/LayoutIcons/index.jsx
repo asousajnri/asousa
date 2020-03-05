@@ -16,6 +16,7 @@ import Posts from './Icons/Posts';
 import DoubleChevronDown from './Icons/DoubleChevronDown';
 import DoubleChevronLeft from './Icons/DoubleChevronLeft';
 import DoubleChevronRight from './Icons/DoubleChevronRight';
+import Gear from './Icons/Gear';
 
 export {
   Facebook,
@@ -36,4 +37,5 @@ export {
   DoubleChevronDown,
   DoubleChevronLeft,
   DoubleChevronRight,
+  Gear,
 };

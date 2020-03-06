@@ -21,12 +21,12 @@ export const UserNotification = styled.span`
   padding: 0.3rem;
   font-weight: bold;
   font-size: 1rem;
-  background: #fff;
+  background: ${props => props.theme.colors.primary};
   display: flex;
   align-items: center;
   border-radius: 50%;
   justify-content: center;
-  color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colorsDashboard.primary};
   top: -6px;
   right: -6px;
 `;

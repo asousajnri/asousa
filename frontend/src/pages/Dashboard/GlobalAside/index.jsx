@@ -1,17 +1,23 @@
 import React from 'react';
 
-// import { Dashboard } from '../../../components/LayoutIcons';
+import pathPhoto from '../../../assets/images/photo.jpg';
 import Menu from './Menu';
-import { Container } from './styles';
+import { Container, UserSettings, Avatar, PopupNotification } from './styles';
 
 const GlobalAside = () => {
   const dataMenu = [
-    { name: 'Páginas', icon: 'DashboardPages' },
+    { name: 'Páginas', icon: 'Pages' },
     { name: 'Posts', icon: 'Posts' },
   ];
 
   return (
     <Container>
+      <UserSettings>
+        <Avatar>
+          <img src={pathPhoto} alt="" />
+          <PopupNotification>5</PopupNotification>
+        </Avatar>
+      </UserSettings>
       <Menu dataMenu={dataMenu} />
     </Container>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import * as LayoutIcons from '../../../../components/LayoutIcons';
+import { colorsDashboard } from '../../../../styles/Theme/mainTheme';
 import MenuMobileAction from './MenuMobileAction';
 import {
   HeaderMobileContainer,
@@ -14,7 +15,7 @@ const HeaderMobile = () => (
   <HeaderMobileContainer>
     <TitlePage>
       <WrapperIcon>
-        <LayoutIcons.Dashboard fill="#fff" />
+        <LayoutIcons.Dashboard fill={colorsDashboard.icon} />
       </WrapperIcon>
       Dashboard
     </TitlePage>

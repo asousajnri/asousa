@@ -13,6 +13,7 @@ import Mortarboard from './Icons/Mortarboard';
 import Pages from './Icons/Pages';
 import Posts from './Icons/Posts';
 import Project from './Icons/Project';
+import RebelAlliance from './Icons/RebelAlliance';
 import Skills from './Icons/Skills';
 import Twitter from './Icons/Twitter';
 import User from './Icons/User';
@@ -21,6 +22,7 @@ import Work from './Icons/Work';
 
 export {
   Facebook,
+  RebelAlliance,
   DashboardPages,
   Twitter,
   Instagram,

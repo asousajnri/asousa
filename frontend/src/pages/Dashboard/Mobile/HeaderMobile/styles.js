@@ -6,8 +6,8 @@ export const HeaderMobileContainer = styled.header`
   justify-content: space-between;
   height: 8rem;
   padding: 0 2rem;
-  background: ${props => props.theme.colors.primary};
-  color: ${props => props.theme.colors.textInverter};
+  background: ${props => props.theme.colorsDashboard.primary};
+  color: ${props => props.theme.colorsDashboard.text};
   width: 100%;
 `;
 

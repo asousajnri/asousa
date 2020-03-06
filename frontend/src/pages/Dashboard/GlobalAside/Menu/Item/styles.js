@@ -1,56 +1,57 @@
 import styled from 'styled-components';
 
 export const Container = styled.li`
+  &:last-child {
+    a {
+      border-bottom: transparent;
+    }
+  }
+
   a {
     display: flex;
-    padding: 1.5rem;
-    color: #fff;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3rem;
+    color: ${props => props.theme.colorsDashboard.secundary};
     text-decoration: none;
     position: relative;
+    border-bottom: 0.5px solid #f7f5f5;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.5s ease-in-out;
+    position: relative;
 
-    h2 {
-      font-size: 2.5rem;
-      font-weight: 400;
+    &:hover {
+      .bolinha {
+        opacity: 1;
+      }
     }
+  }
 
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
 
-      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+58,0.05+100 */
-      background: -moz-linear-gradient(
-        top,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0) 58%,
-        rgba(0, 0, 0, 0.05) 100%
-      ); /* FF3.6-15 */
-      background: -webkit-linear-gradient(
-        top,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0) 58%,
-        rgba(0, 0, 0, 0.05) 100%
-      ); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0) 0%,
-        rgba(0, 0, 0, 0) 58%,
-        rgba(0, 0, 0, 0.05) 100%
-      ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#0d000000',GradientType=0 ); /* IE6-9 */
-    }
+  .bolinha {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: ${props => props.theme.colors.secundary};
+    position: absolute;
+    right: -1rem;
+    top: 50%;
+    margin-top: -1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
   }
 `;
 
 export const WrapperIcon = styled.i`
   display: block;
-  width: 2.5rem;
-  height: 2.5rem;
-  margin-right: 1rem;
+  width: 3rem;
+  height: 3rem;
   position: relative;
-  z-index: 2;
+  margin-bottom: 1rem;
 `;

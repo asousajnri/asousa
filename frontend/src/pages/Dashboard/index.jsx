@@ -6,7 +6,7 @@ import GlobalAside from './GlobalAside';
 import HeaderMobile from './Mobile/HeaderMobile';
 import MenuMobile from './Mobile/MenuMobile';
 import UserProfileAndSettings from './Mobile/UserProfileAndSettings';
-import { DashBoardContainer } from './styles';
+import { DashBoardContainer, MainContent } from './styles';
 
 const Dashboard = () => {
   const isMobile = useIsMobile();
@@ -24,6 +24,8 @@ const Dashboard = () => {
         )}
 
         {!isMobile && <GlobalAside />}
+
+        <MainContent />
       </DashBoardContainer>
     </>
   );

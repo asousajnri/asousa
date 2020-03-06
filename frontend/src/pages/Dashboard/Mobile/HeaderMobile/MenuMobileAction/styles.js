@@ -21,8 +21,8 @@ export const Line = styled.span`
   width: 100%;
   display: block;
   height: 0.4rem;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  background: ${props => props.theme.colorsDashboard.secundary};
+  /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3); */
   transition: all 0.3s ease-in-out;
   max-width: 3.2rem;
   border-radius: 0.1rem;

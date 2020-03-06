@@ -5,18 +5,23 @@ import Button from '../../components/Button';
 import Form from '../../components/Form';
 import { LoginContainer, GoBack } from './styles';
 
-const Login = () => (
-  <LoginContainer>
-    <Form.Wrapper>
-      <Form.Input placeholder="User" />
-      <Form.Input placeholder="Password" />
-      <Button type="submit">Acessar</Button>
-    </Form.Wrapper>
+import HelmetTitleAndFavicon from '../../components/HelmetTitleAndFavicon';
 
-    <GoBack>
-      <Link to="/">Voltar</Link>
-    </GoBack>
-  </LoginContainer>
+const Login = () => (
+  <>
+    <HelmetTitleAndFavicon pageTitle="Login" />
+    <LoginContainer>
+      <Form.Wrapper>
+        <Form.Input placeholder="User" />
+        <Form.Input placeholder="Password" />
+        <Button type="submit">Acessar</Button>
+      </Form.Wrapper>
+
+      <GoBack>
+        <Link to="/">Voltar</Link>
+      </GoBack>
+    </LoginContainer>
+  </>
 );
 
 export default Login;

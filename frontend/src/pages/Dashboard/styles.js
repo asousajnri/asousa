@@ -21,4 +21,7 @@ export const DashBoardContainer = styled.div`
 export const MainContent = styled.main`
   display: flex;
   flex-direction: column;
+  padding: 3rem 2rem;
+  width: 100%;
+  height: 100%;
 `;

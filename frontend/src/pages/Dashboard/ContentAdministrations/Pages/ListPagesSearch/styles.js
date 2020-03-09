@@ -7,10 +7,10 @@ export const Container = styled.div`
   a {
     color: #000;
     text-decoration: none;
-    border-bottom: 1px dashed #ccc;
+    border-bottom: 1px dashed #000;
 
     &:hover {
-      background: #e8e8e8;
+      background: #fff;
     }
 
     &:last-child {

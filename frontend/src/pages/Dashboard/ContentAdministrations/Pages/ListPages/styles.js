@@ -15,6 +15,10 @@ export const ToolBar = styled.ul`
     display: flex;
     margin-right: 2rem;
 
+    &:hover {
+      border-bottom: 1px solid #000;
+    }
+
     &:last-child {
       margin-right: 0;
     }

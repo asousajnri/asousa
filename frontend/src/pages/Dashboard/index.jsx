@@ -28,7 +28,7 @@ const Dashboard = () => {
         {!isMobile && <GlobalAside />}
 
         <MainContent>
-          <Route path="/dashboard/paginas">
+          <Route exact path="/dashboard/paginas">
             <ContentAdminPages.ListPages />
           </Route>
         </MainContent>

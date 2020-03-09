@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import * as LayoutIcons from '../../../../../components/LayoutIcons';
 import Title from '../../Title';
+import ListPagesSearch from '../ListPagesSearch';
 import {
   Container,
   ToolBar,
@@ -42,6 +43,8 @@ const ListPages = () => (
         <LayoutIcons.Search fill="#000" />
       </ButtonSearch>
     </SearchPages>
+
+    <ListPagesSearch />
   </Container>
 );
 

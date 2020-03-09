@@ -29,7 +29,7 @@ function App() {
             <Route exact path="/admin">
               {loggedIn ? <Redirect to="/dashboard" /> : <Login />}
             </Route>
-            <Route exact path="/dashboard">
+            <Route path="/dashboard">
               <Dashboard />
             </Route>
           </ThemeProvider>

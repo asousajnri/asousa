@@ -10,9 +10,9 @@ export const Container = styled.li`
   a {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 3rem;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 2rem 3rem;
     color: ${props => props.theme.colorsDashboard.secundary};
     text-decoration: none;
     position: relative;
@@ -50,8 +50,8 @@ export const Container = styled.li`
 
 export const WrapperIcon = styled.i`
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   position: relative;
-  margin-bottom: 1rem;
+  margin-right: 1rem;
 `;

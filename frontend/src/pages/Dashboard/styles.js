@@ -13,7 +13,8 @@ export const DashBoardContainer = styled.div`
   @media ${devices.tabletLandscape} {
     position: relative;
     margin: auto;
-    border-radius: 3rem;
+    /* border-radius: 3rem; */
+    padding: 0 2rem;
     flex-direction: row;
   }
 `;
@@ -24,4 +25,8 @@ export const MainContent = styled.main`
   padding: 3rem 2rem;
   width: 100%;
   height: 100%;
+
+  @media ${devices.tabletLandscape} {
+    padding: 3rem 2rem 3rem 5rem;
+  }
 `;

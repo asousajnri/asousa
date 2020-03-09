@@ -5,5 +5,5 @@ export const Container = styled.ul`
   flex-direction: column;
   background: ${props => props.theme.colorsDashboard.primary};
   overflow: hidden;
-  border-radius: 2rem;
+  border-radius: 1rem;
 `;

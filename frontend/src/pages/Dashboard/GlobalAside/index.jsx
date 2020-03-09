@@ -6,8 +6,8 @@ import { Container, UserSettings, Avatar, PopupNotification } from './styles';
 
 const GlobalAside = () => {
   const dataMenu = [
-    { name: 'Páginas', icon: 'Pages' },
-    { name: 'Posts', icon: 'Posts' },
+    { name: 'Páginas', icon: 'Pages', url: 'paginas' },
+    { name: 'Posts', icon: 'Posts', url: 'posts' },
   ];
 
   return (

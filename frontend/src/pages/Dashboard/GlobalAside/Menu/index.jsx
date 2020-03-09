@@ -13,6 +13,7 @@ const Menu = ({ dataMenu }) => (
         key={uniqueId()}
         name={item.name}
         iconLayout={LayoutIcons[item.icon]}
+        url={item.url}
       />
     ))}
   </Container>

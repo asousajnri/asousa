@@ -1,7 +1,9 @@
 import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import HelmetTitleAndFavicon from '../../components/HelmetTitleAndFavicon';
 import useIsMobile from '../../Hooks/useIsMobile';
+import ContentAdminPages from './ContentAdministrations/Pages';
 import GlobalAside from './GlobalAside';
 import HeaderMobile from './Mobile/HeaderMobile';
 import MenuMobile from './Mobile/MenuMobile';
@@ -25,7 +27,11 @@ const Dashboard = () => {
 
         {!isMobile && <GlobalAside />}
 
-        <MainContent />
+        <MainContent>
+          <Route path="/dashboard/paginas">
+            <ContentAdminPages.ListPages />
+          </Route>
+        </MainContent>
       </DashBoardContainer>
     </>
   );

@@ -28,7 +28,7 @@ export default createGlobalStyle`
 
     body {
         font-family: Circular Std;
-        background: #f5f5fc;
+        background: #f3f3f3;
         font-size: 1.6rem;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;

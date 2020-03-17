@@ -1,5 +1,5 @@
 module.exports = {
-  name: 'mainTheme',
+  name: 'Pink And Green',
 
   colors: {
     primary: '#ea178c',
@@ -8,13 +8,5 @@ module.exports = {
     text: '#000000',
     textInverter: '#ffffff',
     textBlockTitleIcon: '#FFFFFF',
-  },
-
-  colorsDashboard: {
-    primary: '#fff',
-    secundary: '#000',
-
-    text: '#000',
-    icon: '#000',
   },
 };

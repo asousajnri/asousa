@@ -71,10 +71,6 @@ export const BlockTitleIcon = styled.div`
     @media ${devices.tabletPortrait} {
       font-size: 5rem;
     }
-
-    @media ${devices.desktop} {
-      margin-bottom: 1.5rem;
-    }
   }
 
   span {

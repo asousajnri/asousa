@@ -1,3 +1,3 @@
 import pinkGreen from './pinkgreen';
 
-export { pinkGreen };
+export default { pinkGreen };

@@ -2,7 +2,7 @@ export const sizes = {
   mobile: '360px',
   tabletPortrait: '600px',
   tabletLandscape: '900px',
-  tabletLandscape1024: '900px',
+  tabletLandscape1024: '1024px',
   desktop: '1265px',
   desktopBig: '1400px',
 };

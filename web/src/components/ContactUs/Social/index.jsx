@@ -10,6 +10,7 @@ const Social = ({ social }) => (
         key={item._id}
         href={item.social_url}
         changeBg={index === 0 || index === 3 ? true : false}
+        target="_blank"
       >
         <IconWrapper>
           {item.social === 'Facebook' && <LayoutIcons.Facebook fill="#fff" />}

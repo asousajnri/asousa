@@ -10,6 +10,8 @@ const Slide = ({ skills }) => {
   const params = {
     slidesPerView: 1,
     speed: 1200,
+    observer: true,
+    observeParents: true,
     autoplay: {
       delay: 1200,
       waitForTransition: true,

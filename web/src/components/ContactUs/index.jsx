@@ -12,10 +12,6 @@ import { ContactUsContainer, ColumnOtherContacts, ColumnForm } from './styles';
 const ContactUs = () => {
   const [contacts, setContacts] = useState([]);
 
-  const [phones, setPhones] = useState([]);
-  const [emails, setEmails] = useState([]);
-  const [socialNetworks, setSocialNetworks] = useState([]);
-
   useEffect(() => {
     async function loadContacts() {
       const response = await api.get('get-contacts');

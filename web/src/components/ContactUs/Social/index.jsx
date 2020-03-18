@@ -7,6 +7,7 @@ const Social = ({ social }) => (
   <SocialContainer>
     {social.map((item, index) => (
       <SocialItem
+        key={item._id}
         href={item.social_url}
         changeBg={index === 0 || index === 3 ? true : false}
       >

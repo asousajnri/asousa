@@ -69,8 +69,8 @@ export const SlideContainer = styled.div`
   }
 `;
 
-export const SlideItem = styled.div.attrs({
-  className: 'swiper-slide',
+export const Item = styled.div.attrs({
+  // className: 'swiper-slide',
 })`
   background: #fff;
   display: flex;
@@ -80,6 +80,10 @@ export const SlideItem = styled.div.attrs({
   height: 32rem;
   position: relative;
   padding: 3rem;
+
+  @media ${devices.tabletLandscape} {
+    width: 50% !important;
+  }
 
   &::before {
     content: '';

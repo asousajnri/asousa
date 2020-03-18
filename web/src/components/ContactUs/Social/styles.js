@@ -36,7 +36,7 @@ export const SocialItem = styled.a`
   }
 
   ${props =>
-    props.changeBg &&
+    props.changeBg === true &&
     css`
       background: #c11374;
     `}

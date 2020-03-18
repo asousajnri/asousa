@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+import api from '../../../services/api';
 
 import BlockTitleIcon from '../../../components/BlockTitleIcon';
 import { Project } from '../../../components/LayoutIcons';
@@ -6,38 +8,17 @@ import Item from './Item';
 import { WorksContainer } from './styles';
 
 const Works = () => {
-  const [worksLis, setWorksList] = useState([
-    {
-      name: 'Printerama',
-      enterprise: 'Bleez Agência Digital',
-      pathImg: require('../../../assets/images/works/printerama.jpg'),
-    },
-    {
-      name: 'Bransk',
-      enterprise: 'Index Digital',
-      pathImg: require('../../../assets/images/works/bransk.jpg'),
-    },
-    {
-      name: 'Mesa Brasil',
-      enterprise: 'Index Digital',
-      pathImg: require('../../../assets/images/works/mesa.jpg'),
-    },
-    {
-      name: 'Colégio Nova Dimensão',
-      enterprise: 'Freelancer',
-      pathImg: require('../../../assets/images/works/colegioNd.jpg'),
-    },
-    {
-      name: 'Roteiros Incríveis',
-      enterprise: 'Index Digital',
-      pathImg: require('../../../assets/images/works/roteiros.jpg'),
-    },
-    {
-      name: 'Gaspar Viana',
-      enterprise: 'Index Digital',
-      pathImg: require('../../../assets/images/works/clinica.jpg'),
-    },
-  ]);
+  const [works, setWorks] = useState([]);
+
+  useEffect(() => {
+    async function loadWorks() {
+      const response = await api.get('get-works');
+
+      setWorks(response.data);
+    }
+
+    loadWorks();
+  }, []);
 
   return (
     <WorksContainer>
@@ -48,12 +29,12 @@ const Works = () => {
         IconTitle={Project}
       />
 
-      {worksLis.map((work, index) => (
+      {works.map(work => (
         <Item
-          key={index}
-          name={work.name}
-          enterprise={work.enterprise}
-          pathImg={work.pathImg}
+          key={work._id}
+          name={work.title}
+          enterprise={work.subtitle}
+          pathImg={work.image}
         />
       ))}
     </WorksContainer>

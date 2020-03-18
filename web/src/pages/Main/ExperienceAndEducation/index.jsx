@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import api from '../../../services/api';
 
 import BlockTitleIcon from '../../../components/BlockTitleIcon';
 import * as LayoutIcons from '../../../components/LayoutIcons';
@@ -6,31 +8,25 @@ import Items from './Items';
 import { Container, Side } from './styles';
 
 const ExperienceAndEducation = () => {
-  const dataExperience = [
-    {
-      title: 'Front End Developer',
-      subtitle: 'Index Digital - 2019/Atualmente',
-    },
-    {
-      title: 'Front End Developer',
-      subtitle: 'Bleez Agência Digital - 2016/2017',
-    },
-    {
-      title: 'Web Designer',
-      subtitle: 'LME (UFC) - 2013/2016',
-    },
-  ];
+  const [experiences, setExperiences] = useState([]);
+  const [educations, setEducations] = useState([]);
 
-  const dataEducation = [
-    {
-      title: 'Análise de Sistemas',
-      subtitle: 'FATENE - 2013/2017',
-    },
-    {
-      title: 'Curso de Informática',
-      subtitle: 'EEEP Prof. César Campelo - 2010/2013',
-    },
-  ];
+  useEffect(() => {
+    async function loadExperiences() {
+      const response = await api.get('get-experiences');
+
+      setExperiences(response.data);
+    }
+
+    async function loadEducations() {
+      const response = await api.get('get-educations');
+
+      setEducations(response.data);
+    }
+
+    loadExperiences();
+    loadEducations();
+  }, []);
 
   return (
     <Container>
@@ -41,7 +37,7 @@ const ExperienceAndEducation = () => {
           blockColor="secundary"
           IconTitle={LayoutIcons.Work}
         />
-        <Items data={dataExperience} />
+        <Items data={experiences} />
       </Side>
       <Side>
         <BlockTitleIcon
@@ -51,7 +47,7 @@ const ExperienceAndEducation = () => {
           bgGradiente
           IconTitle={LayoutIcons.Mortarboard}
         />
-        <Items data={dataEducation} />
+        <Items data={educations} />
       </Side>
     </Container>
   );

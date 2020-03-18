@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import api from '../../services/api';
 
 import BlockTitleIcon from '../BlockTitleIcon';
 import { ContactUs as IconContactUs } from '../LayoutIcons';
@@ -7,22 +9,42 @@ import OtherContacts from './OtherContacts';
 import Social from './Social';
 import { ContactUsContainer, ColumnOtherContacts, ColumnForm } from './styles';
 
-const ContactUs = () => (
-  <ContactUsContainer>
-    <ColumnForm>
-      <BlockTitleIcon
-        targetSection="contact-us"
-        titleText="Contact US"
-        IconTitle={IconContactUs}
-      />
-      <Form />
-    </ColumnForm>
+const ContactUs = () => {
+  const [contacts, setContacts] = useState([]);
 
-    <ColumnOtherContacts>
-      <OtherContacts />
-      <Social />
-    </ColumnOtherContacts>
-  </ContactUsContainer>
-);
+  const [phones, setPhones] = useState([]);
+  const [emails, setEmails] = useState([]);
+  const [socialNetworks, setSocialNetworks] = useState([]);
+
+  useEffect(() => {
+    async function loadContacts() {
+      const response = await api.get('get-contacts');
+
+      setContacts(response.data);
+    }
+
+    loadContacts();
+  }, []);
+
+  return (
+    <ContactUsContainer>
+      <ColumnForm>
+        <BlockTitleIcon
+          targetSection="contact-us"
+          titleText="Contact US"
+          IconTitle={IconContactUs}
+        />
+        <Form />
+      </ColumnForm>
+
+      {contacts.map(element => (
+        <ColumnOtherContacts key={element._id}>
+          <OtherContacts phones={element.phones} emails={element.emails} />
+          <Social social={element.socialNetworks} />
+        </ColumnOtherContacts>
+      ))}
+    </ContactUsContainer>
+  );
+};
 
 export default ContactUs;

@@ -5,7 +5,7 @@ import devices from '../../../../styles/devices';
 
 export const ItemContainer = styled.div`
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
   vertical-align: top;
   width: 100%;
   cursor: pointer;

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../../services/api';
 
-import pathPhoto from '../../../assets/images/photo.jpg';
 import {
   AboutMeContainer,
   Side,
@@ -30,7 +29,10 @@ const AboutMe = () => {
       {profile.map(item => (
         <AboutMeContainer key={item._id}>
           <Side>
-            <Photo src={item.image_url} alt="Antônio Sousa" />
+            <Photo
+              src={`http://localhost:3333/files/${item.image}`}
+              alt="Antônio Sousa"
+            />
             <LayerOverlay />
           </Side>
           <SideBio>

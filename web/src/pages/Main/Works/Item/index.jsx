@@ -7,7 +7,10 @@ const Item = ({ name, enterprise, pathImg }) => {
 
   return (
     <ItemContainer onClick={() => setHoverOverlay(!hoverOverlay)}>
-      <Image src={pathImg} alt="Image Placeholder" />
+      <Image
+        src={`http://localhost:3333/files/${pathImg}`}
+        alt="Image Placeholder"
+      />
 
       <OverlayHover className={`hovered-${hoverOverlay}`}>
         <h3>{name}</h3>

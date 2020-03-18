@@ -22,15 +22,15 @@ routes.get('/get-skills', SkillsController.index);
 routes.post('/create-skills', SkillsController.store);
 
 // Routes Works
-routes.get('/get-work', WorksController.index);
+routes.get('/get-works', WorksController.index);
 routes.post('/create-work', upload.single('image'), WorksController.store);
 
 // Routes Experience
-routes.get('/get-experience', ExperienceController.index);
+routes.get('/get-experiences', ExperienceController.index);
 routes.post('/create-experience', ExperienceController.store);
 
 // Routes Education
-routes.get('/get-education', EducationController.index);
+routes.get('/get-educations', EducationController.index);
 routes.post('/create-education', EducationController.store);
 
 // Routes Contacts

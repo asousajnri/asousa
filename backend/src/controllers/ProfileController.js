@@ -9,12 +9,16 @@ module.exports = {
 
   async store(req, res) {
     const { name, office, bio } = req.body;
+    const { filename: image } = req.file;
+
+    const [imageName] = image.split('.');
+    const fileName = `${imageName}.jpg`;
 
     const perfil = await Profile.create({
       name,
       office,
       bio,
-      image_url: req.file.path,
+      image: fileName,
     });
 
     return res.json(perfil);

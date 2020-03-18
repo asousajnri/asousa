@@ -9,11 +9,15 @@ module.exports = {
 
   async store(req, res) {
     const { title, subtitle } = req.body;
+    const { filename: image } = req.file;
+
+    const [imageName] = image.split('.');
+    const fileName = `${imageName}.jpg`;
 
     const work = await Works.create({
       title,
       subtitle,
-      image_url: req.file.path,
+      image: fileName,
     });
 
     return res.json(work);

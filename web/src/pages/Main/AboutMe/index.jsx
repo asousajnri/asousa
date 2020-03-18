@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import api from '../../../services/api';
 
 import pathPhoto from '../../../assets/images/photo.jpg';
 import {
@@ -10,27 +12,39 @@ import {
   LayerOverlay,
 } from './styles';
 
-const AboutMe = () => (
-  <AboutMeContainer>
-    <Side>
-      <Photo src={pathPhoto} alt="Antônio Sousa" />
-      <LayerOverlay />
-    </Side>
-    <SideBio>
-      <BlockTitleIcon>
-        <h1>Antônio Sousa</h1>
-        <span>Front End Developer</span>
-      </BlockTitleIcon>
+const AboutMe = () => {
+  const [profile, setProfile] = useState([]);
 
-      <p>
-        It is a long established fact that a reader will be distracted by the
-        readable content of a page when looking at its layout. The point of
-        using Lorem Ipsum is that it has a more-or-less normal distribution of
-        letters, as opposed to using 'Content here, content here', making it
-        look like readable English.
-      </p>
-    </SideBio>
-  </AboutMeContainer>
-);
+  useEffect(() => {
+    async function loadProfile() {
+      const response = await api.get('get-profile');
+
+      setProfile(response.data);
+    }
+
+    loadProfile();
+  }, []);
+
+  return (
+    <>
+      {profile.map(item => (
+        <AboutMeContainer key={item._id}>
+          <Side>
+            <Photo src={item.image_url} alt="Antônio Sousa" />
+            <LayerOverlay />
+          </Side>
+          <SideBio>
+            <BlockTitleIcon>
+              <h1>{item.name}</h1>
+              <span>{item.office}</span>
+            </BlockTitleIcon>
+
+            <p>{item.bio}</p>
+          </SideBio>
+        </AboutMeContainer>
+      ))}
+    </>
+  );
+};
 
 export default AboutMe;

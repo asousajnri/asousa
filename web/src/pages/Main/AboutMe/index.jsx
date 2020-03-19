@@ -6,7 +6,7 @@ import {
   AboutMeContainer,
   Side,
   SideBio,
-  BlockTitleIcon,
+  SectionTitle,
   Photo,
   LayerOverlay,
 } from './styles';
@@ -22,6 +22,10 @@ const AboutMe = () => {
     }
 
     loadProfile();
+
+    return () => {
+      console.log('AboutMe unmount');
+    };
   }, []);
 
   return (
@@ -36,10 +40,10 @@ const AboutMe = () => {
             <LayerOverlay />
           </Side>
           <SideBio>
-            <BlockTitleIcon>
+            <SectionTitle>
               <h1>{item.name}</h1>
               <span>{item.office}</span>
-            </BlockTitleIcon>
+            </SectionTitle>
 
             <p>{item.bio}</p>
           </SideBio>

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 import favicon from '../../assets/images/favicon.ico';
 
-const HelmetTitleAndFavicon = ({ pageTitle, children }) => (
+const HeadOverride = ({ pageTitle, children }) => (
   <Helmet>
     <link rel="icon" href={favicon} />
     <title>{pageTitle}</title>
@@ -13,4 +13,4 @@ const HelmetTitleAndFavicon = ({ pageTitle, children }) => (
   </Helmet>
 );
 
-export default HelmetTitleAndFavicon;
+export default HeadOverride;

@@ -42,7 +42,7 @@ export const SlideContainer = styled.div`
     }
 
     @media ${devices.desktop} {
-      width: 15.4rem;
+      width: 15.6rem;
     }
   }
 

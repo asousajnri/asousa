@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../../services/api';
 
-import BlockTitleIcon from '../../../components/BlockTitleIcon';
+import SectionTitle from '../../../components/SectionTitle';
 import { Skills as SkillIcon } from '../../../components/LayoutIcons';
 import Slide from './Slide';
 import { SkillContainer } from './styles';
@@ -18,11 +18,15 @@ const Skills = () => {
     }
 
     loadSkills();
+
+    return () => {
+      console.log('Skills unmount');
+    };
   }, []);
 
   return (
     <SkillContainer>
-      <BlockTitleIcon
+      <SectionTitle
         targetSection="skills"
         titleText="Skills"
         blockColor="secundary"

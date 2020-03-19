@@ -8,7 +8,7 @@ module.exports = {
   },
 
   async store(req, res) {
-    const { title, subtitle } = req.body;
+    const { title, subtitle, url } = req.body;
     const { filename: image } = req.file;
 
     const [imageName] = image.split('.');
@@ -18,6 +18,7 @@ module.exports = {
       title,
       subtitle,
       image: fileName,
+      url,
     });
 
     return res.json(work);

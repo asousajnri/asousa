@@ -6,11 +6,11 @@ import AboutMe from './AboutMe';
 import ExperienceAndEducation from './ExperienceAndEducation';
 import Skills from './Skills';
 import Works from './Works';
-import HelmetHead from '../../components/HelmetHead';
+import HeadOverride from '../../components/HeadOverride';
 
 const Main = () => (
   <>
-    <HelmetHead pageTitle="Antônio Sousa" />
+    <HeadOverride pageTitle="Antônio Sousa" />
     <MainContainer>
       <AboutMe />
       <Skills />

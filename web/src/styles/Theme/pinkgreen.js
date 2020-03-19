@@ -7,6 +7,6 @@ module.exports = {
 
     text: '#000000',
     textInverter: '#ffffff',
-    textBlockTitleIcon: '#FFFFFF',
+    textSectionTitle: '#FFFFFF',
   },
 };

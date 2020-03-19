@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../../services/api';
 
-import BlockTitleIcon from '../../../components/BlockTitleIcon';
+import SectionTitle from '../../../components/SectionTitle';
 import { Project } from '../../../components/LayoutIcons';
 import Item from './Item';
 import { WorksContainer } from './styles';
@@ -18,11 +18,15 @@ const Works = () => {
     }
 
     loadWorks();
+
+    return () => {
+      console.log('Works unmount');
+    };
   }, []);
 
   return (
     <WorksContainer>
-      <BlockTitleIcon
+      <SectionTitle
         targetSection="works"
         titleText="Works"
         blockColor="primary"
@@ -35,6 +39,7 @@ const Works = () => {
           name={work.title}
           enterprise={work.subtitle}
           pathImg={work.image}
+          projectUrl={work.url}
         />
       ))}
     </WorksContainer>

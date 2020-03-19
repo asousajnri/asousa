@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../services/api';
 
-import BlockTitleIcon from '../BlockTitleIcon';
+import SectionTitle from '../SectionTitle';
 import { ContactUs as IconContactUs } from '../LayoutIcons';
-import Form from './Form';
+// import Form from './Form';
 import OtherContacts from './OtherContacts';
 import Social from './Social';
 import { ContactUsContainer, ColumnOtherContacts, ColumnForm } from './styles';
+
+import Form from '../Form';
 
 const ContactUs = () => {
   const [contacts, setContacts] = useState([]);
@@ -25,12 +27,18 @@ const ContactUs = () => {
   return (
     <ContactUsContainer>
       <ColumnForm>
-        <BlockTitleIcon
+        <SectionTitle
           targetSection="contact-us"
           titleText="Contact US"
           IconTitle={IconContactUs}
         />
-        <Form />
+
+        <Form.Wrapper>
+          <Form.Input placeholder="Your name" />
+          <Form.Input placeholder="Your email" />
+          <Form.Textarea placeholder="Your message" />
+          <Form.Button>Enviar</Form.Button>
+        </Form.Wrapper>
       </ColumnForm>
 
       {contacts.map(element => (

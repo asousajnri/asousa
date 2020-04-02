@@ -4,12 +4,11 @@ import api from '../../services/api';
 
 import SectionTitle from '../SectionTitle';
 import { ContactUs as IconContactUs } from '../LayoutIcons';
-// import Form from './Form';
 import OtherContacts from './OtherContacts';
 import Social from './Social';
 import { ContactUsContainer, ColumnOtherContacts, ColumnForm } from './styles';
 
-import Form from '../Form';
+import Form from './Form';
 
 const ContactUs = () => {
   const [contacts, setContacts] = useState([]);

@@ -4,13 +4,13 @@ import ContactUs from '../../components/ContactUs';
 import MainContainer from '../../components/MainContainer';
 import AboutMe from './AboutMe';
 import ExperienceAndEducation from './ExperienceAndEducation';
-import Skills from './Skills';
 import Works from './Works';
-import HeadOverride from '../../components/HeadOverride';
+import Skills from './Skills';
+import Helmet from '../../components/Helmet';
 
 const Main = () => (
   <>
-    <HeadOverride pageTitle="Antônio Sousa" />
+    <Helmet pageTitle="Antônio Sousa" />
     <MainContainer>
       <AboutMe />
       <Skills />

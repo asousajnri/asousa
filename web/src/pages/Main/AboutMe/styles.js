@@ -78,6 +78,11 @@ export const SectionTitle = styled.div`
   }
 `;
 
+export const ContainerPlaceholder = styled.div`
+  width: 100%;
+  padding: 3rem 2rem;
+`;
+
 export const Photo = styled.img`
   height: 100%;
   width: 100%;

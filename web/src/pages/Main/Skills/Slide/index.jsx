@@ -4,9 +4,13 @@ import React from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
 
+import FadeIn from 'react-fade-in';
+
+import Placeholder from './Placeholder';
+
 import { SlideContainer, Item } from './styles';
 
-const Slide = ({ skills }) => {
+const Slide = ({ skills, loading }) => {
   const params = {
     slidesPerView: 1,
     speed: 1200,
@@ -32,13 +36,31 @@ const Slide = ({ skills }) => {
 
   return (
     <SlideContainer>
-      <Swiper {...params}>
-        {skills.map(skill => (
-          <Item key={skill._id}>
-            <span>{skill.name}</span>
-          </Item>
-        ))}
-      </Swiper>
+      {loading ? (
+        <Swiper {...params}>
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+          <Placeholder />
+        </Swiper>
+      ) : (
+        <Swiper {...params}>
+          {skills.map(skill => (
+            <Item key={skill._id}>
+              <FadeIn>
+                <span>{skill.name}</span>
+              </FadeIn>
+            </Item>
+          ))}
+        </Swiper>
+      )}
     </SlideContainer>
   );
 };

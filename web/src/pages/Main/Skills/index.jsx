@@ -9,19 +9,23 @@ import { SkillContainer } from './styles';
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function loadSkills() {
-      const response = await api.get('get-skills');
+    try {
+      async function loadSkills() {
+        const response = await api.get('get-skills');
 
-      setSkills(response.data);
+        if (response) {
+          setTimeout(() => setLoading(false), 3000);
+          setSkills(response.data);
+        }
+      }
+
+      loadSkills();
+    } catch (err) {
+      console.log(err);
     }
-
-    loadSkills();
-
-    return () => {
-      console.log('Skills unmount');
-    };
   }, []);
 
   return (
@@ -32,7 +36,7 @@ const Skills = () => {
         blockColor="secundary"
         IconTitle={SkillIcon}
       />
-      <Slide skills={skills} />
+      <Slide loading={loading} skills={skills} />
     </SkillContainer>
   );
 };

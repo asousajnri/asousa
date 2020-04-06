@@ -14,7 +14,7 @@ const Skills = () => {
   useEffect(() => {
     try {
       async function loadSkills() {
-        const response = await api.get('ge-skills');
+        const response = await api.get('get-skills');
 
         if (response) {
           setTimeout(() => setLoading(false), 3000);

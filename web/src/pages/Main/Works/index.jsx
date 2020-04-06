@@ -38,9 +38,7 @@ const Works = () => {
       />
 
       {loading ? (
-        <>
-          <Placeholder />
-        </>
+        <Placeholder />
       ) : (
         works.map(work => (
           <Item

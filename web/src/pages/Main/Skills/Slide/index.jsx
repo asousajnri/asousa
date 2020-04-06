@@ -42,9 +42,9 @@ const Slide = ({ skills, loading }) => {
         <Swiper {...params}>
           {skills.map(skill => (
             <Item key={skill._id}>
-              {/* <FadeIn> */}
-              <span>{skill.name}</span>
-              {/* </FadeIn> */}
+              <FadeIn>
+                <span>{skill.name}</span>
+              </FadeIn>
             </Item>
           ))}
         </Swiper>

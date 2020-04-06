@@ -7,21 +7,25 @@ import { Project } from '../../../components/LayoutIcons';
 import Item from './Item';
 import { WorksContainer } from './styles';
 
+import Placeholder from './Placeholder';
+
 const Works = () => {
   const [works, setWorks] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function loadWorks() {
-      const response = await api.get('get-works');
+    try {
+      async function loadWorks() {
+        const response = await api.get('get-works');
 
-      setWorks(response.data);
+        setWorks(response.data);
+      }
+
+      loadWorks();
+      setTimeout(() => setLoading(false), 3000);
+    } catch (err) {
+      console.log(err);
     }
-
-    loadWorks();
-
-    return () => {
-      console.log('Works unmount');
-    };
   }, []);
 
   return (
@@ -33,15 +37,21 @@ const Works = () => {
         IconTitle={Project}
       />
 
-      {works.map(work => (
-        <Item
-          key={work._id}
-          name={work.title}
-          enterprise={work.subtitle}
-          pathImg={work.image}
-          projectUrl={work.url}
-        />
-      ))}
+      {loading ? (
+        <>
+          <Placeholder />
+        </>
+      ) : (
+        works.map(work => (
+          <Item
+            key={work._id}
+            name={work.title}
+            enterprise={work.subtitle}
+            pathImg={work.image}
+            projectUrl={work.url}
+          />
+        ))
+      )}
     </WorksContainer>
   );
 };

@@ -5,7 +5,6 @@ import devices from '../../../../styles/devices';
 
 export const ItemContainer = styled.div`
   position: relative;
-  /* display: inline-block; */
   vertical-align: top;
   width: 100%;
   cursor: pointer;
@@ -25,7 +24,6 @@ export const OverlayHover = styled.div`
 
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
-  /* transition: transform .3s linear; */
 
   padding: 3rem;
   display: flex;

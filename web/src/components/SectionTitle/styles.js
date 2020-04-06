@@ -9,6 +9,7 @@ export const Container = styled.div`
   padding: 3rem 2rem;
   height: 20rem;
   width: 100%;
+  /* max-width: 64.2rem; */
   color: ${props => props.theme.colors.textSectionTitle};
   position: relative;
 
@@ -18,8 +19,6 @@ export const Container = styled.div`
 
   @media ${devices.desktop} {
     padding: 3rem 6rem;
-    width: 100%;
-    /* max-width: 64rem; */
   }
 
   background: ${props =>

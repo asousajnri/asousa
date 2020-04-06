@@ -7,7 +7,7 @@ import * as LayoutIcons from '../../../components/LayoutIcons';
 import Items from './Items';
 import { Container, Side } from './styles';
 
-const ExperienceAndEducation = () => {
+const Career = () => {
   const [experiences, setExperiences] = useState([]);
   const [educations, setEducations] = useState([]);
 
@@ -64,4 +64,4 @@ const ExperienceAndEducation = () => {
   );
 };
 
-export default ExperienceAndEducation;
+export default Career;

@@ -12,6 +12,11 @@ export const Container = styled.div`
 
   @media ${devices.tabletLandscape} {
     height: 32rem;
+    width: 45rem;
+  }
+
+  @media ${devices.desktop} {
+    width: 64.3rem;
   }
 
   span {

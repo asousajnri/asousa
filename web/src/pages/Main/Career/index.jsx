@@ -19,10 +19,6 @@ const Career = () => {
     }
 
     loadEducations();
-
-    return () => {
-      console.log('Experience And Education unmount');
-    };
   }, []);
 
   useEffect(() => {

@@ -41,8 +41,8 @@ const AboutMe = () => {
         <Placeholder />
       ) : (
         profile.map(item => (
-          <FadeIn>
-            <AboutMeContainer key={item._id}>
+          <FadeIn key={item._id}>
+            <AboutMeContainer>
               <Side>
                 <Photo
                   src={`http://localhost:3333/files/${item.image}`}

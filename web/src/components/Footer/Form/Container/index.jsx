@@ -1,9 +1,7 @@
 import React from 'react';
 
-import { Form } from './styles';
+import { FormContainer } from './styles';
 
-const Container = ({ children }) => (
-  <Form>{children}</Form>
-);
+const Container = ({ children }) => <FormContainer>{children}</FormContainer>;
 
 export default Container;

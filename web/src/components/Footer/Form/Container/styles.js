@@ -4,7 +4,7 @@ import { shade } from 'polished';
 
 import devices from '../../../../styles/devices';
 
-export const WrapperContainer = styled.form`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;

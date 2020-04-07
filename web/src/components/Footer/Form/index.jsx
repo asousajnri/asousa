@@ -1,6 +1,6 @@
 import Input from './Input';
 import Textarea from './Textarea';
-import Wrapper from './Wrapper';
+import Container from './Container';
 import Button from './Button';
 
-export default { Input, Textarea, Wrapper, Button };
+export default { Input, Textarea, Container, Button };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContactUs from '../../components/ContactUs';
+import Footer from '../../components/Footer';
 import MainContainer from '../../components/MainContainer';
 import AboutMe from './AboutMe';
 import Career from './Career';
@@ -16,7 +16,7 @@ const Main = () => (
       <Skills />
       <Works />
       <Career />
-      <ContactUs />
+      <Footer />
     </MainContainer>
   </>
 );

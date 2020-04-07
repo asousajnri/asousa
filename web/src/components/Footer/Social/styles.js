@@ -21,10 +21,10 @@ export const SocialItem = styled.a`
   height: 18rem;
   border: 0.3rem solid transparent;
 
-  transition: border 0.5s ease-in-out;
+  transition: background 0.3s ease-in-out;
 
   &:hover {
-    border-color: #fff;
+    background: #fff;
   }
 
   @media ${devices.tabletPortrait} {

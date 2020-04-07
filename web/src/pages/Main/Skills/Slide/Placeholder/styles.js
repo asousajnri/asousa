@@ -16,7 +16,7 @@ export const Container = styled.div`
   }
 
   @media ${devices.desktop} {
-    width: 65rem;
+    width: 64.4rem;
   }
 
   span {

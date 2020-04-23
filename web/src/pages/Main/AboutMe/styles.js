@@ -29,6 +29,10 @@ export const Side = styled.section`
   @media ${devices.tabletLandscape} {
     width: 50%;
   }
+
+  @media ${devices.tabletLandscape} {
+    height: 100vh;
+  }
 `;
 
 export const SideBio = styled(Side)`

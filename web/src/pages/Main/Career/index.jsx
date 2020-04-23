@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../../services/api';
 
-import SectionTitle from '../../../components/SectionTitle';
-import * as LayoutIcons from '../../../components/LayoutIcons';
-import Items from './Items';
-import { Container, Side } from './styles';
+import { Container, InfosContainer, Side, Placeholder } from './styles';
 
 const Career = () => {
   const [experiences, setExperiences] = useState([]);
   const [educations, setEducations] = useState([]);
+
+  const [loadingExperiences, setLoadingExperiences] = useState(true);
+  const [loadingEducations, setLoadingEducations] = useState(true);
 
   useEffect(() => {
     async function loadEducations() {
@@ -19,6 +19,7 @@ const Career = () => {
     }
 
     loadEducations();
+    setTimeout(() => setLoadingExperiences(false), 3000);
   }, []);
 
   useEffect(() => {
@@ -29,33 +30,47 @@ const Career = () => {
     }
 
     loadExperiences();
-
-    return () => {
-      console.log('Experience And Education unmount');
-    };
+    setTimeout(() => setLoadingEducations(false), 3000);
   }, []);
 
   return (
     <Container>
-      <Side>
-        <SectionTitle
-          targetSection="work-experience"
-          titleText="Work Experience"
-          blockColor="secundary"
-          IconTitle={LayoutIcons.Work}
-        />
-        <Items data={experiences} />
-      </Side>
-      <Side>
-        <SectionTitle
-          targetSection="education"
-          titleText="Education"
-          blockColor="secundary"
-          bgGradiente
-          IconTitle={LayoutIcons.Mortarboard}
-        />
-        <Items data={educations} />
-      </Side>
+      <h2>Experience and Education</h2>
+
+      <InfosContainer>
+        {loadingExperiences ? (
+          <Side as="div">
+            {experiences.map(item => (
+              <Placeholder key={item._id} />
+            ))}
+          </Side>
+        ) : (
+          <Side>
+            {experiences.map(item => (
+              <li key={item._id}>
+                <h3>{item.title}</h3>
+                <span>{item.subtitle}</span>
+              </li>
+            ))}
+          </Side>
+        )}
+        {loadingEducations ? (
+          <Side as="div">
+            {experiences.map(item => (
+              <Placeholder key={item._id} />
+            ))}
+          </Side>
+        ) : (
+          <Side>
+            {educations.map(item => (
+              <li key={item._id}>
+                <h3>{item.title}</h3>
+                <span>{item.subtitle}</span>
+              </li>
+            ))}
+          </Side>
+        )}
+      </InfosContainer>
     </Container>
   );
 };

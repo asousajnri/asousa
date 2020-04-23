@@ -14,7 +14,7 @@ const Social = ({ social }) => {
           onMouseLeave={() => setIsHover(null)}
           key={item._id}
           href={item.social_url}
-          changeBg={index === 0 || index === 3 ? true : false}
+          // changeBg={index === 0 || index === 3 ? true : false}
           target="_blank"
         >
           <IconWrapper>

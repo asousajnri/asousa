@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import api from '../../../services/api';
 
-import SectionTitle from '../../../components/SectionTitle';
-import { Skills as SkillIcon } from '../../../components/LayoutIcons';
-import Slide from './Slide';
-import { SkillContainer } from './styles';
+import { Container, SkillsList, Placeholder } from './styles';
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
@@ -23,21 +20,30 @@ const Skills = () => {
       }
 
       loadSkills();
+      setTimeout(() => setLoading(false), 3000);
     } catch (err) {
       console.log(err);
     }
   }, []);
 
   return (
-    <SkillContainer>
-      <SectionTitle
-        targetSection="skills"
-        titleText="Skills"
-        blockColor="secundary"
-        IconTitle={SkillIcon}
-      />
-      <Slide loading={loading} skills={skills} />
-    </SkillContainer>
+    <Container>
+      <h2>Skills</h2>
+
+      {loading ? (
+        <Placeholder>
+          {skills.map(item => (
+            <div />
+          ))}
+        </Placeholder>
+      ) : (
+        <SkillsList>
+          {skills.map(item => (
+            <li key={item._id}>{item.name}</li>
+          ))}
+        </SkillsList>
+      )}
+    </Container>
   );
 };
 

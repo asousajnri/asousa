@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import MainContainer from '../../components/MainContainer';
 import AboutMe from './AboutMe';
 import Career from './Career';
-import Works from './Works';
+import Cases from './Cases';
 import Skills from './Skills';
 import Helmet from '../../components/Helmet';
 
@@ -14,7 +14,7 @@ const Main = () => (
     <MainContainer>
       <AboutMe />
       <Skills />
-      <Works />
+      <Cases />
       <Career />
       <Footer />
     </MainContainer>

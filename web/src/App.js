@@ -5,11 +5,11 @@ import Routes from './routes';
 import { ThemeProvider } from 'styled-components';
 
 import GlobalStyle from './styles/global';
-import pinkgreen from './styles/theme/pinkgreen';
+import defaultTheme from './styles/theme/default';
 
 function App() {
   return (
-    <ThemeProvider theme={pinkgreen}>
+    <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <Router>
         <Routes />

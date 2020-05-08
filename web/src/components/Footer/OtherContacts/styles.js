@@ -16,7 +16,7 @@ export const Container = styled.ul`
     height: auto;
   }
 
-  @media ${devices.tabletPortrait} {
+  @media ${devices.tabletLandscape} {
     width: 50%;
   }
 `;

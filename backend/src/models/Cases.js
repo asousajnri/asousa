@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
-const WorksScheme = mongoose.Schema({
+const CasesScheme = mongoose.Schema({
   title: String,
   subtitle: String,
   image: String,
   url: String,
 });
 
-module.exports = mongoose.model('Works', WorksScheme);
+module.exports = mongoose.model('Cases', CasesScheme);

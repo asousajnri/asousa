@@ -1,10 +1,10 @@
-const Works = require('../models/Works');
+const Cases = require('../models/Cases');
 
 module.exports = {
   async index(req, res) {
-    const works = await Works.find();
+    const cases = await Cases.find();
 
-    return res.json(works);
+    return res.json(cases);
   },
 
   async store(req, res) {
@@ -14,13 +14,13 @@ module.exports = {
     const [imageName] = image.split('.');
     const fileName = `${imageName}.jpg`;
 
-    const work = await Works.create({
+    const cases = await Cases.create({
       title,
       subtitle,
       image: fileName,
       url,
     });
 
-    return res.json(work);
+    return res.json(cases);
   },
 };

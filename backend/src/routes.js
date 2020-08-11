@@ -8,33 +8,33 @@ const upload = multer(uploadConfig);
 
 const ProfileController = require('./controllers/ProfileController');
 const SkillsController = require('./controllers/SkillsController');
-const WorksController = require('./controllers/WorksController');
+const CasesController = require('./controllers/CasesController');
 const ExperienceController = require('./controllers/ExperienceController');
 const EducationController = require('./controllers/EducationController');
 const ContactsController = require('./controllers/ContactsController');
 
 // Routes Perfil
-routes.get('/get-profile', ProfileController.index);
-routes.post('/create-profile', upload.single('image'), ProfileController.store);
+routes.get('/profile', ProfileController.index);
+routes.post('/add-profile', upload.single('image'), ProfileController.store);
 
 // Routes Skills
-routes.get('/get-skills', SkillsController.index);
-routes.post('/create-skills', SkillsController.store);
+routes.get('/skills', SkillsController.index);
+routes.post('/add-skills', SkillsController.store);
 
 // Routes Works
-routes.get('/get-works', WorksController.index);
-routes.post('/create-work', upload.single('image'), WorksController.store);
+routes.get('/cases', CasesController.index);
+routes.post('/add-cases', upload.single('image'), CasesController.store);
 
 // Routes Experience
-routes.get('/get-experiences', ExperienceController.index);
-routes.post('/create-experience', ExperienceController.store);
+routes.get('/experiences', ExperienceController.index);
+routes.post('/add-experience', ExperienceController.store);
 
 // Routes Education
-routes.get('/get-educations', EducationController.index);
-routes.post('/create-education', EducationController.store);
+routes.get('/educations', EducationController.index);
+routes.post('/add-education', EducationController.store);
 
 // Routes Contacts
-routes.get('/get-contacts', ContactsController.index);
-routes.post('/create-contacts', ContactsController.store);
+routes.get('/contacts', ContactsController.index);
+routes.post('/add-contacts', ContactsController.store);
 
 module.exports = routes;

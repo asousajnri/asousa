@@ -1,9 +1,0 @@
-{
-  "name": "asousa",
-  "version": "1.0.0",
-  "description": "Portfólio pessoal",
-  "main": "index.js",
-  "repository": "https://github.com/asousajnri/asousa.git",
-  "author": "Antônio Sousa <a.sousa.jnri@gmail.com>",
-  "license": "MIT"
-}

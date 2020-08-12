@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 
-const GlobalStyled = createGlobalStyle`
+import fonts from "./fonts";
+
+export default createGlobalStyle`
+  ${fonts};
+
   :root {
     font-size: 60%;
 
@@ -33,8 +37,6 @@ const GlobalStyled = createGlobalStyle`
   input,
   button,
   textarea {
-    font: 500 1.6rem Open Sans;
+    font: 500 1.6rem Circular Std;
   }
 `;
-
-export default GlobalStyled;

@@ -1,9 +1,11 @@
 import React from "react";
 
+import { Profile } from "./components";
+
 const App = () => {
   return (
     <>
-      <h1>Hello word!</h1>
+      <Profile />
     </>
   );
 };

@@ -6,17 +6,20 @@ export default createGlobalStyle`
   ${fonts};
 
   :root {
-    font-size: 60%;
+    font-size: 62.5%;
 
     --background-color: #E9EBEE;
     --primary-color: #EA178C;
-    --secundary-color: #1CB517;
+    --secondary-color: #1CB517;
+
+    --background-profile-info: #FFFFFF;
+    --color-text: #000000;
   }
 
   * {
     margin: 0;
     padding: 0;
-    box-sizing: bordex-box;
+    box-sizing: border-box;
   }
 
   html, body, #root {
@@ -30,7 +33,7 @@ export default createGlobalStyle`
   #root {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   body,
@@ -38,5 +41,10 @@ export default createGlobalStyle`
   button,
   textarea {
     font: 500 1.6rem Circular Std;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
   }
 `;

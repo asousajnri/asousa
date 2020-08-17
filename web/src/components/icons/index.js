@@ -3,6 +3,7 @@ import Github from './github';
 import Instagram from './instagram';
 import Twitter from './twitter';
 import Linkedin from './linkedin';
+import Select from './select';
 
 export default {
   Facebook,
@@ -10,4 +11,5 @@ export default {
   Instagram,
   Twitter,
   Linkedin,
+  Select,
 };

@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const Github = ({ fill = "#000", width = "2rem" }) => (
+const Github = ({ fill = '#000', width = '2rem' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    className="Github"
+    className="IconComponent Github"
     viewBox="0 0 512 512"
     aria-labelledby="title"
     fill={fill}

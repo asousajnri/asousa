@@ -26,8 +26,9 @@ export default createGlobalStyle`
 
   #root {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
   }
 
   body,
@@ -44,5 +45,9 @@ export default createGlobalStyle`
 
   ul {
     list-style: none;
+  }
+
+  .IconComponent {
+    transition: fill .4s ease;
   }
 `;

@@ -38,7 +38,7 @@ export const StyledImageProfile = styled.img`
 export const StyledInfos = styled.div`
   background: ${props =>
     props.theme.background_profile_info};
-  padding: 2rem;
+  padding: 2rem 2rem 3rem;
 
   display: flex;
   flex-direction: column;

@@ -4,7 +4,7 @@ const Twitter = ({ fill = '#000', width = '2rem' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    className="Twitter"
+    className="IconComponent Twitter"
     viewBox="0 0 97.637 97.637"
     aria-labelledby="title"
     fill={fill}

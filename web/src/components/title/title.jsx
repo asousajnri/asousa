@@ -1,9 +1,13 @@
-import React from "react";
+import React from 'react';
 
-import { StyledBlockTitle } from "./title-styles";
+import { StyledBlockTitle } from './title-styles';
 
-const Title = () => {
-  return <StyledBlockTitle>Title</StyledBlockTitle>;
+const Title = ({ children, color }) => {
+  return (
+    <StyledBlockTitle color={color}>
+      {children}
+    </StyledBlockTitle>
+  );
 };
 
 export default Title;

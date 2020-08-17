@@ -1,10 +1,10 @@
-import React from "react";
+import React from 'react';
 
-const Facebook = ({ fill = "#000", width = "2rem" }) => (
+const Facebook = ({ fill = '#000', width = '2rem' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    className="Facebook"
+    className="IconComponent Facebook"
     viewBox="0 0 167.657 167.657"
     aria-labelledby="title"
     fill={fill}

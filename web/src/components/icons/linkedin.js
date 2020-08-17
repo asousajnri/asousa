@@ -4,7 +4,7 @@ const Linkedin = ({ fill = '#000', width = '2rem' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    className="Linkedin"
+    className="IconComponent Linkedin"
     viewBox="0 0 510 510"
     aria-labelledby="title"
     fill={fill}

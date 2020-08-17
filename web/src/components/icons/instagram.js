@@ -4,7 +4,7 @@ const Instagram = ({ fill = '#000', width = '2rem' }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
-    className="Instagram"
+    className="IconComponent Instagram"
     viewBox="0 0 24 24"
     aria-labelledby="title"
     fill={fill}

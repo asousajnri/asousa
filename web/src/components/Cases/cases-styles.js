@@ -1,5 +1,16 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const StyledCases = styled.section`
-  display: block;
+import devices from '../../assets/styles/devices';
+
+export const StyledCases = styled.ul`
+  display: grid;
+  width: 100%;
+
+  @media ${devices.tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${devices.desktop} {
+    grid-template-columns: repeat(3, 1fr);
+  }
 `;

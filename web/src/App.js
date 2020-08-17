@@ -1,13 +1,11 @@
-import React from "react";
+import React from 'react';
 
-import { Profile } from "./components";
+import { Profile } from './components';
 
-const App = () => {
-  return (
-    <>
-      <Profile />
-    </>
-  );
-};
+const App = () => (
+  <>
+    <Profile />
+  </>
+);
 
 export default App;

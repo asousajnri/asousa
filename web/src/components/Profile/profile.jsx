@@ -1,13 +1,15 @@
-import React from "react";
+import React from 'react';
+
+import SocialListing from './social-listing';
 
 import {
   StyledProfile,
   StyledImageProfile,
   StyledInfos,
   StyledOffice,
-} from "./styles";
+} from './profile-styles';
 
-import pathProfileImage from "../../assets/images/photo.jpg";
+import pathProfileImage from '../../assets/images/photo.jpg';
 
 const Profile = () => {
   return (
@@ -18,6 +20,8 @@ const Profile = () => {
           <h1>Antônio Sousa</h1>
           <h2>Front End Developer Jr.</h2>
         </StyledOffice>
+
+        <SocialListing />
       </StyledInfos>
     </StyledProfile>
   );

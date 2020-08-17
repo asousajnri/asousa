@@ -1,3 +1,4 @@
-export { default as BlockTitle } from "./BlockTitle";
-export { default as Cases } from "./Cases";
-export { default as Profile } from "./Profile";
+export { default as Title } from './title';
+export { default as Cases } from './cases';
+export { default as Profile } from './profile';
+export { default as Icons } from './icons';

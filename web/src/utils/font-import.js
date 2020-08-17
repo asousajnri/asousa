@@ -1,10 +1,9 @@
 const fontImport = (
   fontName,
   nameFolder,
-  weight = "normal",
-  style = "normal"
-) => {
-  return ` 
+  weight = 'normal',
+  style = 'normal'
+) => ` 
     @font-face {
     font-family: ${fontName};
     
@@ -20,6 +19,5 @@ const fontImport = (
     font-weight: ${weight};
     font-style: ${style};
   }`;
-};
 
 export default fontImport;

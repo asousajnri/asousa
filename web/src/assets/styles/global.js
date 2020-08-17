@@ -1,19 +1,12 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import fonts from "./fonts";
+import fonts from './fonts';
 
 export default createGlobalStyle`
   ${fonts};
 
   :root {
     font-size: 62.5%;
-
-    --background-color: #E9EBEE;
-    --primary-color: #EA178C;
-    --secondary-color: #1CB517;
-
-    --background-profile-info: #FFFFFF;
-    --color-text: #000000;
   }
 
   * {
@@ -27,7 +20,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: var(--background-color);
+    background-color: ${props =>
+      props.theme.background_body};
   }
 
   #root {
@@ -46,5 +40,9 @@ export default createGlobalStyle`
   img {
     display: block;
     max-width: 100%;
+  }
+
+  ul {
+    list-style: none;
   }
 `;

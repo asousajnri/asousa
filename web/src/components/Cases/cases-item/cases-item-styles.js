@@ -41,7 +41,7 @@ export const StyledOverlay = styled.div`
 
   h2 {
     font-weight: 900;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     font-size: 3rem;
     color: ${props => props.theme.text_white};
     margin-bottom: 3rem;
@@ -50,8 +50,13 @@ export const StyledOverlay = styled.div`
       font-size: 4rem;
     }
   }
+`;
+
+export const ClickMe = styled.div`
+  display: flex;
 
   span {
+    margin-left: 0.3rem;
     color: ${props => props.theme.text_white};
     display: flex;
     align-items: flex-end;

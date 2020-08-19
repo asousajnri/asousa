@@ -5,6 +5,7 @@ import MyIcons from '../../icons';
 import {
   StyledCasesItem,
   StyledOverlay,
+  ClickMe,
 } from './cases-item-styles';
 
 const CasesItem = ({ imageUrl, name, background }) => {
@@ -15,10 +16,10 @@ const CasesItem = ({ imageUrl, name, background }) => {
       <img src={imageUrl} alt={name} />
       <StyledOverlay background={background}>
         <h2>{name}</h2>
-        <span>
+        <ClickMe>
           <MyIcons.Select width="2.5rem" fill="#FFFFFF" />
-          Clique-me!
-        </span>
+          <span>Clique-me!</span>
+        </ClickMe>
       </StyledOverlay>
     </StyledCasesItem>
   );

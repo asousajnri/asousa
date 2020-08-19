@@ -4,6 +4,7 @@ import Instagram from './instagram';
 import Twitter from './twitter';
 import Linkedin from './linkedin';
 import Select from './select';
+import Star from './star';
 
 export default {
   Facebook,
@@ -12,4 +13,5 @@ export default {
   Twitter,
   Linkedin,
   Select,
+  Star,
 };

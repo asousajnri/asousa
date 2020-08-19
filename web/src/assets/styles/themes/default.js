@@ -4,6 +4,8 @@ export default {
   primary_color: '#EA178C',
   secondary_color: '#1CB517',
 
+  color_white: '#FFFFFF',
+
   background_body: '#E9EBEE',
 
   text_dark: '#000000',

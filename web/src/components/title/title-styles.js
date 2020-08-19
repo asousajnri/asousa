@@ -11,6 +11,7 @@ export const StyledBlockTitle = styled.h2`
   text-align: left;
   padding: 0 2rem;
   margin-bottom: 2rem;
+  width: 100%;
 
   @media ${devices.desktop} {
     margin-bottom: 4rem;

@@ -9,12 +9,17 @@ export const StyledCareerItem = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 35rem;
 
   @media ${devices.desktop} {
     height: 50rem;
   }
 
   @media ${devices.widescreen} {
+    height: 60rem;
+  }
+
+  @media ${devices.fullhd} {
     height: 70rem;
   }
 

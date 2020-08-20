@@ -13,4 +13,8 @@ export const StyledCases = styled.ul`
   @media ${devices.desktop} {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  @media ${devices.widescreen} {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `;

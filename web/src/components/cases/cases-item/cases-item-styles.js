@@ -48,8 +48,12 @@ export const StyledOverlay = styled.div`
     color: ${props => props.theme.text_white};
     margin-bottom: 3rem;
 
-    @media ${devices.desktop} {
+    @media ${devices.tablet} {
       font-size: 4rem;
+    }
+
+    @media ${devices.widescreen} {
+      font-size: 6rem;
     }
   }
 `;

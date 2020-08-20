@@ -7,7 +7,7 @@ export const StyledSection = styled.section`
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  padding-bottom: 4rem;
+  padding-bottom: 6rem;
 
   @media ${devices.desktop} {
     padding-bottom: 8rem;

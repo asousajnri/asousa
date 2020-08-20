@@ -47,7 +47,7 @@ export const StyledInfos = styled.div`
 
   @media ${devices.tablet} {
     justify-content: space-between;
-    padding: 3rem 4rem;
+    padding: 3rem 5rem;
   }
 
   @media ${devices.tablet_landscape} {

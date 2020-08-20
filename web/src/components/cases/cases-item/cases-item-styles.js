@@ -38,7 +38,7 @@ export const StyledOverlay = styled.div`
   }
 
   ${props =>
-    props.background == 'primary' &&
+    props.background === 'primary' &&
     css`
       background: ${props => props.theme.primary_color};
     `}

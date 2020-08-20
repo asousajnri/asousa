@@ -8,6 +8,10 @@ export const StyledCasesItem = styled.li`
   overflow: hidden;
   max-height: 42.7rem;
 
+  @media ${devices.widescreen} {
+    max-height: 62.7rem;
+  }
+
   img {
     width: 100%;
     height: 100%;
@@ -41,7 +45,6 @@ export const StyledOverlay = styled.div`
 
   h2 {
     font-weight: 900;
-    /* text-transform: uppercase; */
     font-size: 3rem;
     color: ${props => props.theme.text_white};
     margin-bottom: 3rem;

@@ -14,8 +14,16 @@ export const StyledCareerItem = styled.li`
     height: 50rem;
   }
 
+  @media ${devices.widescreen} {
+    height: 70rem;
+  }
+
   img {
     margin-bottom: 2rem;
+
+    @media ${devices.widescreen} {
+      width: 20rem;
+    }
   }
 
   h2,
@@ -30,6 +38,10 @@ export const StyledCareerItem = styled.li`
     @media ${devices.desktop} {
       font-size: 3rem;
     }
+
+    @media ${devices.widescreen} {
+      font-size: 4rem;
+    }
   }
 
   span {
@@ -38,6 +50,10 @@ export const StyledCareerItem = styled.li`
 
     @media ${devices.desktop} {
       font-size: 2.5rem;
+    }
+
+    @media ${devices.widescreen} {
+      font-size: 3.5rem;
     }
   }
 `;

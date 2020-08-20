@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { shade } from 'polished';
 
 import defaultTheme from '../../../../assets/styles/themes/default';
 

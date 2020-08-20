@@ -56,6 +56,10 @@ export const StyledImage = styled.div`
   background: ${props => props.theme.color_white};
   position: relative;
   z-index: 2;
+
+  @media ${devices.widescreen} {
+    padding: 8rem 3rem;
+  }
 `;
 
 export const StyledStart = styled.ul`

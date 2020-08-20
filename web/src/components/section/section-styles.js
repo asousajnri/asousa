@@ -9,6 +9,10 @@ export const StyledSection = styled.section`
   width: 100%;
   padding-bottom: 4rem;
 
+  @media ${devices.desktop} {
+    padding-bottom: 8rem;
+  }
+
   ${props =>
     props.type === 'centered' &&
     css`

@@ -20,6 +20,7 @@ const App = () => (
     <Section color="primary" title="Carreira">
       <Career />
     </Section>
+    <Section color="secondary" title="Mensagem"></Section>
   </>
 );
 

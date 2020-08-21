@@ -4,14 +4,14 @@ import Form from '../form';
 import Button from '../button';
 
 import {
-  StyledMessage,
+  StyledContact,
   StyledBanner,
   StyledHalf,
-} from './message-styles';
+} from './contact-styles';
 
-const Message = () => {
+const Contact = () => {
   return (
-    <StyledMessage>
+    <StyledContact>
       <StyledHalf>
         <Form.Container>
           <Form.Input label="Nome" type="text" />
@@ -28,8 +28,8 @@ const Message = () => {
           <img src="https://place-hold.it/600x600" alt="" />
         </StyledBanner>
       </StyledHalf>
-    </StyledMessage>
+    </StyledContact>
   );
 };
 
-export default Message;
+export default Contact;

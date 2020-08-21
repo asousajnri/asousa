@@ -6,7 +6,7 @@ import {
   Cases,
   Skills,
   Career,
-  Message,
+  Contact,
 } from './components';
 
 const App = () => (
@@ -21,8 +21,13 @@ const App = () => (
     <Section color="primary" title="Carreira">
       <Career />
     </Section>
-    <Section color="secondary" title="Mensagem" lastSection>
-      <Message />
+    <Section
+      as="footer"
+      color="secondary"
+      title="Contate-me"
+      lastSection
+    >
+      <Contact />
     </Section>
   </>
 );

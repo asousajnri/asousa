@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import devices from '../../assets/styles/devices';
 
-export const StyledMessage = styled.footer`
+export const StyledContact = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;

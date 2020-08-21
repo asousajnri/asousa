@@ -11,6 +11,12 @@ export const StyledSection = styled.section`
 
   @media ${devices.desktop} {
     padding-bottom: 8rem;
+
+    ${props =>
+      props.lastSection &&
+      css`
+        padding-bottom: 0;
+      `}
   }
 
   ${props =>
@@ -19,4 +25,10 @@ export const StyledSection = styled.section`
       padding: 0 2rem 4rem;
       max-width: 112.4rem;
     `};
+
+  ${props =>
+    props.lastSection &&
+    css`
+      padding-bottom: 0;
+    `}
 `;

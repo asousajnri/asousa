@@ -4,9 +4,21 @@ import Title from '../title';
 
 import { StyledSection } from './section-styles';
 
-const Section = ({ as, children, type, title, color }) => {
+const Section = ({
+  as,
+  children,
+  type,
+  title,
+  color,
+  lastSection,
+}) => {
   return (
-    <StyledSection as={as} type={type} color={color}>
+    <StyledSection
+      as={as}
+      type={type}
+      color={color}
+      lastSection={lastSection}
+    >
       <Title color={color}>{title}</Title>
       {children}
     </StyledSection>

@@ -5,3 +5,6 @@ export { default as Icons } from './icons';
 export { default as Section } from './section';
 export { default as Skills } from './skills';
 export { default as Career } from './career';
+export { default as Message } from './message';
+export { default as Form } from './form';
+export { default as Button } from './button';

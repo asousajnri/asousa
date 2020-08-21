@@ -6,6 +6,7 @@ import {
   Cases,
   Skills,
   Career,
+  Message,
 } from './components';
 
 const App = () => (
@@ -20,7 +21,9 @@ const App = () => (
     <Section color="primary" title="Carreira">
       <Career />
     </Section>
-    <Section color="secondary" title="Mensagem"></Section>
+    <Section color="secondary" title="Mensagem" lastSection>
+      <Message />
+    </Section>
   </>
 );
 

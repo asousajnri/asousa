@@ -1,6 +1,7 @@
 export default {
   name: 'default',
 
+  primary_color_other: '#EB56D5',
   primary_color: '#EA178C',
   secondary_color: '#1CB517',
 

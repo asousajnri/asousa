@@ -17,7 +17,7 @@ const Contact = () => {
           <Form.Input label="Nome" type="text" />
           <Form.Input label="Email" type="email" />
           <Form.Input label="Assunto" type="text" />
-          <Form.Textarea label="Assunto" />
+          <Form.Textarea label="Mensagem" />
           <Button typeColor="secondary" type="submit">
             Enviar
           </Button>

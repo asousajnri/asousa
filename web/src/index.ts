@@ -4,12 +4,12 @@ import { ThemeProvider } from 'styled-components';
 
 import defaultTheme from './assets/styles/themes/default';
 
-import GlobalStyled from './assets/styles/global';
+import StyledGlobal from './assets/styles/global';
 import App from './App';
 
 ReactDOM.render(
   <ThemeProvider theme={defaultTheme}>
-    <GlobalStyled />
+    <StyledGlobal />
     <App />
   </ThemeProvider>,
   document.getElementById('root')

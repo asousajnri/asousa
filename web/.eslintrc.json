@@ -3,20 +3,41 @@
     "browser": true,
     "es6": true
   },
+<<<<<<< HEAD
   "extends": ["plugin:react/recommended", "airbnb"],
+=======
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "eslint-config-airbnb",
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components"
+  ],
+>>>>>>> parent of f0654cf... Add base do Typescript
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+<<<<<<< HEAD
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "tsx": true,
       "ts": true
+=======
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "js": true
+>>>>>>> parent of f0654cf... Add base do Typescript
     },
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
+<<<<<<< HEAD
   "plugins": ["react", "@typescript-eslint"],
+=======
+  "plugins": ["react"],
+>>>>>>> parent of f0654cf... Add base do Typescript
   "rules": {}
 }

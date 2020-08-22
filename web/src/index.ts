@@ -7,10 +7,4 @@ import defaultTheme from './assets/styles/themes/default';
 import StyledGlobal from './assets/styles/global';
 import App from './App';
 
-ReactDOM.render(
-  <ThemeProvider theme={defaultTheme}>
-    <StyledGlobal />
-    <App />
-  </ThemeProvider>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById('root'));

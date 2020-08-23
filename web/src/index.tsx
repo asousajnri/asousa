@@ -1,14 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ThemeProvider } from 'styled-components';
+import App from './App';
 
-import { ThemeProvider } from "styled-components";
-
-import theme from "./assets/styles/themes/default";
+import StyledGlobal from './assets/styles/global';
+import theme from './assets/styles/themes/default';
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
+    <StyledGlobal />
     <App />
   </ThemeProvider>,
-  document.getElementById("root")
+  document.getElementById('root')
 );

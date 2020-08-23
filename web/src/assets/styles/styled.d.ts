@@ -1,12 +1,13 @@
-import "styled-components";
+import 'styled-components';
 
-declare module "styled-components" {
+declare module 'styled-components' {
   export interface DefaultTheme {
     title: string;
 
     colors: {
       primary: string;
       secondary: string;
+      tertiary: string;
 
       white: string;
       black: string;
@@ -20,8 +21,7 @@ declare module "styled-components" {
 
     profile: {
       info: string;
-      icon: string;
-      icon_hover: string;
+      defaultIconColor: string;
     };
   }
 }

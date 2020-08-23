@@ -1,6 +1,6 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
-import fonts from "./fonts";
+import fonts from './fonts';
 
 export default createGlobalStyle`
   ${fonts};
@@ -20,7 +20,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: ${(props) => props.theme.page.body};
+    background-color: ${props => props.theme.page.body};
   }
 
   #root {

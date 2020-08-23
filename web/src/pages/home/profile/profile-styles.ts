@@ -16,7 +16,7 @@ export const StyledProfile = styled.header`
     padding: 4rem;
   }
 
-  @media ${devices.tablet_landscape} {
+  @media ${devices.tabletLandscape} {
     padding: 6rem 8rem 8rem;
   }
 `;
@@ -30,7 +30,7 @@ export const StyledImageProfile = styled.img`
     width: 20rem;
   }
 
-  @media ${devices.tablet_landscape} {
+  @media ${devices.tabletLandscape} {
     width: 25rem;
   }
 `;
@@ -49,7 +49,7 @@ export const StyledInfos = styled.div`
     padding: 3rem 5rem;
   }
 
-  @media ${devices.tablet_landscape} {
+  @media ${devices.tabletLandscape} {
     padding: 4rem 4.8rem 3.6rem;
     width: 45.5rem;
     align-items: flex-start;
@@ -75,7 +75,7 @@ export const StyledOffice = styled.div`
     font-size: 2.8rem;
     font-weight: 900;
 
-    @media ${devices.tablet_landscape} {
+    @media ${devices.tabletLandscape} {
       font-size: 4rem;
     }
   }
@@ -85,7 +85,7 @@ export const StyledOffice = styled.div`
     font-size: 1.6rem;
     color: ${props => props.theme.colors.black};
 
-    @media ${devices.tablet_landscape} {
+    @media ${devices.tabletLandscape} {
       font-size: 2rem;
     }
   }

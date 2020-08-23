@@ -12,11 +12,11 @@ export const StyledContainer = styled.form`
     padding: 6rem 4rem;
   }
 
-  @media ${devices.tablet_landscape} {
+  @media ${devices.tabletLandscape} {
     padding: 8rem 6rem;
   }
 
-  @media ${devices.tablet_landscape} {
+  @media ${devices.tabletLandscape} {
     padding: 8rem;
   }
 `;

@@ -19,7 +19,7 @@ export const StyledBlockTitle = styled.h2<
   margin-bottom: 3rem;
   width: 100%;
 
-  @media ${devices.tablet_landscape} {
+  @media ${devices.tabletLandscape} {
     padding: 0 8rem;
     font-size: 6rem;
     margin-bottom: 4rem;

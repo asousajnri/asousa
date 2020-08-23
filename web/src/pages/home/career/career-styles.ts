@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import devices from '../../assets/styles/devices';
+import { devices } from '../../../assets/styles/devices';
 
 export const StyledCareer = styled.ul`
   width: 100%;
@@ -10,7 +10,7 @@ export const StyledCareer = styled.ul`
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media ${devices.tablet_landscape} {
+  @media ${devices.tabletLandscape} {
     grid-template-columns: repeat(3, 1fr);
   }
 `;

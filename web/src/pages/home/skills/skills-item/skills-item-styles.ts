@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import devices from '../../../assets/styles/devices';
+import { devices } from '../../../../assets/styles/devices';
 
 export const StyledSkillsItem = styled.li`
   width: 100%;
@@ -53,7 +53,7 @@ export const StyledImage = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${props => props.theme.color_white};
+  background: ${props => props.theme.colors.white};
   position: relative;
   z-index: 2;
 

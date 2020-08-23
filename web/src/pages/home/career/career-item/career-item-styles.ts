@@ -1,8 +1,14 @@
 import styled from 'styled-components';
 
-import devices from '../../../assets/styles/devices';
+import { devices } from '../../../../assets/styles/devices';
 
-export const StyledCareerItem = styled.li`
+interface IStyledCareerItem {
+  color: string;
+}
+
+export const StyledCareerItem = styled.li<
+  IStyledCareerItem
+>`
   background: ${props => props.color};
   padding: 6rem 2rem;
   display: flex;
@@ -33,7 +39,7 @@ export const StyledCareerItem = styled.li`
 
   h2,
   span {
-    color: ${props => props.theme.color_white};
+    color: ${props => props.theme.colors.white};
     text-align: center;
   }
 

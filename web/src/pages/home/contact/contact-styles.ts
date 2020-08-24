@@ -7,7 +7,7 @@ export const StyledContact = styled.div`
   display: flex;
   flex-direction: column;
 
-  @media ${devices.tablet} {
+  @media ${devices.tabletLandscape} {
     flex-direction: row;
   }
 `;
@@ -18,7 +18,7 @@ export const StyledHalf = styled.div`
   align-items: center;
   width: 100%;
 
-  @media ${devices.tablet} {
+  @media ${devices.tabletLandscape} {
     width: 50%;
   }
 `;
@@ -28,11 +28,22 @@ export const StyledBanner = styled.div`
   height: 100%;
   padding: 6rem 2rem;
   background: ${(props) => props.theme.colors.black};
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+
+  @media ${devices.tablet} {
+      padding: 8rem 6rem;
+  }
+
+  @media ${devices.tablet} {
+    padding: 8rem;
+  }
+
+  @media ${devices.fullhd} {
+    padding: 8rem 20rem;
+  }
 
   h3 {
     margin-bottom: 2rem;
@@ -40,6 +51,14 @@ export const StyledBanner = styled.div`
     font-weight: 900;
     color: ${(props) => props.theme.colors.secondary};
     text-align: left;
+
+    @media ${devices.tablet} {
+        font-size: 4rem;
+    }
+
+    @media ${devices.desktop} {
+        font-size: 6rem;
+    }
   }
 
   p {
@@ -47,10 +66,27 @@ export const StyledBanner = styled.div`
       color: ${(props) => props.theme.colors.white};
       margin-bottom: 2rem;
       display: inline-block;
+
+      @media ${devices.tablet} {
+          font-size: 1.8rem;
+      }
+
+      @media ${devices.desktop} {
+          font-size: 2.2rem;
+      }
   }
 
   em {
+      font-style: normal;
       display: inline-block;
-      color: ${(props) => props.theme.colors.secondary}
+      color: ${(props) => props.theme.colors.secondary};
+
+      @media ${devices.tablet} {
+          font-size: 1.6rem;
+      }
+
+      @media ${devices.desktop} {
+          font-size: 2.2rem;
+      }
   }
 `;

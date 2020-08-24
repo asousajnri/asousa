@@ -3,13 +3,13 @@ const fontImport = (
   nameFolder: string,
   weight: any = "normal",
   style: string = "normal"
-) => ` 
+) => `
     @font-face {
     font-family: ${fontName};
-    
-    src: 
+
+    src:
       url(${require(`../assets/fonts/${nameFolder}/${weight}.eot`)});
-    src: 
+    src:
       url(${require(`../assets/fonts/${nameFolder}/${weight}.eot?#iefix`)}) format('embedded-opentype'),
       url(${require(`../assets/fonts/${nameFolder}/${weight}.woff2`)}) format('woff2'),
       url(${require(`../assets/fonts/${nameFolder}/${weight}.woff`)}) format('woff'),

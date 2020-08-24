@@ -6,6 +6,7 @@ import Profile from './profile';
 import Cases from './cases';
 import Skills from './skills';
 import Career from './career';
+import Contact from './contact';
 
 const Home: React.FC = () => (
   <>
@@ -18,6 +19,9 @@ const Home: React.FC = () => (
     </Section>
     <Section title="Carreira" color="primary">
       <Career />
+    </Section>
+    <Section title="Contate-me" color="secondary" lastSection>
+      <Contact />
     </Section>
   </>
 );

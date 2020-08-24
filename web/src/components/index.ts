@@ -1,10 +1,4 @@
 export { default as Title } from './title';
-// export { default as Cases } from './cases';
-// export { default as Profile } from './profile';
 export { default as MyIcons } from './my-icons';
-// export { default as Section } from './section';
-// export { default as Skills } from './skills';
-// export { default as Career } from './career';
-// export { default as Contact } from './contact';
-// export { default as Form } from './form';
-// export { default as Button } from './button';
+export { default as Form } from './form';
+export { default as Button } from './button';

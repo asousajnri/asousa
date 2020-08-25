@@ -16,10 +16,25 @@ const Contact: React.FC = () => {
     <StyledContact>
       <StyledHalf>
         <Form.Container onSubmit={() => 0}>
-          <Form.Input ref={inputRef} labelText="Nome" type="text" />
-          <Form.Input ref={inputRef} labelText="Email" type="email" />
-          <Form.Input ref={inputRef} labelText="Assunto" type="text" />
-          <Form.Textarea ref={textareRef} labelText="Assunto" />
+          <Form.Input
+            ref={inputRef}
+            labelText="Nome"
+            type="text"
+          />
+          <Form.Input
+            ref={inputRef}
+            labelText="Email"
+            type="email"
+          />
+          <Form.Input
+            ref={inputRef}
+            labelText="Assunto"
+            type="text"
+          />
+          <Form.Textarea
+            ref={textareRef}
+            labelText="Assunto"
+          />
           <Button typeColor="secondary" type="submit">
             Enviar
           </Button>
@@ -29,12 +44,10 @@ const Contact: React.FC = () => {
         <StyledBanner>
           <h3>Faaaala Galera,</h3>
           <p>
-            Obrigado por acessarem meu site. Qualquer dúvida,
-            sugestão ou interesse pelo meu trabalho, entre em contato pelo
-            {' '}
-            <em>form</em>
-            {' '}
-            dessa sessão.
+            Obrigado por acessarem meu site. Qualquer
+            dúvida, sugestão ou interesse pelo meu trabalho,
+            entre em contato pelo <em>formulário</em> dessa
+            sessão.
           </p>
 
           <em>Vlws, flws!!</em>

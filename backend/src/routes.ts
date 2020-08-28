@@ -23,4 +23,7 @@ routes.post('/skills', upload.single('logo'), Controllers.Skills.store);
 routes.get('/career', Controllers.Career.index);
 routes.post('/career', upload.single('logo'), Controllers.Career.store);
 
+routes.get('/contact', Controllers.Contact.index);
+routes.post('/contact', Controllers.Contact.store);
+
 export default routes;

@@ -1,10 +1,19 @@
 import { Schema, Model, model } from 'mongoose';
 
-import ProfileInterface from '../interfaces/Profile';
+import ProfileInterfaceModel from '../interfaces/Profile';
 
-const ProfileSchema = new Schema();
+const ProfileSchema = new Schema(
+  {
+    photo: String,
+    name: String,
+    office: String,
+  },
+  {
+    timestamps: true,
+  },
+);
 
-const Profile: Model<ProfileInterface> = model<ProfileInterface>(
+const Profile: Model<ProfileInterfaceModel> = model<ProfileInterfaceModel>(
   'Profile',
   ProfileSchema,
 );

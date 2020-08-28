@@ -14,6 +14,15 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 12,
   },
-  plugins: ['@typescript-eslint'],
-  rules: {},
+  plugins: ['@typescript-eslint', 'import'],
+  rules: {
+    'import/extensions': [
+      'error',
+      {
+        ts: 'never',
+      },
+    ],
+    'import/no-unresolved': 0,
+    'no-unused-variable': 0,
+  },
 };

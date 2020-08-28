@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import PofileInterface from '../interfaces/Profile';
 
-import Profile from '../schemas/Profile';
+import Profile from '../models/Profile';
 
 export default {
   async index(req: Request, res: Response): Promise<Response> {

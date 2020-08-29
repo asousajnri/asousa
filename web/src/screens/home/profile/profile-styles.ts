@@ -5,14 +5,15 @@ import { devices } from '../../../assets/styles/devices';
 export const StyledProfile = styled.header`
   display: flex;
   flex-direction: column;
-  padding: 4rem 2rem;
+  padding: 0rem 0rem 4rem;
 
   @media ${devices.mobile} {
     flex-direction: row;
+    margin-right: auto;
+    padding: 3rem 2rem 4rem;
   }
 
   @media ${devices.tablet} {
-    margin-right: auto;
     padding: 4rem;
   }
 
@@ -36,13 +37,17 @@ export const StyledImageProfile = styled.img`
 `;
 
 export const StyledInfos = styled.div`
-  background: ${props => props.theme.profile.info};
+  background: ${(props) => props.theme.profile.info};
   padding: 2rem 2rem 3rem;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @media ${devices.mobile} {
+    padding: 2rem 3rem;
+  }
 
   @media ${devices.tablet} {
     justify-content: space-between;
@@ -71,7 +76,7 @@ export const StyledOffice = styled.div`
   }
 
   h1 {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     font-size: 2.8rem;
     font-weight: 900;
 
@@ -83,7 +88,7 @@ export const StyledOffice = styled.div`
   h2 {
     font-weight: 400;
     font-size: 1.6rem;
-    color: ${props => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.black};
 
     @media ${devices.tabletLandscape} {
       font-size: 2rem;

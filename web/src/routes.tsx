@@ -1,16 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { Home } from './pages';
+import { Home } from './screens';
 
-const Routes: React.FC = () => {
-  return (
-    <BrowserRouter>
-      <Switch>
-        <Route path="/" exact component={Home} />
-      </Switch>
-    </BrowserRouter>
-  );
-};
+const Routes: React.FC = () => (
+  <BrowserRouter>
+    <Switch>
+      <Route path="/" exact component={Home} />
+    </Switch>
+  </BrowserRouter>
+);
 
 export default Routes;

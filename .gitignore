@@ -2,10 +2,9 @@ node_modules/
 dist/
 build/
 
-.DS_Store
 yarn.lock
 package-lock.json
 .env
 
-uploads/*
-!uploads/.gitkeep
+backend/uploads/*
+backend/!uploads/.gitkeep

@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 
-import { devices } from '../../../assets/styles/devices';
+import PlaceholderEffect from '../../../../assets/styles/placeholder-effect';
+import { devices } from '../../../../assets/styles/devices';
 
-export const StyledProfile = styled.header`
+export const StyleProfile = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0rem 0rem 4rem;
+  width: 100%;
 
   @media ${devices.mobile} {
     flex-direction: row;
@@ -22,8 +24,14 @@ export const StyledProfile = styled.header`
   }
 `;
 
-export const StyledImageProfile = styled.img`
+export const StyledImageProfile = styled(PlaceholderEffect)`
+  height: 30rem;
+  margin-bottom: 1rem;
+
   @media ${devices.mobile} {
+    margin-bottom: 0;
+    margin-right: 1rem;
+    height: 15rem;
     width: 15rem;
   }
 
@@ -36,8 +44,7 @@ export const StyledImageProfile = styled.img`
   }
 `;
 
-export const StyledInfos = styled.div`
-  background: ${(props) => props.theme.profile.info};
+export const StyledInfos = styled(PlaceholderEffect)`
   padding: 4rem 2rem;
 
   display: flex;
@@ -47,6 +54,7 @@ export const StyledInfos = styled.div`
 
   @media ${devices.mobile} {
     padding: 2rem 3rem;
+    width: 28rem;
   }
 
   @media ${devices.tablet} {
@@ -58,40 +66,5 @@ export const StyledInfos = styled.div`
     padding: 4rem 4.8rem 3.6rem;
     width: 45.5rem;
     align-items: flex-start;
-  }
-`;
-
-export const StyledOffice = styled.div`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2rem;
-
-  h1,
-  h2 {
-    text-align: center;
-
-    @media ${devices.mobile} {
-      text-align: left;
-    }
-  }
-
-  h1 {
-    color: ${(props) => props.theme.colors.primary};
-    font-size: 2.8rem;
-    font-weight: 900;
-
-    @media ${devices.tabletLandscape} {
-      font-size: 4rem;
-    }
-  }
-
-  h2 {
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: ${(props) => props.theme.colors.black};
-
-    @media ${devices.tabletLandscape} {
-      font-size: 2rem;
-    }
   }
 `;

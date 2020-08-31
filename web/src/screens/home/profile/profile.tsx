@@ -11,7 +11,7 @@ import {
 
 import pathProfileImage from '../../../assets/images/photo.jpg';
 
-const Profile = () => (
+const Profile: React.FC = () => (
   <StyledProfile>
     <StyledImageProfile src={pathProfileImage} />
     <StyledInfos>

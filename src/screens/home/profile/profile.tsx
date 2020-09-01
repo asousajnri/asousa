@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+
+import useFetchApi from '../../../hooks/useFetchApi';
 
 import SocialListing from './social-listing';
 
@@ -19,12 +20,11 @@ interface IProfile {
 
 const Profile: React.FC = () => {
   const [profile, setProfile] = React.useState<IProfile[]>([]);
+  const { data, isFetchinging } = useFetchApi<IProfile>('profile');
 
   React.useEffect(() => {
-    axios.get(`${process.env.REACT_APP_ASOUSA_URL_API_BASE}profile`).then((response) => {
-      setProfile(response.data);
-    });
-  }, []);
+    setProfile(data);
+  }, [data, setProfile]);
 
   return (
     <>

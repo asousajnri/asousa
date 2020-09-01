@@ -9,6 +9,7 @@ const CareerSchema = new Schema(
     office: String,
     startYear: String,
     endYear: String,
+    bgColor: String,
   },
   { timestamps: true },
 );

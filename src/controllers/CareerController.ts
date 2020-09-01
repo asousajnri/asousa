@@ -16,7 +16,7 @@ export default {
       office,
       startYear,
       endYear,
-      bgColor,
+      brandColor,
     }: CareerInterface = req.body;
 
     const { filename: logo } = req.file;
@@ -27,7 +27,7 @@ export default {
       office,
       startYear,
       endYear,
-      bgColor,
+      brandColor,
     });
 
     return res.json(career);

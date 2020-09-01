@@ -6,5 +6,5 @@ export default interface CareerInterface extends Document {
   office: string;
   startYear: string;
   endYear: string;
-  bgColor: string;
+  brandColor: string;
 }

@@ -20,6 +20,7 @@ export default {
       link,
       coverImage,
       description,
+      category,
     });
 
     return res.json(cases);

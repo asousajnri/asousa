@@ -5,13 +5,13 @@ import { StyledInput } from './input-styles';
 interface Props {
     type: string;
     labelText: string;
-    ref: React.MutableRefObject<null>;
+    refFieldInput: React.MutableRefObject<null>;
 };
 
-const Input: React.FC<Props> = ({ type, labelText, ref }) => (
+const Input: React.FC<Props> = ({ type, labelText, refFieldInput }) => (
   <StyledInput>
     <label>{labelText}</label>
-    <input type={type} ref={ref} />
+    <input type={type} ref={refFieldInput} />
   </StyledInput>
 );
 

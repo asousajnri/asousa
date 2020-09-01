@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 
 import SocialListing from './social-listing';
 
@@ -9,20 +10,39 @@ import {
   StyledOffice,
 } from './profile-styles';
 
-import pathProfileImage from '../../../assets/images/photo.jpg';
+interface IProfile {
+  _id: string;
+  photo: string;
+  name: string;
+  office: string;
+};
 
-const Profile = () => (
-  <StyledProfile>
-    <StyledImageProfile src={pathProfileImage} />
-    <StyledInfos>
-      <StyledOffice>
-        <h1>Antônio Sousa</h1>
-        <h2>Front End Developer Jr.</h2>
-      </StyledOffice>
+const Profile: React.FC = () => {
+  const [profile, setProfile] = React.useState<IProfile[]>([]);
 
-      <SocialListing />
-    </StyledInfos>
-  </StyledProfile>
-);
+  React.useEffect(() => {
+    axios.get(`${process.env.REACT_APP_ASOUSA_URL_API_BASE}profile`).then((response) => {
+      setProfile(response.data);
+    });
+  }, []);
+
+  return (
+    <>
+      {profile.map((profileItem) => (
+        <StyledProfile key={profileItem._id}>
+          <StyledImageProfile src={`${process.env.REACT_APP_ASOUSA_URL_API_BASE_FILES}${profileItem.photo}`} />
+          <StyledInfos>
+            <StyledOffice>
+              <h1>{profileItem.name}</h1>
+              <h2>{profileItem.office}</h2>
+            </StyledOffice>
+
+            <SocialListing />
+          </StyledInfos>
+        </StyledProfile>
+      ))}
+    </>
+  );
+};
 
 export default Profile;

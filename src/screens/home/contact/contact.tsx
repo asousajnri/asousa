@@ -17,22 +17,22 @@ const Contact: React.FC = () => {
       <StyledHalf>
         <Form.Container onSubmit={() => 0}>
           <Form.Input
-            ref={inputRef}
+            refFieldInput={inputRef}
             labelText="Nome"
             type="text"
           />
           <Form.Input
-            ref={inputRef}
+            refFieldInput={inputRef}
             labelText="Email"
             type="email"
           />
           <Form.Input
-            ref={inputRef}
+            refFieldInput={inputRef}
             labelText="Assunto"
             type="text"
           />
           <Form.Textarea
-            ref={textareRef}
+            refFieldInput={textareRef}
             labelText="Assunto"
           />
           <Button typeColor="secondary" type="submit">
@@ -46,7 +46,11 @@ const Contact: React.FC = () => {
           <p>
             Obrigado por acessarem meu site. Qualquer
             dúvida, sugestão ou interesse pelo meu trabalho,
-            entre em contato pelo <em>formulário</em> dessa
+            entre em contato pelo
+            {' '}
+            <em>formulário</em>
+            {' '}
+            dessa
             sessão.
           </p>
 

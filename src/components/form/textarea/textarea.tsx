@@ -3,14 +3,14 @@ import React from 'react';
 import { StyledTextarea } from './textarea-styles';
 
 interface Props {
-    ref: React.MutableRefObject<null>;
-    labelText: string;
+  refFieldInput: React.MutableRefObject<null>;
+  labelText: string;
 };
 
-const Textarea: React.FC<Props> = ({ ref, labelText }) => (
+const Textarea: React.FC<Props> = ({ refFieldInput, labelText }) => (
   <StyledTextarea>
     <label>{labelText}</label>
-    <textarea ref={ref} />
+    <textarea ref={refFieldInput} />
   </StyledTextarea>
 );
 

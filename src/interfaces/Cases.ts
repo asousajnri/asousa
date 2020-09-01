@@ -5,4 +5,5 @@ export default interface CasesInterface extends Document {
   link: string;
   coverImage: string;
   description: string;
+  category: string;
 }

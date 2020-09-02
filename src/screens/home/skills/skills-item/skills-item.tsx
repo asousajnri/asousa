@@ -3,18 +3,15 @@ import { ThemeContext } from 'styled-components';
 
 import { MyIcons } from '../../../../components';
 
-import {
-  StyledSkillsItem,
-  StyledImage,
-  StyledShadowOverlay,
-  StyledStart,
-} from './skills-item-styles';
+import { StyledSkillsItem, StyledImage, StyledShadowOverlay, StyledStart } from './skills-item-styles';
 
 interface Props {
-  url: string;
+  title: string;
+  logo: string;
+  level: string;
 }
 
-const SkillsItem: React.FC<Props> = ({ url }) => {
+const SkillsItem: React.FC<Props> = ({ title, logo, level }) => {
   const { colors } = useContext(ThemeContext);
 
   return (
@@ -25,34 +22,19 @@ const SkillsItem: React.FC<Props> = ({ url }) => {
       </StyledImage>
       <StyledStart>
         <li>
-          <MyIcons.Star
-            width="3rem"
-            fill={colors.secondary}
-          />
+          <MyIcons.Star width="3rem" fill={colors.secondary} />
         </li>
         <li>
-          <MyIcons.Star
-            width="3rem"
-            fill={colors.secondary}
-          />
+          <MyIcons.Star width="3rem" fill={colors.secondary} />
         </li>
         <li>
-          <MyIcons.Star
-            width="3rem"
-            fill={colors.secondary}
-          />
+          <MyIcons.Star width="3rem" fill={colors.secondary} />
         </li>
         <li>
-          <MyIcons.Star
-            width="3rem"
-            fill={colors.secondary}
-          />
+          <MyIcons.Star width="3rem" fill={colors.secondary} />
         </li>
         <li>
-          <MyIcons.Star
-            width="3rem"
-            fill={colors.secondary}
-          />
+          <MyIcons.Star width="3rem" fill={colors.secondary} />
         </li>
       </StyledStart>
     </StyledSkillsItem>

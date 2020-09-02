@@ -1,33 +1,42 @@
 import React from 'react';
 
+import useFetchApi from '../../../hooks/useFetchApi';
+
 import CareerItem from './career-item';
 
 import { StyledCareer } from './career-styles';
 
-const Career = () => {
+interface ICareer {
+  _id: string;
+  companyName: string;
+  logo: string;
+  office: string;
+  startYear: string;
+  endYear: string;
+  brandColor: string;
+}
+
+const Career: React.FC = () => {
+  const [career, setCareer] = React.useState<ICareer[]>([]);
+  const { data, isFetchinging } = useFetchApi<ICareer>('career');
+
+  React.useEffect(() => {
+    setCareer(data);
+  }, [data, setCareer]);
+
   return (
     <StyledCareer>
-      <CareerItem
-        color="#EA178C"
-        office="Front End Developer"
-        years=" 2019/~"
-        company="Index Agência Digital"
-        logo="http://place-hold.it/181x70"
-      />
-      <CareerItem
-        color="#5E37AC"
-        office="Front End Developer"
-        years=" 2016/2017"
-        company="Bleez E-commerce"
-        logo="http://place-hold.it/181x70"
-      />
-      <CareerItem
-        color="#EA8A45"
-        office="Web Designer"
-        years=" 2013/2016"
-        company="Laboratório de Mídias Eletrônicas"
-        logo="http://place-hold.it/181x70"
-      />
+      {career.map(careerItem => (
+        <CareerItem
+          key={careerItem._id}
+          companyName={careerItem.companyName}
+          logo="http://place-hold.it/181x70"
+          office={careerItem.office}
+          brandColor={careerItem.brandColor}
+          startYear={careerItem.startYear}
+          endYear={careerItem.endYear}
+        />
+      ))}
     </StyledCareer>
   );
 };

@@ -25,12 +25,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'import',
-    'jsx-a11y',
-  ],
+  plugins: ['react', '@typescript-eslint', 'import', 'jsx-a11y'],
   rules: {
     'import/extensions': [
       'error',
@@ -41,20 +36,16 @@ module.exports = {
     ],
     'react/prop-types': 'off',
     'import/no-unresolved': 'off',
-    'react/jsx-filename-extension': [
-      'error',
-      { extensions: ['.ts', '.tsx'] },
-    ],
+    'react/jsx-filename-extension': ['error', { extensions: ['.ts', '.tsx'] }],
     'jsx-a11y/heading-has-content': [
       2,
       {
         components: ['MyHeading'],
       },
     ],
+    'dot-notation': [0, { allowKeywords: true }],
     'import/prefer-default-export': 'off',
-    '@typescript-eslint/explicit-function-return-type':
-      'off',
-    '@typescript-eslint/explicit-member-accessibility':
-      'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/explicit-member-accessibility': 'off',
   },
 };

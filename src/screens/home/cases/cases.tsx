@@ -1,37 +1,44 @@
 import React from 'react';
 
+import useFetchApi from '../../../hooks/useFetchApi';
+
 import CasesItem from './cases-item';
 
 import { StyledCases } from './cases-styles';
 
-const Cases: React.FC = () => (
-  <StyledCases>
-    <CasesItem
-      background="primary"
-      imageUrl="https://picsum.photos/id/200/600/600"
-      name="Teste"
-    />
-    <CasesItem
-      background="primary"
-      imageUrl="https://picsum.photos/id/201/600/600"
-      name="Teste"
-    />
-    <CasesItem
-      background="primary"
-      imageUrl="https://picsum.photos/id/202/600/600"
-      name="Teste"
-    />
-    <CasesItem
-      background="primary"
-      imageUrl="https://picsum.photos/id/203/600/600"
-      name="Teste"
-    />
-    <CasesItem
-      background="primary"
-      imageUrl="https://picsum.photos/id/204/600/600"
-      name="Teste"
-    />
-  </StyledCases>
-);
+interface ICases {
+  _id: string;
+  title: string;
+  link: string;
+  coverImage: string;
+  description: string;
+  category: string;
+}
+
+const Cases: React.FC = () => {
+  const [cases, setCases] = React.useState<ICases[]>([]);
+  const { data, isFetchinging } = useFetchApi<ICases>('cases');
+
+  React.useEffect(() => {
+    setCases(data);
+  }, [data, setCases]);
+
+  return (
+    <StyledCases>
+      {cases.map(caseItem => (
+        <CasesItem
+          key={caseItem._id}
+          background="primary"
+          id={caseItem._id}
+          title={caseItem.title}
+          coverImage="https://place-hold.it/600x600"
+          link={caseItem.link}
+          description={caseItem.description}
+          category={caseItem.category}
+        />
+      ))}
+    </StyledCases>
+  );
+};
 
 export default Cases;

@@ -22,12 +22,8 @@ const SocialListing: React.FC = () => {
 
   return (
     <StyledSocialListing>
-      {socialNetwork.map((socialItem) => (
-        <SocialListingItem
-          key={socialItem._id}
-          url={socialItem.link}
-          icon={socialItem.title}
-        />
+      {socialNetwork.map(socialItem => (
+        <SocialListingItem key={socialItem._id} url={socialItem.link} icon={socialItem.title} />
       ))}
     </StyledSocialListing>
   );

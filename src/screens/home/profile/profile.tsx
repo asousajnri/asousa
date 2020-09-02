@@ -16,7 +16,7 @@ interface IProfile {
   photo: string;
   name: string;
   office: string;
-};
+}
 
 const Profile: React.FC = () => {
   const [profile, setProfile] = React.useState<IProfile[]>([]);
@@ -28,9 +28,9 @@ const Profile: React.FC = () => {
 
   return (
     <>
-      {profile.map((profileItem) => (
+      {profile.map(profileItem => (
         <StyledProfile key={profileItem._id}>
-          <StyledImageProfile src={`${process.env.REACT_APP_URL_API_BASE_FILES}${profileItem.photo}`} />
+          <StyledImageProfile src="https://place-hold.it/600x600" />
           <StyledInfos>
             <StyledOffice>
               <h1>{profileItem.name}</h1>

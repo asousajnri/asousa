@@ -2,27 +2,24 @@ import React from 'react';
 
 import { MyIcons } from '../../../../components';
 
-import {
-  StyledCasesItem,
-  StyledOverlay,
-  ClickMe,
-} from './cases-item-styles';
+import { StyledCasesItem, StyledOverlay, ClickMe } from './cases-item-styles';
+import Select from '../../../../components/my-icons/select';
 
 interface Props {
-  imageUrl: string;
-  name: string;
   background: string;
+  id: string;
+  title: string;
+  link: string;
+  coverImage: string;
+  description: string;
+  category: string;
 }
 
-const CasesItem: React.FC<Props> = ({
-  imageUrl,
-  name,
-  background,
-}) => (
+const CasesItem: React.FC<Props> = ({ coverImage, title, background, id }) => (
   <StyledCasesItem>
-    <img src={imageUrl} alt={name} />
+    <img src={coverImage} alt={title} />
     <StyledOverlay background={background}>
-      <h2>{name}</h2>
+      <h2>{title}</h2>
       <ClickMe>
         <MyIcons.Select width="2.5rem" fill="#FFFFFF" />
         <span>Clique-me!</span>

@@ -3,13 +3,11 @@ import styled from 'styled-components';
 import { devices } from '../../../../assets/styles/devices';
 
 interface IStyledCareerItem {
-  color: string;
+  brandColor: string;
 }
 
-export const StyledCareerItem = styled.li<
-  IStyledCareerItem
->`
-  background: ${props => props.color};
+export const StyledCareerItem = styled.li<IStyledCareerItem>`
+  background: ${props => props.brandColor};
   padding: 6rem 2rem;
   display: flex;
   flex-direction: column;

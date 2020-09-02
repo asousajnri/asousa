@@ -43,7 +43,7 @@ export const StyledImageProfile = styled.img`
 
 export const StyledInfos = styled.div`
   background: ${props => props.theme.profile.info};
-  padding: 2rem 2rem 3rem;
+  padding: 3rem 2rem;
   height: 100%;
 
   display: flex;

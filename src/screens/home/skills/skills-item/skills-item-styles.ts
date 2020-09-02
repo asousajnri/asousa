@@ -48,7 +48,7 @@ export const StyledShadowOverlay = styled.div`
 
 export const StyledImage = styled.div`
   width: 100%;
-  padding: 4rem 3rem;
+  padding: 6rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;

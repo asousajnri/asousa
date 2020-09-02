@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StyledSkills, StyledSkill, StyledSkillLogo, StyledSkillStar } from './skills-loading-styles';
+import { StyledSkills, StyledSkill, StyledSkillLogo } from './skills-loading-styles';
 
 interface ISkills {
   _id: string;

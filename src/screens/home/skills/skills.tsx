@@ -29,8 +29,8 @@ const Skills = () => {
       {!isFetchinging && (
         <StyledSkills>
           {skills.map(skill => (
-            <ReactFadeIn transitionDuration={1000}>
-              <SkillsItem key={skill._id} title={skill.title} logo={skill.logo} level={skill.level} />
+            <ReactFadeIn key={skill._id} transitionDuration={1000}>
+              <SkillsItem title={skill.title} logo={skill.logo} level={skill.level} />
             </ReactFadeIn>
           ))}
         </StyledSkills>

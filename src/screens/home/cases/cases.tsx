@@ -32,9 +32,8 @@ const Cases: React.FC = () => {
       {!isFetchinging && (
         <StyledCases>
           {cases.map(caseItem => (
-            <ReactFadeIn transitionDuration={1000}>
+            <ReactFadeIn key={caseItem._id} transitionDuration={1000}>
               <CasesItem
-                key={caseItem._id}
                 background="primary"
                 id={caseItem._id}
                 title={caseItem.title}

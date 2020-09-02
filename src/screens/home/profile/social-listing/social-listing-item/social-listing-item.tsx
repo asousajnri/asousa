@@ -40,7 +40,7 @@ const SocialListingItem: React.FC<Props> = ({ url, icon }) => {
       onMouseOver={() => setIconColor(secondary)}
       onMouseLeave={() => setIconColor(defaultIconColor)}
     >
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noopener noreferrer">
         {socialIcons.map(
           socialIcon => socialIcon.title === icon && <socialIcon.component width="2rem" fill={iconColor} />
         )}

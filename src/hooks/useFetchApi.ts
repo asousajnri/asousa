@@ -16,7 +16,7 @@ const useFetchApi = <T>(resource: string): Response<T> => {
     try {
       setIsFetchinging(true);
 
-      const response = await axios.get(`${`${process.env.REACT_APP_ASOUSA_URL_API_BASE}`}${resource}`);
+      const response = await axios.get(`${`${process.env.REACT_APP_URL_API_BASE}`}${resource}`);
       const { data } = await response;
 
       if (data) {

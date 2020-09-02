@@ -3,27 +3,27 @@ import { ThemeContext } from 'styled-components';
 
 import { StyledSocialListingItem } from './social-listing-item-styles';
 
-interface IComponentIcon {
-  fill: string;
-  width: string;
-}
+import { MyIcons } from '../../../../../components';
 
 interface Props {
   url: string;
-  ComponentIcon: React.FC<IComponentIcon>;
+  icon: string;
 }
 
 const SocialListingItem: React.FC<Props> = ({
   url,
-  ComponentIcon,
+  icon,
 }) => {
   const {
     profile: { defaultIconColor },
     colors: { secondary },
   } = useContext(ThemeContext);
   const [iconColor, setIconColor] = useState(
-    defaultIconColor
+    defaultIconColor,
   );
+  // const [iconsComponent] = useState([...MyIcons]);
+
+  // console.log(iconsComponent);
 
   return (
     <StyledSocialListingItem
@@ -31,7 +31,7 @@ const SocialListingItem: React.FC<Props> = ({
       onMouseLeave={() => setIconColor(defaultIconColor)}
     >
       <a href={url}>
-        <ComponentIcon width="100%" fill={iconColor} />
+        a
       </a>
     </StyledSocialListingItem>
   );

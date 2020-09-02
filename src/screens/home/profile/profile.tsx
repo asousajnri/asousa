@@ -30,7 +30,7 @@ const Profile: React.FC = () => {
     <>
       {profile.map((profileItem) => (
         <StyledProfile key={profileItem._id}>
-          <StyledImageProfile src={`${process.env.REACT_APP_ASOUSA_URL_API_BASE_FILES}${profileItem.photo}`} />
+          <StyledImageProfile src={`${process.env.REACT_APP_URL_API_BASE_FILES}${profileItem.photo}`} />
           <StyledInfos>
             <StyledOffice>
               <h1>{profileItem.name}</h1>

@@ -35,6 +35,7 @@ export const StyledOverlay = styled.div<IStyledOverlay>`
   flex-direction: column;
   opacity: 0;
   transition: 0.5s ease;
+  padding: 3rem;
 
   &:hover {
     opacity: 1;
@@ -49,15 +50,19 @@ export const StyledOverlay = styled.div<IStyledOverlay>`
   h2 {
     font-weight: 900;
     font-size: 3rem;
+    line-height: 3.2rem;
     color: ${props => props.theme.colors.white};
     margin-bottom: 3rem;
+    text-align: center;
 
     @media ${devices.tablet} {
       font-size: 4rem;
+      line-height: 4.2rem;
     }
 
     @media ${devices.widescreen} {
       font-size: 6rem;
+      line-height: 6.2rem;
     }
   }
 `;

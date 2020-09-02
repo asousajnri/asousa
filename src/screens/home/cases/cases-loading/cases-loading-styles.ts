@@ -24,6 +24,6 @@ export const StyledCase = styled(PlaceholderEffect)`
   height: 42.7rem;
 
   @media ${devices.widescreen} {
-    height: 62.7rem;
+    height: 47.2rem;
   }
 `;

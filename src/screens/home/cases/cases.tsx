@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactFadeIn from 'react-fade-in';
 
 import useFetchApi from '../../../hooks/useFetchApi';
 
@@ -31,16 +32,18 @@ const Cases: React.FC = () => {
       {!isFetchinging && (
         <StyledCases>
           {cases.map(caseItem => (
-            <CasesItem
-              key={caseItem._id}
-              background="primary"
-              id={caseItem._id}
-              title={caseItem.title}
-              coverImage="https://place-hold.it/600x600"
-              link={caseItem.link}
-              description={caseItem.description}
-              category={caseItem.category}
-            />
+            <ReactFadeIn transitionDuration={1000}>
+              <CasesItem
+                key={caseItem._id}
+                background="primary"
+                id={caseItem._id}
+                title={caseItem.title}
+                coverImage="https://place-hold.it/600x600"
+                link={caseItem.link}
+                description={caseItem.description}
+                category={caseItem.category}
+              />
+            </ReactFadeIn>
           ))}
         </StyledCases>
       )}

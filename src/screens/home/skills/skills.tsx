@@ -1,8 +1,10 @@
 import React from 'react';
+import ReactFadeIn from 'react-fade-in';
 
 import useFetchApi from '../../../hooks/useFetchApi';
 
 import SkillsItem from './skills-item';
+import SkillsLoading from './skills-loading';
 
 import { StyledSkills } from './skills-styles';
 
@@ -22,11 +24,18 @@ const Skills = () => {
   }, [data, setSkills]);
 
   return (
-    <StyledSkills>
-      {skills.map(skill => (
-        <SkillsItem key={skill._id} title={skill.title} logo={skill.logo} level={skill.level} />
-      ))}
-    </StyledSkills>
+    <>
+      {isFetchinging && <SkillsLoading skills={skills} />}
+      {!isFetchinging && (
+        <StyledSkills>
+          {skills.map(skill => (
+            <ReactFadeIn transitionDuration={1000}>
+              <SkillsItem key={skill._id} title={skill.title} logo={skill.logo} level={skill.level} />
+            </ReactFadeIn>
+          ))}
+        </StyledSkills>
+      )}
+    </>
   );
 };
 

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { devices } from '../../../assets/styles/devices';
+
 export const StyledTextarea = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,14 +11,22 @@ export const StyledTextarea = styled.div`
 
   label {
     margin-bottom: 1rem;
-    color: ${(props) => props.theme.colors.secondary};
+    color: ${props => props.theme.colors.secondary};
   }
 
   textarea {
     resize: none;
     height: 13rem;
     border-radius: 0.5rem;
-    border: 2px solid ${(props) => props.theme.colors.grey};
+    border: 2px solid ${props => props.theme.colors.grey};
     padding: 2rem;
+
+    @media ${devices.desktop} {
+      height: 15rem;
+    }
+
+    @media ${devices.fullhd} {
+      height: 25rem;
+    }
   }
 `;

@@ -30,7 +30,7 @@ const Profile: React.FC = () => {
       {!isFetchinging &&
         profile.map(profileItem => (
           <StyledProfile key={profileItem._id}>
-            <ReactFadeIn className="FadeIn">
+            <ReactFadeIn className="FadeIn" transitionDuration={1000}>
               <StyledImageProfile src="https://place-hold.it/600x600" />
               <StyledInfos>
                 <StyledOffice>

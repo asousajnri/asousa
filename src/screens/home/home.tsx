@@ -14,7 +14,7 @@ const Home: React.FC = () => (
     <Section title="Cases" color="primary">
       <Cases />
     </Section>
-    <Section title="Habilidade" color="secondary">
+    <Section title="Habilidades" color="secondary">
       <Skills />
     </Section>
     <Section title="Carreira" color="primary">

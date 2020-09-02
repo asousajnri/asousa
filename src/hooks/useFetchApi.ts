@@ -2,9 +2,9 @@ import React from 'react';
 import axios from 'axios';
 
 type Response<T> = {
-  isFetchinging: boolean,
-  error: null,
-  data: T[],
+  isFetchinging: boolean;
+  error: null;
+  data: T[];
 };
 
 const useFetchApi = <T>(resource: string): Response<T> => {
@@ -25,7 +25,11 @@ const useFetchApi = <T>(resource: string): Response<T> => {
     } catch (err) {
       setError(err);
     } finally {
-      setIsFetchinging(false);
+      let setDelayFetchingingFalse;
+      (() => {
+        clearTimeout(setDelayFetchingingFalse);
+        setDelayFetchingingFalse = setTimeout(() => setIsFetchinging(false), 2000);
+      })();
     }
   }, [setIsFetchinging, resource, setError]);
 

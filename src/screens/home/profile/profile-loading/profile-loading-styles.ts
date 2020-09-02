@@ -31,8 +31,8 @@ export const StyledImageProfile = styled(PlaceholderEffect)`
   @media ${devices.mobile} {
     margin-bottom: 0;
     margin-right: 1rem;
-    height: 15rem;
-    width: 15rem;
+    height: 25rem;
+    width: 25rem;
   }
 
   @media ${devices.tablet} {

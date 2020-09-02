@@ -3,6 +3,7 @@ import React from 'react';
 import useFetchApi from '../../../hooks/useFetchApi';
 
 import CasesItem from './cases-item';
+import CasesLoading from './cases-loading';
 
 import { StyledCases } from './cases-styles';
 
@@ -24,20 +25,26 @@ const Cases: React.FC = () => {
   }, [data, setCases]);
 
   return (
-    <StyledCases>
-      {cases.map(caseItem => (
-        <CasesItem
-          key={caseItem._id}
-          background="primary"
-          id={caseItem._id}
-          title={caseItem.title}
-          coverImage="https://place-hold.it/600x600"
-          link={caseItem.link}
-          description={caseItem.description}
-          category={caseItem.category}
-        />
-      ))}
-    </StyledCases>
+    <>
+      {isFetchinging && <CasesLoading cases={cases} />}
+
+      {!isFetchinging && (
+        <StyledCases>
+          {cases.map(caseItem => (
+            <CasesItem
+              key={caseItem._id}
+              background="primary"
+              id={caseItem._id}
+              title={caseItem.title}
+              coverImage="https://place-hold.it/600x600"
+              link={caseItem.link}
+              description={caseItem.description}
+              category={caseItem.category}
+            />
+          ))}
+        </StyledCases>
+      )}
+    </>
   );
 };
 

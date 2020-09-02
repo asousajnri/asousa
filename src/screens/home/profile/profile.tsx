@@ -1,15 +1,12 @@
 import React from 'react';
+import ReactFadeIn from 'react-fade-in';
 
 import useFetchApi from '../../../hooks/useFetchApi';
 
 import SocialListing from './social-listing';
+import ProfileLoading from './profile-loading';
 
-import {
-  StyledProfile,
-  StyledImageProfile,
-  StyledInfos,
-  StyledOffice,
-} from './profile-styles';
+import { StyledProfile, StyledImageProfile, StyledInfos, StyledOffice } from './profile-styles';
 
 interface IProfile {
   _id: string;
@@ -28,19 +25,24 @@ const Profile: React.FC = () => {
 
   return (
     <>
-      {profile.map(profileItem => (
-        <StyledProfile key={profileItem._id}>
-          <StyledImageProfile src="https://place-hold.it/600x600" />
-          <StyledInfos>
-            <StyledOffice>
-              <h1>{profileItem.name}</h1>
-              <h2>{profileItem.office}</h2>
-            </StyledOffice>
+      {isFetchinging && <ProfileLoading />}
 
-            <SocialListing />
-          </StyledInfos>
-        </StyledProfile>
-      ))}
+      {!isFetchinging &&
+        profile.map(profileItem => (
+          <StyledProfile key={profileItem._id}>
+            <ReactFadeIn className="FadeIn">
+              <StyledImageProfile src="https://place-hold.it/600x600" />
+              <StyledInfos>
+                <StyledOffice>
+                  <h1>{profileItem.name}</h1>
+                  <h2>{profileItem.office}</h2>
+                </StyledOffice>
+
+                <SocialListing />
+              </StyledInfos>
+            </ReactFadeIn>
+          </StyledProfile>
+        ))}
     </>
   );
 };

@@ -3,7 +3,6 @@ import React from 'react';
 import { MyIcons } from '../../../../components';
 
 import { StyledCasesItem, StyledOverlay, ClickMe } from './cases-item-styles';
-import Select from '../../../../components/my-icons/select';
 
 interface Props {
   background: string;

@@ -47,18 +47,25 @@ export const StyledShadowOverlay = styled.div`
 `;
 
 export const StyledImage = styled.div`
+  max-height: 27rem;
+  height: 100%;
   width: 100%;
   padding: 6rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: ${props => props.theme.colors.white};
+  background: ${(props) => props.theme.colors.white};
   position: relative;
   z-index: 2;
 
   @media ${devices.widescreen} {
     padding: 8rem 3rem;
+  }
+
+  img {
+    /* width: 15rem;
+    max-width: 15rem; */
   }
 `;
 

@@ -32,11 +32,11 @@ const Career: React.FC = () => {
 
       {!isFetchinging && (
         <StyledCareer>
-          {career.map(careerItem => (
+          {career.map((careerItem) => (
             <ReactFadeIn key={careerItem._id} transitionDuration={1000}>
               <CareerItem
                 companyName={careerItem.companyName}
-                logo="http://place-hold.it/181x70"
+                logo={careerItem.logo}
                 office={careerItem.office}
                 brandColor={careerItem.brandColor}
                 startYear={careerItem.startYear}

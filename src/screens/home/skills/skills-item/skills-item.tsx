@@ -4,7 +4,9 @@ import { rgba } from 'polished';
 
 import { MyIcons } from '../../../../components';
 
-import { StyledSkillsItem, StyledImage, StyledShadowOverlay, StyledStart } from './skills-item-styles';
+import {
+  StyledSkillsItem, StyledImage, StyledShadowOverlay, StyledStart,
+} from './skills-item-styles';
 
 interface Props {
   title: string;
@@ -20,10 +22,10 @@ const SkillsItem: React.FC<Props> = ({ title, logo, level }) => {
     <StyledSkillsItem>
       <StyledImage>
         <StyledShadowOverlay />
-        <img src="https://place-hold.it/150x150" alt="" />
+        <img src={logo} alt="" />
       </StyledImage>
       <StyledStart>
-        {stars.map(starOrder => {
+        {stars.map((starOrder) => {
           if (starOrder <= Number(level)) {
             return (
               <li key={Math.floor(Math.random() * (1 - 100000))}>

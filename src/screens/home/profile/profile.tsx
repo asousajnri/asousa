@@ -6,7 +6,9 @@ import useFetchApi from '../../../hooks/useFetchApi';
 import SocialListing from './social-listing';
 import ProfileLoading from './profile-loading';
 
-import { StyledProfile, StyledImageProfile, StyledInfos, StyledOffice } from './profile-styles';
+import {
+  StyledProfile, StyledImageProfile, StyledInfos, StyledOffice,
+} from './profile-styles';
 
 interface IProfile {
   _id: string;
@@ -27,11 +29,11 @@ const Profile: React.FC = () => {
     <>
       {isFetchinging && <ProfileLoading />}
 
-      {!isFetchinging &&
-        profile.map(profileItem => (
+      {!isFetchinging
+        && profile.map((profileItem) => (
           <StyledProfile key={profileItem._id}>
             <ReactFadeIn className="FadeIn" transitionDuration={1000}>
-              <StyledImageProfile src="https://place-hold.it/600x600" />
+              <StyledImageProfile src={profileItem.photo} />
               <StyledInfos>
                 <StyledOffice>
                   <h1>{profileItem.name}</h1>

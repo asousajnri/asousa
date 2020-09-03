@@ -31,13 +31,13 @@ const Cases: React.FC = () => {
 
       {!isFetchinging && (
         <StyledCases>
-          {cases.map(caseItem => (
+          {cases.map((caseItem) => (
             <ReactFadeIn key={caseItem._id} transitionDuration={1000}>
               <CasesItem
                 background="primary"
                 id={caseItem._id}
                 title={caseItem.title}
-                coverImage="https://place-hold.it/600x600"
+                coverImage={caseItem.coverImage}
                 link={caseItem.link}
                 description={caseItem.description}
                 category={caseItem.category}

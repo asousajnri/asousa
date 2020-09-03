@@ -42,7 +42,7 @@ const SocialListingItem: React.FC<Props> = ({ url, icon }) => {
     >
       <a href={url} target="_blank" rel="noopener noreferrer">
         {socialIcons.map(
-          socialIcon => socialIcon.title === icon && <socialIcon.component width="2rem" fill={iconColor} />
+          (socialIcon) => socialIcon.title === icon && <socialIcon.component width="2rem" fill={iconColor} />,
         )}
       </a>
     </StyledSocialListingItem>

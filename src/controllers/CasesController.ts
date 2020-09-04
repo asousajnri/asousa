@@ -13,7 +13,7 @@ export default {
 
   async store(req: Request, res: Response): Promise<Response> {
     const { title, link, description, category }: CasesInterface = req.body;
-    const { filename: coverImage } = req.file;
+    const { location: coverImage = '' } = req.file;
 
     const cases = await Cases.create({
       title,

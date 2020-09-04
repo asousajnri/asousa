@@ -19,7 +19,7 @@ export default {
       brandColor,
     }: CareerInterface = req.body;
 
-    const { filename: logo } = req.file;
+    const { location: logo = '' } = req.file;
 
     const career = await Career.create({
       companyName,

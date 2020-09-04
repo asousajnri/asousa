@@ -1,13 +1,16 @@
-import multer from 'multer';
 import path from 'path';
-
-const storage = multer.diskStorage({
-  destination: path.resolve(__dirname, '..', '..', 'uploads'),
-  filename(req, file, callback) {
-    callback(null, file.originalname);
-  },
-});
+import multerS3 from 'multer-s3';
+import aws from 'aws-sdk';
 
 export default {
-  storage,
+  dest: path.resolve(__dirname, '..', '..', 'uploads'),
+  storage: multerS3({
+    s3: new aws.S3(),
+    bucket: 'asousaportfolio',
+    contentType: multerS3.AUTO_CONTENT_TYPE,
+    acl: 'public-read',
+    key: (req, file, cb) => {
+      cb(null, file.originalname);
+    },
+  }),
 };

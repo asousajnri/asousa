@@ -12,7 +12,7 @@ export default {
 
   async store(req: Request, res: Response): Promise<Response> {
     const { title, level }: SkillsInterface = req.body;
-    const { filename: logo } = req.file;
+    const { location: logo = '' } = req.file;
 
     const skills = await Skills.create({
       title,

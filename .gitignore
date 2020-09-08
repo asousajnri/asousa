@@ -2,7 +2,7 @@ node_modules/
 dist/
 build/
 
-yarn.lock
+# yarn.lock
 package-lock.json
 .env
 

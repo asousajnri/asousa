@@ -62,15 +62,18 @@ export const StyledImage = styled.div`
   @media ${devices.widescreen} {
     padding: 8rem 3rem;
   }
+
+  img {
+    /* width: 15rem;
+    max-width: 15rem; */
+  }
 `;
 
-export const StyledLevel = styled.h3`
+export const StyledStart = styled.ul`
   display: flex;
   justify-content: center;
   padding: 2rem;
   width: 100%;
-  color: ${(props) => props.theme.colors.secondary};
-  font-size: 2.5rem;
 
   @media ${devices.tablet} {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+100&0+48,0.53+100 */
@@ -93,5 +96,9 @@ export const StyledLevel = styled.h3`
       rgba(0, 0, 0, 0.03) 100%
     ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#87000000',GradientType=1 ); /* IE6-9 */
+  }
+
+  li + li {
+    margin-left: 1rem;
   }
 `;

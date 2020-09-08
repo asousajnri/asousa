@@ -30,6 +30,7 @@ export const CaseAlert = styled.div`
   text-align: center;
 
   em {
+    font-weight: bold;
     color: ${(props) => props.theme.colors.primary};
     font-style: normal;
     text-transform: uppercase; 

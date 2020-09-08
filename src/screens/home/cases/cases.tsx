@@ -8,7 +8,7 @@ import { Section } from '../../../containers';
 import CasesItem from './cases-item';
 import CasesLoading from './cases-loading';
 
-import { StyledCases } from './cases-styles';
+import { StyledCases, CaseAlert } from './cases-styles';
 
 interface ICases {
   _id: string;
@@ -29,6 +29,26 @@ const Cases: React.FC = () => {
 
   return (
     <Section color="primary" title="Cases">
+      <CaseAlert>
+        Alguns desses
+        {' '}
+        <em>cases</em>
+        {' '}
+        são de
+        {' '}
+        <em>empresas</em>
+        {' '}
+        que trabalhei (ou trabalho atualmente), participando como Front-end.
+        Outros são de
+        {' '}
+        <em>estudos</em>
+        {' '}
+        pessoais ou/e
+        {' '}
+        <em>freelas</em>
+        .
+      </CaseAlert>
+
       {isFetchinging && <CasesLoading cases={cases} />}
 
       {!isFetchinging && (

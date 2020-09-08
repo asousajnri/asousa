@@ -36,10 +36,10 @@ export const StyledOverlay = styled.a<IStyledOverlay>`
   opacity: 0;
   transition: 0.5s ease;
   padding: 3rem;
+  text-decoration: none;
 
   &:hover {
     opacity: 1;
-    text-decoration: none;
   }
 
   ${(props) => props.background === 'primary'

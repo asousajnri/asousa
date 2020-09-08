@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { devices } from '../../../assets/styles/devices';
 
 export const StyledProfile = styled.header`
+  width: 100%;
+
   .FadeIn {
     display: flex;
     flex-direction: column;
@@ -28,6 +30,10 @@ export const StyledProfile = styled.header`
 `;
 
 export const StyledImageProfile = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
   @media ${devices.mobile} {
     width: 15rem;
   }
@@ -42,7 +48,7 @@ export const StyledImageProfile = styled.img`
 `;
 
 export const StyledInfos = styled.div`
-  background: ${props => props.theme.profile.info};
+  background: ${(props) => props.theme.profile.info};
   padding: 3rem 2rem;
   height: 100%;
 
@@ -82,7 +88,7 @@ export const StyledOffice = styled.div`
   }
 
   h1 {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     font-size: 2.8rem;
     font-weight: 900;
 
@@ -94,7 +100,7 @@ export const StyledOffice = styled.div`
   h2 {
     font-weight: 400;
     font-size: 1.6rem;
-    color: ${props => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.black};
 
     @media ${devices.tabletLandscape} {
       font-size: 2rem;

@@ -8,7 +8,7 @@ import { Section } from '../../../containers';
 import CasesItem from './cases-item';
 import CasesLoading from './cases-loading';
 
-import { StyledCases, CaseAlert } from './cases-styles';
+import { StyledCases } from './cases-styles';
 
 interface ICases {
   _id: string;

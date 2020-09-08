@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { Section } from '../../containers';
-
 import Profile from './profile';
 import Cases from './cases';
 import Skills from './skills';

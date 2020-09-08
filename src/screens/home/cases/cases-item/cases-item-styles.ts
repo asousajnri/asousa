@@ -23,7 +23,7 @@ interface IStyledOverlay {
   background: string;
 }
 
-export const StyledOverlay = styled.div<IStyledOverlay>`
+export const StyledOverlay = styled.a<IStyledOverlay>`
   position: absolute;
   left: 0;
   top: 0;
@@ -39,19 +39,19 @@ export const StyledOverlay = styled.div<IStyledOverlay>`
 
   &:hover {
     opacity: 1;
+    text-decoration: none;
   }
 
-  ${props =>
-    props.background === 'primary' &&
-    css`
-      background: ${props => props.theme.colors.primary};
+  ${(props) => props.background === 'primary'
+    && css`
+      background: ${(props) => props.theme.colors.primary};
     `}
 
   h2 {
     font-weight: 900;
     font-size: 3rem;
     line-height: 3.2rem;
-    color: ${props => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.white};
     margin-bottom: 3rem;
     text-align: center;
 
@@ -72,7 +72,7 @@ export const ClickMe = styled.div`
 
   span {
     margin-left: 0.3rem;
-    color: ${props => props.theme.colors.white};
+    color: ${(props) => props.theme.colors.white};
     display: flex;
     align-items: flex-end;
     font-size: 1.8rem;

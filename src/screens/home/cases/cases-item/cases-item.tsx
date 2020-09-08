@@ -14,10 +14,12 @@ interface Props {
   category: string;
 }
 
-const CasesItem: React.FC<Props> = ({ coverImage, title, background, id }) => (
+const CasesItem: React.FC<Props> = ({
+  coverImage, title, background, id, link,
+}) => (
   <StyledCasesItem>
     <img src={coverImage} alt={title} />
-    <StyledOverlay background={background}>
+    <StyledOverlay href={link} target="_blank" background={background}>
       <h2>{title}</h2>
       <ClickMe>
         <MyIcons.Select width="2.5rem" fill="#FFFFFF" />

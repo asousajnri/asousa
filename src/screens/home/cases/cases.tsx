@@ -29,26 +29,6 @@ const Cases: React.FC = () => {
 
   return (
     <Section color="primary" title="Cases">
-      <CaseAlert>
-        Alguns desses
-        {' '}
-        <em>cases</em>
-        {' '}
-        são de
-        {' '}
-        <em>empresas</em>
-        {' '}
-        que trabalhei (ou trabalho atualmente), participando como Front-end.
-        Outros são de
-        {' '}
-        <em>estudos</em>
-        {' '}
-        pessoais ou/e
-        {' '}
-        <em>freelas</em>
-        .
-      </CaseAlert>
-
       {isFetchinging && <CasesLoading cases={cases} />}
 
       {!isFetchinging && (

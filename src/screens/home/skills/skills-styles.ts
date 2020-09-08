@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { lighten } from 'polished';
 
 import { devices } from '../../../assets/styles/devices';
 

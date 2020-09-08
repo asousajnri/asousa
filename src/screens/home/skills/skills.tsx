@@ -2,6 +2,8 @@ import React from 'react';
 
 import useFetchApi from '../../../hooks/useFetchApi';
 
+import { Section } from '../../../containers';
+
 import SkillsItem from './skills-item';
 import SkillsLoading from './skills-loading';
 
@@ -14,7 +16,7 @@ interface ISkills {
   level: string;
 }
 
-const Skills = () => {
+const Skills: React.FC = () => {
   const [skills, setSkills] = React.useState<ISkills[]>([]);
   const { data, isFetchinging } = useFetchApi<ISkills>('skills');
 
@@ -23,16 +25,18 @@ const Skills = () => {
   }, [data, setSkills]);
 
   return (
-    <>
+    <Section title="Habilidades" color="secondary">
       {isFetchinging && <SkillsLoading skills={skills} />}
       {!isFetchinging && (
-        <StyledSkills>
-          {skills.map((skill) => (
-            <SkillsItem key={skill._id} title={skill.title} logo={skill.logo} level={skill.level} />
-          ))}
-        </StyledSkills>
+        <>
+          <StyledSkills>
+            {skills.map((skill) => (
+              <SkillsItem key={skill._id} title={skill.title} logo={skill.logo} level={skill.level} />
+            ))}
+          </StyledSkills>
+        </>
       )}
-    </>
+    </Section>
   );
 };
 

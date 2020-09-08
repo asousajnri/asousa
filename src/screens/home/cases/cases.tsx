@@ -3,6 +3,8 @@ import ReactFadeIn from 'react-fade-in';
 
 import useFetchApi from '../../../hooks/useFetchApi';
 
+import { Section } from '../../../containers';
+
 import CasesItem from './cases-item';
 import CasesLoading from './cases-loading';
 
@@ -26,7 +28,7 @@ const Cases: React.FC = () => {
   }, [data, setCases]);
 
   return (
-    <>
+    <Section color="primary" title="Cases">
       {isFetchinging && <CasesLoading cases={cases} />}
 
       {!isFetchinging && (
@@ -46,7 +48,7 @@ const Cases: React.FC = () => {
           ))}
         </StyledCases>
       )}
-    </>
+    </Section>
   );
 };
 

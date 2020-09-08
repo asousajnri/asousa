@@ -3,6 +3,8 @@ import ReactFadeIn from 'react-fade-in';
 
 import useFetchApi from '../../../hooks/useFetchApi';
 
+import { Section } from '../../../containers';
+
 import CareerItem from './career-item';
 import CareerLoading from './career-loading';
 
@@ -27,7 +29,7 @@ const Career: React.FC = () => {
   }, [data, setCareer]);
 
   return (
-    <>
+    <Section title="Carreira" color="primary" lastSection>
       {isFetchinging && <CareerLoading career={career} />}
 
       {!isFetchinging && (
@@ -46,7 +48,7 @@ const Career: React.FC = () => {
           ))}
         </StyledCareer>
       )}
-    </>
+    </Section>
   );
 };
 

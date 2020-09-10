@@ -8,7 +8,7 @@ interface ICases {
   link: string;
   coverImage: string;
   description: string;
-  category: string;
+  local: string;
 }
 
 interface Props {
@@ -17,7 +17,7 @@ interface Props {
 
 const CasesLoading: React.FC<Props> = ({ cases }) => (
   <StyledCases>
-    {cases.map(caseItem => (
+    {cases.map((caseItem) => (
       <StyledCase key={caseItem._id} />
     ))}
   </StyledCases>

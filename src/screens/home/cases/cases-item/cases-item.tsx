@@ -11,7 +11,7 @@ interface Props {
   link: string;
   coverImage: string;
   description: string;
-  category: string;
+  local: string;
 }
 
 const CasesItem: React.FC<Props> = ({

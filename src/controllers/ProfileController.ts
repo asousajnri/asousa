@@ -13,7 +13,7 @@ export default {
 
   async store(req: Request, res: Response): Promise<Response> {
     const { name, office }: PofileInterface = req.body;
-    const { location: photo = '' } = req.file;
+    const { location: photo = '' } = req.fileS3;
 
     const profile = await Profile.create({
       photo,

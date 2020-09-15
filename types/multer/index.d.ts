@@ -2,14 +2,14 @@ import { Readable } from 'stream';
 
 declare global {
   namespace Express {
-    namespace MulterS3 {
+    namespace Multer {
       interface File {
         location: string;
       }
     }
 
     interface Request {
-      fileS3: MulterS3.File;
+      file: Multer.File;
     }
   }
 }

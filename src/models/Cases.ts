@@ -8,7 +8,7 @@ const CasesSchema = new Schema(
     link: String,
     coverImage: String,
     description: String,
-    category: String,
+    local: String,
   },
   { timestamps: true },
 );

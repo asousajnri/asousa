@@ -7,4 +7,5 @@ export default interface CasesInterface extends Document {
   description: string;
   local: string;
   tecnologias: string;
+  status: string;
 }

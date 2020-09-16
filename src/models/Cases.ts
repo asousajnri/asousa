@@ -10,6 +10,7 @@ const CasesSchema = new Schema(
     description: String,
     local: String,
     tecnologias: String,
+    status: String,
   },
   { timestamps: true },
 );

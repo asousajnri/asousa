@@ -12,7 +12,13 @@ export default {
   },
 
   async store(req: Request, res: Response): Promise<Response> {
-    const { title, link, description, local }: CasesInterface = req.body;
+    const {
+      title,
+      link,
+      description,
+      local,
+      tecnologias,
+    }: CasesInterface = req.body;
     const { location: coverImage = '' } = req.file;
 
     const cases = await Cases.create({
@@ -21,6 +27,7 @@ export default {
       coverImage,
       description,
       local,
+      tecnologias,
     });
 
     return res.json(cases);

@@ -9,7 +9,7 @@ const CasesSchema = new Schema(
     coverImage: String,
     description: String,
     local: String,
-    tecnologias: String,
+    tecs: String,
     status: String,
   },
   { timestamps: true },

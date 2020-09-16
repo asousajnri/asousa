@@ -6,6 +6,6 @@ export default interface CasesInterface extends Document {
   coverImage: string;
   description: string;
   local: string;
-  tecnologias: string;
+  tecs: string;
   status: string;
 }

@@ -18,7 +18,7 @@ export default {
       description,
       local,
       status,
-      tecnologias,
+      tecs,
     }: CasesInterface = req.body;
     const { location: coverImage = '' } = req.file;
 
@@ -28,7 +28,7 @@ export default {
       coverImage,
       description,
       local,
-      tecnologias,
+      tecs,
       status,
     });
 

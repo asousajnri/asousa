@@ -17,6 +17,7 @@ interface ICases {
   coverImage: string;
   description: string;
   local: string;
+  tecs: string;
 }
 
 const Cases: React.FC = () => {
@@ -43,6 +44,7 @@ const Cases: React.FC = () => {
                 link={caseItem.link}
                 description={caseItem.description}
                 local={caseItem.local}
+                tecs={caseItem.tecs}
               />
             </ReactFadeIn>
           ))}
